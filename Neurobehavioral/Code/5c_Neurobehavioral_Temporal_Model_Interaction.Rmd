@@ -1,0 +1,241 @@
+---
+title: "summer"
+author: "Jasen"
+date: "7/7/2021"
+output: pdf_document
+---
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(gridExtra)
+library(geepack)
+library(scales)
+library(reshape2)
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Code/00_Codes.R", sep = '')
+source(codes_dir)
+```
+
+# load the data
+
+```{r}
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/long_temporal_data.RData", sep = '')
+load(codes_dir)
+```
+
+#creating longitudinal model
+
+```{r}
+response_vars <- c('aac', 'rsc', 'iic', 'inc', 'isc', 'cits', 'snc', 'mffts', 'mffdts', 'dcgts', 'gpts',
+                   'auditory_attention_response_set', 'inhibition',
+                   'attention_inhibitory_control', 'language', 'memory_and_learning', 'visuospatial_processing')
+
+#restricting to a and c timepoints
+
+df3_long <- df2_long 
+df3_long$Index <- factor(df3_long$Index, levels = c(1,2,3))
+
+# two_levels <- c(F,F,F,F,F,T,T,T,T,T,T,
+#                 F,T,T,T)
+
+area_var <- c('100','200','500')
+area_var <- paste('ha_', area_var, sep = '')
+area_var <- paste(area_var, 'm', sep = '')
+area_var_log <- paste(area_var, '_log', sep = '')
+area_var_scaled <- paste(area_var, '_scaled', sep = '')
+area_var_scaled_log <- paste(area_var, '_scaled_log', sep = '')
+
+distance_vars <- c('dis_house_plant', 'dis_house_plant_log', area_var, area_var_log, area_var_scaled, area_var_scaled_log)
+distance_vars <- c('dis_house_plant_log', area_var_log)
+
+pvalues <- data.frame()
+ests <- data.frame()
+
+output_dir <- paste(substr(dir,1, nchar(dir)-4), "Figures/Neurobehavioral/5c_Neurobehavioral_Temporal_Models_Interaction.txt", sep = '')
+sink(output_dir)
+for(k in 1:length(response_vars)){
+  est_array <- c()
+  pval_array <- c()
+  for(j in distance_vars){
+    two_levels <- F
+    covariates <- c('age', 'race', 'gender', 'zha', 'i_g4salary_scaled',  'i_d9educatpar', 'currentnoflorag')
+    
+    i <- response_vars[k]
+    
+    important_vars <- c('nid', 'Index', covariates, i, j)
+    
+    if(i == 'iic' | i == 'isc' | i == 'inhibition'){
+      important_vars <- append(important_vars, 'inc')
+      covariates <- append(covariates, 'inc')
+    }
+    if(i == 'mffdts' | i == 'memory_and_learning'){
+      important_vars <- append(important_vars, 'mffts')
+      covariates <- append(covariates, 'mffts')
+    }
+    
+    
+    
+    df4_long <- df3_long %>% select(important_vars) %>% na.omit()
+    
+    if(0 %in% table(df4_long$Index)){
+      df4_long$Index <- factor(df4_long$Index, levels = c(1,3))
+      two_levels <- T
+    }
+    
+    # if(two_levels[k]){
+    #   df3_long$Index <- factor(df3_long$Index, levels = c(1,3))
+    # }
+    
+    int_term <- paste(j, 'Index', sep = ' * ')
+    
+    eq <- paste(i, int_term, sep = ' ~ ')
+    temp <- paste(covariates, collapse = ' + ')
+    eq <- paste(eq, temp, sep = ' + ')
+    
+    m <- geeglm(formula = formula(eq), id = nid, data=df4_long,
+                family='gaussian', corstr="exchangeable")
+    s <- summary(m)
+    
+    s_coeffs <- s$coefficients
+    
+    est_1 <- s_coeffs[2,1]
+    pvalue_1 <- s_coeffs[2,4]
+    
+
+    
+    if(two_levels){
+      temp <- dim(s_coeffs)[1]
+      
+      height_13 <- s_coeffs[3,1]
+      pvalue_height_13 <- s_coeffs[3,4]  
+    
+      est_13 <- s_coeffs[temp,1]
+      pvalue_13 <- s_coeffs[temp,4]
+      
+      df5_long <- df4_long
+      df5_long$Index <- factor(df5_long$Index, levels = c(3,1))
+      
+      m <- geeglm(formula = formula(eq), id = nid, data=df5_long,
+                  family='gaussian', corstr="exchangeable")
+      s <- summary(m)
+      
+      s_coeffs <- s$coefficients 
+      
+      est_3 <- s_coeffs[2,1]
+      pvalue_3 <- s_coeffs[2,4]
+      
+      est_2 <- NA
+      est_23 <- NA
+      est_12 <- NA
+      height_12 <- NA
+      height_23 <- NA
+      pvalue_2 <- NA
+      pvalue_23 <- NA
+      pvalue_12 <- NA
+      pvalue_height_12 <- NA
+      pvalue_height_23 <- NA
+      
+    } else{
+      temp <- dim(s_coeffs)[1]
+      
+      height_12 <- s_coeffs[3,1]
+      pvalue_height_12 <- s_coeffs[3,4]   
+      height_13 <- s_coeffs[4,1]
+      pvalue_height_13 <- s_coeffs[4,4]       
+      
+      est_13 <- s_coeffs[temp,1]
+      pvalue_13 <- s_coeffs[temp,4]      
+      est_12 <- s_coeffs[temp-1,1]
+      pvalue_12 <- s_coeffs[temp-1,4]     
+
+      df5_long <- df4_long
+      df5_long$Index <- factor(df5_long$Index, levels = c(2,1,3))
+      
+      m <- geeglm(formula = formula(eq), id = nid, data=df5_long,
+                  family='gaussian', corstr="exchangeable")
+      s <- summary(m)
+      
+      s_coeffs <- s$coefficients 
+      
+      height_23 <- s_coeffs[4,1]
+      pvalue_height_23 <- s_coeffs[4,4]    
+      
+      est_23 <- s_coeffs[temp,1]
+      pvalue_23 <- s_coeffs[temp,4]   
+      
+      est_2 <- s_coeffs[2,1]
+      pvalue_2 <- s_coeffs[2,4]      
+      
+      df5_long <- df4_long
+      df5_long$Index <- factor(df5_long$Index, levels = c(3,1,2))
+      
+      m <- geeglm(formula = formula(eq), id = nid, data=df5_long,
+                  family='gaussian', corstr="exchangeable")
+      s <- summary(m)
+      
+      s_coeffs <- s$coefficients 
+      
+      est_3 <- s_coeffs[2,1]
+      pvalue_3 <- s_coeffs[2,4]          
+    }
+    
+    temp_est_result <- rbind(c(est_1, est_2, est_3),
+                         c(est_12, est_13, est_23),
+                         c(height_12, height_13, height_23))
+    
+    temp_pvalue_result <- rbind(c(pvalue_1, pvalue_2, pvalue_3),
+                         c(pvalue_12, pvalue_13, pvalue_23),
+                         c(pvalue_height_12, pvalue_height_13, pvalue_height_23))
+    
+    
+    
+    pval_array <- cbind(pval_array, temp_pvalue_result)
+    est_array <- cbind(est_array, temp_est_result)
+    
+    print(eq)
+    print(table(df4_long$Index))
+    print(s)
+    print('-------------------------------')
+  }
+  pvalues <- rbind(pvalues, pval_array)
+  ests <- rbind(ests, est_array)
+}
+sink()
+
+```
+
+#create pvalue matrix
+
+```{r}
+colnames(ests) <- rep(distance_vars, each = 3)
+
+temp <- rep(response_vars, each = 3)
+temp2 <- rep(c('slope', 'slope diff', 'height diff'), length(response_vars))
+
+
+rownames(ests) <- paste(temp, temp2, sep = ' ')
+
+name <- c('Figures/Neurobehavioral/5c_NEPSY_Estimates.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(ests, file = data_dir)
+
+colnames(pvalues) <- rep(distance_vars, each = 3)
+
+temp <- rep(response_vars, each = 3)
+temp2 <- rep(c('slope', 'slope diff', 'height diff'), length(response_vars))
+
+
+rownames(pvalues) <- paste(temp, temp2, sep = ' ')
+
+name <- c('Figures/Neurobehavioral/5c_NEPSY_Pvalues.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(pvalues, file = data_dir)
+
+pvalues3 <- pvalues
+pvalues3[abs(pvalues3) > 0.05] <- NA
+
+name <- c('Figures/Neurobehavioral/5c_NEPSY_Pvalues_significant.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(pvalues3, file = data_dir)
+```

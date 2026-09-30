@@ -1,0 +1,285 @@
+---
+title: "Neurobehavioral Scatterplots"
+author: "Jasen Zhang"
+date: "7/27/2021"
+output: pdf_document
+---
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(gridExtra)
+library(geepack)
+library(scales)
+library(reshape2)
+library(lsmeans)
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Code/00_Codes.R", sep = '')
+source(codes_dir)
+```
+
+# load the data
+
+```{r}
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/long_temporal_data_V012522.RData", sep = '')
+load(codes_dir)
+
+NEPSY <- c("aac", "rsc", "iic", "inc", "isc", "cits", "snc", "mffts", "mffdts", "dcgts", "gpts",
+           "auditory_attention_response_set",
+           "inhibition", "attention_inhibitory_control", "language",
+           "memory_and_learning", "visuospatial_processing")
+
+covariates <- c('age',  'race','gender', 'Index', 'days_after_mdh', 'zha', 'i_g4salary_scaled', 'i_d9educatpar', 'currentnoflorag', 'dist_house_plant')
+
+df3_long <- df2_long[
+  # Keep only rows with *no* NA in covariates
+  rowSums(is.na(df2_long[covariates])) == 0 &
+  # And also rows where NOT all NEPSY columns are NA
+  !apply(df2_long[NEPSY], 1, function(x) all(is.na(x))),
+]
+
+df_a <- df3_long %>% filter(Index == 1)
+df_b <- df3_long %>% filter(Index == 2)
+df_c <- df3_long %>% filter(Index == 3)
+```
+
+# Scatterplots
+
+```{r}
+response_vars <- c('aac', 'rsc', 'iic', 'inc', 'isc', 'cits', 'snc', 'mffts', 'mffdts', 'dcgts', 'gpts', 
+                   'auditory_attention_response_set', 'inhibition', 
+                   'attention_inhibitory_control', 'language', 'memory_and_learning', 'visuospatial_processing')
+
+
+response_vars_b <- c('aac', 'rsc', 'iic', 'inc', 'isc', 
+                     'auditory_attention_response_set', 'inhibition')
+
+covariates <- c('age', 'race', 'gender', 'days_after_mdh', 'zha', 'i_g4salary_scaled',  'i_d9educatpar', 'currentnoflorag')
+
+
+all_vars <- c(response_vars, covariates)
+all_vars_b <- c(response_vars_b, covariates)
+
+distance_vars <- c('dist_house_plant_log', 'ha_150m_log', 'ha_200m_log', 'ha_300m_log', 'ha_500m_log')
+
+
+a_quantiles <- quantile(df_a$dist_house_plant, c(0, 0.25, 0.5, 0.75))
+b_quantiles <- quantile(df_b$dist_house_plant, c(0, 0.25, 0.5, 0.75))
+c_quantiles <- quantile(df_c$dist_house_plant, c(0, 0.25, 0.5, 0.75))
+
+a_levels <- (df_a$dist_house_plant >= a_quantiles[1]) + 
+  (df_a$dist_house_plant >= a_quantiles[2]) + 
+  (df_a$dist_house_plant >= a_quantiles[3]) + 
+  (df_a$dist_house_plant >= a_quantiles[4])
+
+b_levels <- (df_b$dist_house_plant >= b_quantiles[1]) + 
+  (df_b$dist_house_plant >= b_quantiles[2]) + 
+  (df_b$dist_house_plant >= b_quantiles[3]) + 
+  (df_b$dist_house_plant >= b_quantiles[4])
+
+c_levels <- (df_c$dist_house_plant >= c_quantiles[1]) + 
+  (df_c$dist_house_plant >= c_quantiles[2]) + 
+  (df_c$dist_house_plant >= c_quantiles[3]) + 
+  (df_c$dist_house_plant >= c_quantiles[4])
+
+a_levels <- as.factor(a_levels)
+b_levels <- as.factor(b_levels)
+c_levels <- as.factor(c_levels)
+
+df_a <- df_a %>% mutate(dist_levels = a_levels)
+df_b <- df_b %>% mutate(dist_levels = b_levels)
+df_c <- df_c %>% mutate(dist_levels = c_levels)
+
+```
+
+```{r}
+make_table <- function(df_a, all_vars){
+  
+
+  categorical_vars <- c('race', 'gender', 'currentnoflorag')
+  
+  a_results_2 <- data.frame()
+  
+  total_n <- c()
+  p_values <- c()
+  
+  for(i in all_vars){
+    temp_df2 <- df_a %>% filter(! is.na(!!as.name(i)))  # remove NA's of variable of interest
+    temp_n <- nrow(temp_df2)
+    total_n <- append(total_n, temp_n)
+    
+    #get p-values
+    if(i %in% categorical_vars){
+      
+      # goodness of fit
+      # chi_sq_df <- table(dplyr::pull(temp_df2, dist_levels), dplyr::pull(temp_df2, i))
+      # 
+      # test_obj <- chisq.test(chi_sq_df)
+      # temp_p_val <- round(test_obj$p.value, 3)
+      
+      # glm
+      
+      if(i == 'race'){
+        x <- temp_df2$race - 1
+        
+      } 
+      
+      if(i == 'gender'){
+        x <- temp_df2$gender
+      }
+      
+      if(i == 'currentnoflorag'){
+        x <- temp_df2$currentnoflorag
+      }
+      
+      y <- temp_df2$dist_house_plant_log
+      
+
+      
+      #model <- glm(formula('y ~ x'), family = binomial)
+      model <- lm(formula('y ~ x'))
+      
+      # Extract p-value for x
+      coef_table <- summary(model)$coefficients
+      temp_p_val <- coef_table["x", "Pr(>|t|)"]   
+
+      
+      
+    } else{
+      #anova p-value
+      
+      # temp_formula <- paste(as.name(i), 'dist_house_plant_log', sep = ' ~ ') # y = outcome, x = dist_log
+      temp_formula <- paste('dist_house_plant_log', as.name(i), sep = ' ~ ') # y = dist_log, x = covariate
+      temp_formula2 <- formula(temp_formula)
+      
+      # test_obj <- aov(temp_formula2, data = temp_df2)
+      # 
+      # temp_sum <- summary(test_obj)
+      # temp_p_val <- round(temp_sum[[1]][1,5], 3)
+      
+      # linear regression p-value
+
+      model <- lm(temp_formula2, data = temp_df2)
+
+      temp_p_val <- summary(model)$coefficients[2,4]      
+      
+      
+    }
+    
+    rounded_p_val <- sprintf("%.3f", round(temp_p_val, 3))
+    
+    p_values <- append(p_values, rounded_p_val)
+  }
+  
+  for(j in c(0,1,2,3,4)){  # collect means for all 5 levels
+    a_results <- data.frame()
+    if(j == 0){
+      temp_df <- df_a
+    } else{
+      temp_df <- df_a %>% filter(dist_levels == j)
+    }
+    
+  
+    for(i in all_vars){
+      temp_df2 <- temp_df %>% filter(! is.na(!!as.name(i)))
+      temp_n <- nrow(temp_df2)
+      temp_vec <- dplyr::pull(temp_df2, i)
+      if(i %in% categorical_vars){
+    
+        
+        if(i == 'race'){
+          temp_prop <- sprintf("%.2f", round(mean(temp_vec == 1), 4) * 100)
+          temp_count <- sum(temp_vec == 1)
+        }
+        if(i == 'gender'){
+          temp_prop <- sprintf("%.2f", round(mean(temp_vec == 0), 4) * 100)
+          temp_count <- sum(temp_vec == 0)
+        }
+        if(i == 'currentnoflorag'){
+          temp_prop <- sprintf("%.2f", round(mean(temp_vec == 0), 4) * 100)
+          temp_count <- sum(temp_vec == 0)
+        }
+        
+        temp_result <- paste0(temp_count, ' (', temp_prop, ')')
+        
+        
+      } else{
+        temp_mean <- sprintf("%.2f", round(mean(temp_vec), 2))
+        temp_sd <- sprintf("%.2f", round(sd(temp_vec), 2))
+        temp_result <- paste(temp_mean, temp_sd, sep = ' (')
+        temp_result <- paste(temp_result, ')', sep = '')
+      }
+      
+      a_results <- rbind(a_results, c(temp_n, temp_result)) 
+      
+    }
+    if(j == 0){
+      a_results_2 <- a_results
+    } else{
+      a_results_2 <- cbind(a_results_2, a_results)
+    }
+      
+  }
+  
+  a_results_2 <- cbind(a_results_2, p_values)
+  
+  colnames(a_results_2) <- c('total_n', 'total_value', '1q_n', '1q_value', '2q_n', '2q_value', '3q_n' ,'3q_value', '4q_n', '4q_value', 'p-values')
+  rownames(a_results_2) <- all_vars
+  
+  a_results_2
+}
+
+final_table_a <- make_table(df_a, all_vars)
+final_table_b <- make_table(df_b, all_vars_b)
+final_table_c <- make_table(df_c, all_vars)
+
+name <- c('Figures/Final/5a_table_a.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(final_table_a, file = data_dir)
+
+name <- c('Figures/Final/5a_table_b.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(final_table_b, file = data_dir)
+
+name <- c('Figures/Final/5a_table_c.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(final_table_c, file = data_dir)
+```
+
+# combine tables abc to get the exact version for the paper
+
+
+```{r}
+cov_final <- c('age', 'race', 'gender', 'days_after_mdh', 'zha', 'i_g4salary_scaled', 'i_d9educatpar', 'currentnoflorag')
+final_table_abc <- rbind(final_table_a[cov_final,], 
+                         final_table_b[cov_final,], 
+                         final_table_c[cov_final,])
+
+final_table_abc <- final_table_abc[ unlist(lapply(1:8, function(i) seq(i, nrow(final_table_abc), by = 8))), ] %>% 
+  select(- c('total_value', '1q_n', '2q_n', '3q_n', '4q_n'))
+
+name <- c('Figures/Final/5a_table_abc.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(final_table_abc, file = data_dir)
+```
+
+# combine tables abc for NEPSY scores (Supplemental table 1)
+
+```{r}
+mental_vars <- c('aac', 'rsc', 'iic', 'inc', 'isc', 'cits', 'snc', 'mffts', 'mffdts', 'dcgts', 'gpts')
+
+nepsy_table_abc <- rbind(final_table_a[mental_vars,], 
+                         final_table_b[mental_vars,], 
+                         final_table_c[mental_vars,])
+
+rownames(nepsy_table_abc) <- paste0(rep(mental_vars, 3),
+                                    rep(c('_a', '_b', '_c'), each = length(mental_vars)))
+
+nepsy_table_abc <- nepsy_table_abc[ unlist(lapply(1:11, function(i) seq(i, nrow(nepsy_table_abc), by = 11))), ] %>% 
+  select(- c('total_value', '1q_n', '2q_n', '3q_n', '4q_n'))
+
+name <- c('Figures/Final/5a_table_abc_NEPSY.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(nepsy_table_abc, file = data_dir)
+```
+

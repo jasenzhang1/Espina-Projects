@@ -1,0 +1,119 @@
+---
+title: "Neurobehavioral Scatterplots"
+author: "Jasen Zhang"
+date: "7/27/2021"
+output: pdf_document
+---
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(gridExtra)
+library(geepack)
+library(scales)
+library(reshape2)
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Code/00_Codes.R", sep = '')
+source(codes_dir)
+```
+
+# load the data
+
+```{r}
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/long_temporal_data_V012522.RData", sep = '')
+load(codes_dir)
+```
+
+# Scatterplots
+
+```{r}
+response_vars <- c('aac', 'rsc', 'iic', 'inc', 'isc', 'cits', 'snc', 'mffts', 'mffdts', 'dcgts', 'gpts', 
+                   'attention_inhibitory_control', 'language', 'memory_and_learning', 'visuospatial_processing')
+
+all_3_timepoints <- c(T,T,T,T,T,F,F,F,F,F,F, 
+                      T,F,F,F)
+
+xmins <- c(-2, -2, -2, -2, -2, -2)
+xmaxes <- c(10, 10, 10, 12,14, 15)
+
+ymins <- rep(-1, 15)
+ymaxes <- rep(20, 15)
+
+distance_vars <- c('dist_house_plant', 'ha_50m', 'ha_100m', 'ha_200m',
+                   'dist_house_plant_log', 'ha_50m_log', 'ha_100m_log', 'ha_200m_log')
+
+distance_vars <- c('dist_house_plant_log', 'ha_50m_log', 'ha_100m_log', 'ha_200m_log', 'ha_300m_log', 'ha_500m_log')
+
+graphs <- list()
+graph_index <- 1
+ 
+for(k in 1:length(response_vars)){ #1 to 15
+  for(l in 1:length(distance_vars)){ # 1 to 4
+    i <- response_vars[k]
+    j <- distance_vars[l]
+    df3_long <- df2_long %>% select('Index', i, j) %>%
+      na.omit() %>%
+      filter(!!as.name(j) != 0)
+    
+    loess_eq <- paste(j, i, sep = ' ~ ')
+    
+    df4_long <- loess_stratify(df3_long, j, i, 'Index', all_3_timepoints[k])
+    
+    temp_index <- as.numeric(df4_long$Index)
+    temp_index[temp_index == 1] <- 'Summer 2008'
+    temp_index[temp_index == 2] <- 'Spring 2016'
+    temp_index[temp_index == 3] <- 'Summer 2016'
+    df4_long$Index2 <- as.factor(temp_index)
+    
+    if(all_3_timepoints[k]){
+      g <- ggplot() + 
+        geom_jitter(data = df4_long, aes(x = !!as.name(j), y = !!as.name(i), color = Index), size = 1.5,  alpha = 0.2, width = 0, height = 0.2) + 
+        geom_line(data = df4_long, aes(x = !!as.name(j), y = loess, color = Index), size = 0.6) + 
+        geom_ribbon(data = df4_long, aes(ymin = lower, ymax = upper, x = !!as.name(j), fill = Index),  linetype=1, alpha=0.1) + 
+        xlim(c(xmins[l], xmaxes[l])) + 
+        ylim(c(ymins[k], ymaxes[k])) + 
+      guides(color=guide_legend("Survey"), fill = FALSE)  
+      
+      graphs[[graph_index]] <- g
+      graph_index <- graph_index + 1      
+    } else{
+      
+      g <- ggplot() + 
+      
+        geom_jitter(data = df4_long, aes(x = !!as.name(j), y = !!as.name(i), color = Index), size = 1.5,  alpha = 0.2, width = 0, height = 0.2) + 
+        geom_line(data = df4_long, aes(x = !!as.name(j), y = loess, color = Index), size = 0.6) + 
+        geom_ribbon(data = df4_long, aes(ymin = lower, ymax = upper, x = !!as.name(j), fill = Index),  linetype=1, alpha=0.1) + 
+        xlim(c(xmins[l], xmaxes[l])) + 
+        ylim(c(ymins[k], ymaxes[k])) +         
+        guides(color=guide_legend("Survey"), fill = FALSE)
+
+      
+      graphs[[graph_index]] <- g
+      graph_index <- graph_index + 1      
+    }
+    
+
+  }
+}
+
+lay2 <- rbind(c(1,1,2),
+              c(1,1,3),
+              c(4,5,6))
+
+plot_dir <- paste(substr(dir,1, nchar(dir)-4), "Figures/5_Neurobehavioral_Temporal_Scatterplot.pdf", sep = '')
+pdf(plot_dir) 
+
+the_end <- length(response_vars)  
+for(i in 1:the_end){
+  index <- 6 * (i - 1)
+  grid.arrange(graphs[[index + 1]],
+               graphs[[index + 2]],
+               graphs[[index + 3]],
+               graphs[[index + 4]],
+               graphs[[index + 5]],
+               graphs[[index + 6]],layout_matrix = lay2)
+}
+
+
+dev.off()
+```

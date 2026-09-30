@@ -1,0 +1,39 @@
+---
+title: "Untitled"
+author: "Jasen Zhang"
+date: "9/10/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(gridExtra)
+library(geepack)
+library(scales)
+
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Code/00_Codes.R", sep = '')
+source(codes_dir)
+
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/schools_in_pm_.csv", sep = '')
+pm_schools <- read.csv(codes_dir)
+
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/Schools_distancesandsurfaceareas.csv", sep = '')
+all_schools <- read.csv(codes_dir)
+
+pm_school_nums <- dplyr::pull(pm_schools, school_num)
+
+all_school_nums <- dplyr::pull(all_schools, school_num)
+
+non_pm_school_nums <- setdiff(all_school_nums, pm_school_nums)
+
+non_pm_schools <- all_schools %>% filter(school_num %in% non_pm_school_nums) %>%
+  select(school_num, names, lat, long)
+
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/schools_not_in_pm.csv", sep = '')
+write.csv(non_pm_schools, codes_dir)
+```

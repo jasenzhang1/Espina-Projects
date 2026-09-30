@@ -1,0 +1,125 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(gridExtra)
+library(geepack)
+library(scales)
+library(reshape2)
+library(lavaan)
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Code/00_Codes.R", sep = '')
+source(codes_dir)
+```
+
+# load the data
+
+```{r}
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/long_temporal_data.RData", sep = '')
+load(codes_dir)
+```
+
+#creating longitudinal model
+
+```{r}
+response_vars <- c('aac', 'rsc', 'iic', 'inc', 'isc', 'cits', 'snc', 'mffts', 'mffdts', 'dcgts', 'gpts',
+                   'auditory_attention_response_set', 'inhibition',
+                   'attention_inhibitory_control', 'language', 'memory_and_learning', 'visuospatial_processing')
+covariates <- c('age', 'race', 'gender', 'Index', 'zha', 'i_g4salary_scaled',  'i_d9educatpar', 'currentnoflorag')
+covariates <- c('age', 'race', 'gender', 'zha', 'i_g4salary_scaled',  'i_d9educatpar', 'currentnoflorag')
+mediators <- c("ache")
+
+df3_long <- df2_long 
+df3_long$Index <- factor(df3_long$Index, levels = c(1,2,3))
+
+area_var <- c('100','200','500')
+area_var <- paste('ha_', area_var, sep = '')
+area_var <- paste(area_var, 'm', sep = '')
+area_var_log <- paste(area_var, '_log', sep = '')
+area_var_scaled <- paste(area_var, '_scaled', sep = '')
+area_var_scaled_log <- paste(area_var, '_scaled_log', sep = '')
+
+distance_vars <- c('dis_house_plant', 'dis_house_plant_log', area_var, area_var_log, area_var_scaled, area_var_scaled_log)
+distance_vars <- c('dis_house_plant_log', area_var_log)
+
+pvalues <- data.frame()
+
+output_dir <- paste(substr(dir,1, nchar(dir)-4), "Figures/Neurobehavioral/5f_Neurobehavioral_Mediator_Models.txt", sep = '')
+sink(output_dir)
+for(k in 1:length(response_vars)){ #responses
+  pval_array <- c()
+  for(j in distance_vars){ #distances
+    covariates <- c('age', 'race', 'gender', 'zha', 'i_g4salary_scaled',  'i_d9educatpar', 'currentnoflorag')
+    i <- response_vars[k]
+    
+    important_vars <- c('nid', 'ache', 'Index', covariates, i, j)
+    
+    if(i == 'iic' | i == 'isc' | i == 'inhibition'){
+      important_vars <- append(important_vars, 'inc')
+      covariates <- append(covariates, 'inc')
+    }
+    if(i == 'mffdts' | i == 'memory_and_learning'){
+      important_vars <- append(important_vars, 'mffts')
+      covariates <- append(covariates, 'mffts')
+    }
+    
+    
+    
+    df4_long <- df3_long %>% select(important_vars) %>% na.omit()
+    
+    if(0 %in% table(df4_long$Index)){
+      df4_long$Index3 <- as.numeric(df4_long$Index == 3)
+      covariates <- append(covariates, 'Index3')
+    } else{
+      df4_long$Index3 <- as.numeric(df4_long$Index == 3)
+      df4_long$Index2 <- as.numeric(df4_long$Index == 2)
+      covariates <- append(covariates, c('Index2', 'Index3'))
+    }
+    
+    u_vars <- covariates
+    m_var <- mediators
+    y_var <- i
+    x_var <- j
+
+    df_ <- df4_long %>% filter_at(all_of(c(u_vars, m_var)), all_vars(! is.na(.)))
+    
+    fms_sem <- c(
+      paste(y_var, "~", paste("1", paste("c", "*", x_var), paste("b", "*", m_var), paste0(u_vars, collapse = " + "), sep = " + ")), 
+      paste(m_var, "~", paste("1", paste("a", "*", x_var), paste0(u_vars, collapse = " + "), sep = " + ")), 
+      "indrct := a * b", "direct := c", "total  := c + a * b"
+    )
+    mod_sem <- paste(fms_sem, collapse = "\n\n")
+    fit_sem <- sem(mod_sem, data = df_)
+    
+    j %>% cat("\t\t\t\t\t", "Exposure:", ., "\n")
+    i %>% str_to_title() %>% cat("\t\t\t\t\t", "Domain:", ., "\n")
+    mediators %>% str_remove("c_") %>% str_to_title() %>% cat("\t\t\t\t\t", "Mediator(s):", ., "\n")
+    # summary(fit_sem)
+    sum_sem <- parameterestimates(fit_sem)
+    tmp <- sum_sem$est[sum_sem$lhs == "indrct"] / sum_sem$est[sum_sem$lhs == "total"] %>% data.frame(est = .)
+    tmp$variable <- "indrct/total"
+    
+    cat("Sample Size:", nrow(df_), "\n\n")
+    sum_sem <- sum_sem %>% filter(lhs %in% c(y_var, m_var, "indrct", "direct", "total")) %>% 
+      select(lhs, rhs, est, se, ci.lower, ci.upper, z, pvalue)
+    
+    cat("Defined Variables:", "\n")
+    result <- sum_sem %>% filter(lhs %in% c("indrct", "direct", "total")) %>% 
+      select(-c(rhs)) %>% 
+      rename(variable = lhs) %>% 
+      bind_rows(tmp)
+    
+    print(as.matrix(result))
+    cat('\n-------------------------------------\n')
+    
+  }
+
+}
+sink()
+
+```

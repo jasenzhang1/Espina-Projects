@@ -1,0 +1,463 @@
+---
+title: "data wrangling"
+author: "Jasen"
+date: "7/8/2021"
+output: pdf_document
+---
+
+# 1. Load the raw_data
+
+```{r}
+library(tidyverse)
+library(gridExtra)
+library(geepack)
+library(scales)
+library(haven)
+
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Code/00_Codes.R", sep = '')
+source(codes_dir)
+
+#01-25 new data
+
+raw_data_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/espina_220125.sas7bdat", sep = '')
+raw_data <- read_sas(raw_data_dir)
+raw_data <- as.data.frame(raw_data)
+
+# old raw data
+
+# raw_data_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/raw_data.200713.RData", sep = '')
+# load(raw_data_dir)
+```
+
+# 2. Remove duplicates and filter relevant variables to create df1 
+
+```{r}
+#remove duplicates
+
+temp <- ! duplicated(raw_data$nid)
+
+raw_data <- raw_data[temp ,]
+
+
+#school data
+
+school_vars <- c('100', '200', '300', '500')
+school_vars <- paste(school_vars, 'm', sep = '')
+school_vars <- paste('area',school_vars, sep = '_')
+
+school_vars <- c('names', 'dist_contour_school', school_vars)
+
+school_data_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/schools_areasdist_210920.csv", sep = '')
+school <- read.csv(school_data_dir) %>%
+  select(school_vars)
+
+var_names <- colnames(raw_data)
+vars1 <- c()
+
+#metabolites
+
+metabolites <- c('CPM','PAR','OXY2','MAL','OPM','24D','TCC','OHIM','ACET','AND','CLOT','DEA','IMID','MEA')
+metabolites_summer <- paste('c_', metabolites, sep = '')
+metabolites_summer_flag <- paste(metabolites_summer, '_Flag', sep = '')
+metabolites_flag <- paste(metabolites, '_Flag', sep = '')
+
+#neurobehavioral vars
+
+neuro_vars <- c('aac', 'aavsrsc', 'rsc', 'aars', 'aa_ss', 'rs_ss', 'attnexec',
+                'iic', 'iicssc', 'inc', 'invsic', 'isc',
+                'cits', 'snc', 'mffts', 'mfvsmfdcss',
+                'mffdts', 'dcgts', 'gpts', 'arts',
+                'd_attnexec', 'n_aars', 'aa_ss', 'rs_ss',
+                'n_in', 'ini_ss', 'inn_ss', 'ins_ss', 'n_st', 
+                'd_language', 'n_ci', 'n_sn', 'd_memlearn', 
+                'mfi_ss', 'mfd_ss', 'n_nm', 'd_visuospat',
+                'n_dc', 'n_gp', 'd_sensmotor', 'n_vp', 'n_wi', 
+                'wirep_ss', 'wirec_ss')
+
+
+mental_health_vars <- c('cdi2',  #depression c_cdi2_tot_t
+                        'masc2')
+
+hormones <- c('cortisol', 'testosterone', 'estradiol', 'dhea')
+c_hormones <- paste('c_', hormones, sep = '')
+other_labs <- c('ache', 'hgb')
+
+demographics <- c('race', 'age', 'gender', 'agem', 'zha', 'zba')
+
+other_covariates <- c('tanner', 'salivatime', 'awakeningtime', 'days_after_mdh')
+
+socioeconomics <- c('g4salary', 'income', 'school')
+
+distances <- c('ha_1000m', 'ha_750m', 'ha_500m', 'ha_300m', 'ha_200m' ,'ha_150m', 'ha_100m', 'ha_50m', 'dist_house_plant')
+
+ends_with_vars <- c(metabolites, 
+           metabolites_flag,
+           hormones,
+           other_labs,
+           neuro_vars,
+           demographics,
+           distances,
+           'm1', 'm2', 'm6', 'm1o',  #pregnancy
+           socioeconomics)     #income = poverty  
+
+ends_with_vars <- paste('_', ends_with_vars, sep = '')
+for(i in ends_with_vars){
+  wow <- ends_with(var_names, i)
+  vars1 <- append(vars1, sort(var_names[wow]))
+}
+
+contains_vars <- c(other_covariates, 
+                   mental_health_vars,
+                  'educat',
+                  'noflo')            #education)
+
+
+for(i in contains_vars){
+  wow <- contains(var_names, i)
+  vars1 <- append(vars1, sort(var_names[wow]))
+}
+
+vars1 <- c('nid', 'c_particsumm', 'c_particapri', 'c_i_g4salary', c_hormones, vars1)
+
+df1 <- raw_data %>% select(vars1)
+```
+
+# 3. Create other variables of interest
+
+
+## 3.1. Create area rung variables
+
+```{r}
+#incorporating school data
+
+df_names <- colnames(school)
+df_names <- paste('school', df_names, sep = '_')
+df_names[1] <- 'c_school'
+colnames(school) <- df_names
+
+df1 <- df1 %>% left_join(school, by = 'c_school')
+
+#create ring-like distances
+
+distances <- c(150, 300, 500)
+
+df1 <- df1 %>% mutate(c_ha_300m_150m = c_ha_300m - c_ha_150m) %>%
+  mutate(c_ha_500m_300m = c_ha_500m - c_ha_300m) %>%
+  mutate(a_ha_300m_150m = a_ha_300m - a_ha_150m) %>%
+  mutate(a_ha_500m_300m = a_ha_500m - a_ha_300m) %>%
+  mutate(b_ha_300m_150m = b_ha_300m - b_ha_150m) %>%
+  mutate(b_ha_500m_300m = b_ha_500m - b_ha_300m)
+```
+
+## 3.2. Create weighted area variables that scale with distance
+
+## 
+
+```{r}
+#create weighted area variables that scale with distance
+
+distances <- c(50, 100, 150, 200, 300, 500, 750, 1000)
+timepoints <- c('a', 'b', 'c')
+
+for(k in timepoints){
+  time_var <- paste(k, '_ha_', sep = '') #create a_ha_ b_ha_ c_ha_
+
+  for(i in 1:length(distances)){
+    max_distance <- distances[i]
+    for(j in 1:i){
+      var_name <- paste(time_var, distances[j], sep = '') #a_ha_50
+      var_name <- paste(var_name, 'm', sep = '') #a_ha_50m$
+
+      area_var <- dplyr::pull(df1, var_name)
+      if(j == 1){
+        area_var_adjusted <- area_var
+        scale_factor <- max_distance/distances[j] # max distance gets a factor of 1, closer distances are > 1
+        scale_factor_squared <- scale_factor^2
+        scale_factor_cubed <- scale_factor^3
+        temp_scaled <- scale_factor * area_var_adjusted
+        temp_scaled_squared <- scale_factor_squared * area_var_adjusted
+        temp_scaled_cubed   <- scale_factor_cubed   * area_var_adjusted
+      } else{
+        area_var_adjusted <- area_var - area_var_prev
+        scale_factor <- max_distance/distances[j]
+        scale_factor_squared <- scale_factor^2
+        scale_factor_cubed <- scale_factor^3
+        temp_scaled <- temp_scaled + scale_factor * area_var_adjusted
+        temp_scaled_squared <- temp_scaled_squared + scale_factor_squared * area_var_adjusted
+        temp_scaled_cubed <- temp_scaled_cubed     + scale_factor_cubed   * area_var_adjusted
+      }
+
+
+
+      area_var_prev <- area_var
+    }
+    updated_var_name <- paste(var_name, 'scaled', sep = '_')
+    updated_var_name_squared <- paste(updated_var_name, 'squared', sep = '_')
+    updated_var_name_cubed   <- paste(updated_var_name, 'cubed', sep = '_')
+    df1 <- df1 %>% mutate(!!updated_var_name := temp_scaled) %>%
+      mutate(!!updated_var_name_squared := temp_scaled_squared) %>%
+      mutate(!!updated_var_name_cubed := temp_scaled_cubed)
+  }
+}
+```
+
+## 3.3 Inverse distance
+
+```{r}
+#create inverse distance
+
+df1 <- df1 %>% mutate(c_dist_house_plant_inv = 1/c_dist_house_plant) %>%
+  mutate(b_dist_house_plant_inv = 1/b_dist_house_plant) %>%
+  mutate(a_dist_house_plant_inv = 1/a_dist_house_plant)
+```
+
+
+## 3.4 edit race, gender, etc...
+
+
+```{r}
+race_df <- df1 %>% select(a_race, c_race, nid)
+race_a_vec <- c()
+race_c_vec <- c()
+
+for(i in 1:nrow(race_df)){
+  slice <- unname(unlist(race_df[i,]))
+  temp_a_race <- slice[1]
+  temp_c_race <- slice[2]
+  temp_nid <- slice[3]
+
+  #if a is NA and c is not NA
+  
+  if(is.na(temp_a_race) & ! is.na(temp_c_race)){
+    temp_a_race <- temp_c_race
+  } 
+
+  #if a is not NA and c is NA
+  
+  if(! is.na(temp_a_race) & is.na(temp_c_race)){
+    temp_c_race <- temp_a_race
+  }   
+  
+  #if both are NA
+  
+  if(is.na(temp_a_race) & is.na(temp_c_race)){
+    temp_c_race <- 2
+    temp_a_race <- 2
+  }     
+  
+  if(! temp_a_race %in% c(1,2)){
+    temp_a_race <- 2
+  }
+  if(! temp_c_race %in% c(1,2)){
+    temp_c_race <- 2
+  }  
+  race_a_vec <- append(race_a_vec, temp_a_race)
+  race_c_vec <- append(race_c_vec, temp_c_race)
+}
+
+df1 <- df1 %>% mutate(a_race = race_a_vec) %>%
+  mutate(c_race = race_c_vec) %>%
+  mutate(b_race = race_c_vec)
+
+#fixing genders
+
+
+gender_df2 <- df1 %>% select(a_gender, b_gender, c_gender)
+temp_gender <- apply(gender_df2,1,function(x){mean(x, na.rm = T)})
+
+df1 <- df1 %>% mutate(a_gender = temp_gender) %>%
+  mutate(b_gender = temp_gender) %>%
+  mutate(c_gender = temp_gender)
+
+#create ordinal salary for C
+
+temp_salary <- df1$c_i_g4salary
+new_salary <- NA * integer(length(temp_salary))
+new_salary[temp_salary <= 50] <- 1
+new_salary[temp_salary > 50 & temp_salary <= 150] <- 2
+new_salary[temp_salary > 150 & temp_salary <= 300] <- 3
+new_salary[temp_salary > 300 & temp_salary <= 500] <- 4
+new_salary[temp_salary > 500 & temp_salary <= 1000] <- 5
+new_salary[temp_salary > 1000 ] <- 6
+
+df1 <- df1 %>% mutate(c_i_g4salary_scaled = new_salary)
+
+#create maternal age at birth
+
+df1 <- df1 %>% mutate(maternal_age_at_birth = c_agem - c_age)
+
+#create c_tanner
+
+df_tanner <- df1 %>% select(c_tannerbreastwomen, c_tannerpubicwomen, c_tannerpubicmen)
+
+c_tanner2 <- c()
+for(i in 1:nrow(df_tanner)){
+  slice <- df_tanner[i,]
+  if(sum(is.na(slice)) == 3){
+    c_tanner2 <- append(c_tanner2, NaN)
+  }
+  if(sum(is.na(slice)) == 2){
+    c_tanner2 <- append(c_tanner2, sum(slice, na.rm = T))
+  }
+  if(sum(is.na(slice)) == 1){
+    c_tanner2 <- append(c_tanner2, sum(slice, na.rm = T)/2)
+  }
+}
+df1 <- df1 %>% mutate(c_tanner = c_tanner2)
+wow <- df1 %>% select(c_tanner, c_tannerbreastwomen, c_tannerpubicmen, c_tannerpubicwomen)
+
+#create awakening_response
+
+df1 <- df1 %>% mutate(c_awakeningresponse = c_salivatime - c_awakeningtime)
+```
+
+
+# 3.5 create log variable names
+
+```{r}
+variables_need_log <- c('c_cortisol', 'c_estradiol', 'c_testosterone', 'c_dhea', 'c_i_g4salary')
+
+area_var_names <- c('ha_50m', 'ha_100m', 'ha_150m', 'ha_200m', 'ha_300m', 'ha_500m', 'ha_750m', 'ha_1000m')
+area_var_names_scaled <- paste(area_var_names, 'scaled', sep = '_')
+area_var_names_scaled_squared <- paste(area_var_names_scaled, 'squared', sep = '_')
+area_var_names_scaled_cubed   <- paste(area_var_names_scaled, 'cubed', sep = '_')
+
+school_area_var_names <- setdiff(colnames(school), 'c_school')
+
+variables_need_log_plus_one <- c('dist_house_plant', 
+                                 'ha_300m_150m',
+                                 'ha_500m_300m',
+                                 area_var_names,
+                                 area_var_names_scaled,
+                                 area_var_names_scaled_squared,
+                                 area_var_names_scaled_cubed)
+
+variables_need_log_plus_one <- paste(rep(c('a_', 'b_', 'c_'), each = length(variables_need_log_plus_one)), variables_need_log_plus_one, sep = "")
+
+#special circumstance for school data 
+
+variables_need_log_plus_one <- c(variables_need_log_plus_one,
+                                 'school_dist_contour_school',
+                                 school_area_var_names)
+
+
+for(i in variables_need_log_plus_one){
+  temp_name <- paste(i, '_log', sep = '')
+  df1 <- df1 %>% mutate(!!as.name(temp_name) := log(!!as.name(i) + 1))
+}
+
+for(i in variables_need_log){
+  temp_name <- paste(i, '_log', sep = '')
+  df1 <- df1 %>% mutate(!!as.name(temp_name) := log(!!as.name(i)))
+}
+
+
+# df1, the expanded dataset WITHOUT FILTERING ANYBODY 
+
+name <- c('Data/df1_2024.RData')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+
+save(df1,file=data_dir)
+```
+
+# 4. creating summer dataset with race and gender as factors
+
+```{r}
+df_summer <- df1 %>% filter(!is.na(c_particsumm))
+
+temp_race <- df_summer$c_race
+temp_race[is.na(temp_race)] <- 2
+temp_race[temp_race == 4] <- 2
+temp_race[temp_race == 1] <- 'indigenous'
+temp_race[temp_race == 2] <- 'mestizo'
+temp_race <- as.factor(temp_race)
+
+temp_gender <- df_summer$c_gender
+temp_gender[temp_gender == 0] <- 'female'
+temp_gender[temp_gender == 1] <- 'male'
+temp_gender <- as.factor(temp_gender)
+
+df_summer <- df_summer %>% mutate(c_race = temp_race) %>%
+  mutate(c_gender = temp_gender)
+
+
+#creating dataset with only PM and Cayambe subjects
+
+# df_summer2 <- df_summer %>% filter(! is.na(school_dist_contour_school))
+
+#save data 
+
+
+
+name <- c('Data/df_summer_V012522.RData')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+save(df_summer,file=data_dir)
+
+#dataset with only PM and Cayambe subjects
+
+# save(df_summer,file=data_dir)
+# 
+# name <- c('Data/df_summer2_V012522.RData')
+# data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+# 
+# save(df_summer2,file=data_dir)
+```
+
+
+
+# Select the cross sectional hormone variables
+
+```{r}
+outcomes <- c('c_cortisol', 'c_testosterone', 'c_estradiol', 'c_dhea')
+outcomes_log <- c('c_cortisol_log', 'c_testosterone_log', 'c_estradiol_log', 'c_dhea_log')
+
+area_var <- c('100','150','200','300','500')
+area_var <- paste('c_ha_', area_var, sep = '')
+area_var <- paste(area_var, 'm', sep = '')
+area_var_log <- paste(area_var, '_log', sep = '')
+area_var_scaled <- paste(area_var, '_scaled', sep = '')
+area_var_scaled_log <- paste(area_var, '_scaled_log', sep = '')
+area_var_scaled_squared_log <- paste(area_var, '_scaled_squared_log', sep = '')
+area_var_scaled_cubed_log <- paste(area_var, '_scaled_cubed_log', sep = '')
+
+school_log_var <- c('dist_contour_school', 
+                    'area_100m',
+                    'area_200m',
+                    'area_300m',
+                    'area_500m')
+
+school_log_var <- paste(school_log_var, 'log', sep = '_')
+school_log_var <- paste('school', school_log_var, sep = '_')
+
+independent_var <- c('c_dist_house_plant',
+                     'c_dist_house_plant_log',
+                     area_var,
+                     area_var_log,
+                     'c_ha_300m_150m',
+                     'c_ha_500m_300m',
+                     'c_ha_300m_150m_log',
+                     'c_ha_500m_300m_log',
+                     school_log_var)
+
+
+
+covariates <- c('c_race', 'c_age', 'c_gender', 'c_zha', 'c_i_g4salary', 'c_i_g4salary_scaled', 'c_tanner', 'c_awakeningresponse', 'c_currentnoflorag')
+
+important_vars <- c('nid', independent_var, outcomes, outcomes_log, covariates)
+
+df_summer_hormone <- df_summer %>% select(all_of(important_vars)) %>%
+  filter(!is.na(c_dist_house_plant)) %>%
+  filter(!is.na(c_zha) & !is.na(c_tanner) & !is.na(c_awakeningresponse) ) %>%
+  
+  # if all of the hormones are missing, remove the subject (2)
+  filter(!is.na(c_cortisol_log) | !is.na(c_testosterone_log) | !is.na(c_estradiol_log) |  !is.na(c_dhea_log)  )
+
+# final data set for the hormone paper (rev 7/23/2024)
+
+name <- c('Data/df_summer_hormone.RData')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+save(df_summer_hormone,file=data_dir)
+```
+
+

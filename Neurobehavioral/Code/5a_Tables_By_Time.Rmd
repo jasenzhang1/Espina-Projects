@@ -1,0 +1,172 @@
+---
+title: "Neurobehavioral Scatterplots"
+author: "Jasen Zhang"
+date: "7/27/2021"
+output: pdf_document
+---
+
+# does the same thing as 5a_Neurobehavioral_Tables
+# DEPRECATED, USE THE OTHER ONE
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(gridExtra)
+library(geepack)
+library(scales)
+library(reshape2)
+library(lsmeans)
+
+library(ggpubr)
+library(rstatix)
+
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Code/00_Codes.R", sep = '')
+source(codes_dir)
+
+```
+
+# load the data
+
+```{r}
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/long_temporal_data_V012522.RData", sep = '')
+load(codes_dir)
+
+```
+
+# Scatterplots
+
+```{r}
+response_vars <- c('aac', 'rsc', 'iic', 'inc', 'isc', 'cits', 'snc', 'mffts', 'mffdts', 'dcgts', 'gpts', 
+                   'auditory_attention_response_set', 'inhibition', 
+                   'attention_inhibitory_control', 'language', 'memory_and_learning', 'visuospatial_processing')
+
+
+response_vars_b <- c('aac', 'rsc', 'iic', 'inc', 'isc', 
+                     'auditory_attention_response_set', 'inhibition')
+
+covariates <- c('age', 'race', 'gender', 'days_after_mdh', 'zha', 'i_g4salary_scaled',  'i_d9educatpar', 'currentnoflorag')
+
+all_vars <- c(response_vars, covariates)
+all_vars_b <- c(response_vars_b, covariates)
+
+distance_vars <- c('dist_house_plant_log', 'ha_150m_log', 'ha_200m_log', 'ha_300m_log', 'ha_500m_log')
+
+# filter NA values out
+
+df3_long <- df2_long[rowSums(is.na(df2_long[covariates])) == 0, ]
+
+df4_long <- df3_long[rowSums(is.na(df3_long[distance_vars])) == 0, ]
+
+# table(df4_long$Index)
+
+df_a <- df4_long %>% filter(Index == 1) %>%
+  filter(! is.na(dist_house_plant))
+
+df_b <- df4_long %>% filter(Index == 2) %>%
+  filter(! is.na(dist_house_plant))
+
+df_c <- df4_long %>% filter(Index == 3) %>%
+  filter(! is.na(dist_house_plant))
+
+```
+
+```{r}
+make_table_time <- function(df_a, all_vars){
+  
+  
+
+  categorical_vars <- c('race', 'gender', 'currentnoflorag')
+  
+  a_results_2 <- data.frame()
+  
+  total_n <- c()
+  p_values <- c()
+  
+  # create quantiles
+  
+  distance <- df_a$dist_house_plant_log
+  
+  df_a$dist_levels <-  cut(distance,
+                           breaks = quantile(distance, probs = seq(0, 1, 0.25), na.rm = T),
+                           include.lowest = TRUE,
+                           labels = c("Q1", "Q2", "Q3", "Q4"))
+   
+  for(i in all_vars){ # for each variable
+    
+    temp_df2 <- df_a %>% filter(! is.na(!!as.name(i))) # remove NA's
+    temp_n <- nrow(temp_df2)
+    total_n <- append(total_n, temp_n)
+    
+    
+    a_results <- data.frame()
+    temp_df <- df_a %>% filter(dist_levels == j)
+  
+    for(i in all_vars){
+      temp_df2 <- temp_df %>% filter(! is.na(!!as.name(i)))
+      temp_n <- nrow(temp_df2)
+      temp_vec <- dplyr::pull(temp_df2, i)
+      if(i %in% categorical_vars){
+    
+        
+        if(i == 'race'){
+          temp_count <- sum(temp_vec == 1)
+          temp_prop <- round(mean(temp_vec == 1), 2)
+        }
+        if(i == 'gender'){
+          temp_prop <- round(mean(temp_vec == 0), 2)
+          temp_count <- sum(temp_vec == 0)
+        }
+        if(i == 'currentnoflorag'){
+          temp_prop <- round(mean(temp_vec == 0), 2)
+          temp_count <- sum(temp_vec == 0)
+        }
+        
+        temp_result <- paste(as.character(temp_prop), as.character(temp_count), sep = ' (')
+        temp_result <- paste(temp_result, ')', sep = '')
+        
+  
+        
+      } else{
+        temp_mean <- round(mean(temp_vec), 2)
+        temp_sd <- round(sd(temp_vec), 2)
+        temp_result <- paste(as.character(temp_mean), as.character(temp_sd), sep = ' (')
+        temp_result <- paste(temp_result, ')', sep = '')
+      }
+      
+      a_results <- rbind(a_results, c(temp_n, temp_result)) 
+      
+    }
+    if(j == 1){
+      a_results_2 <- a_results
+    } else{
+      a_results_2 <- cbind(a_results_2, a_results)
+    }
+      
+  
+    a_results_2 <- cbind(total_n, a_results_2)
+    a_results_2 <- cbind(a_results_2, p_values)
+    
+    colnames(a_results_2) <- c('total_n', '1q_n', '1q_value', '2q_n', '2q_value', '3q_n' ,'3q_value', '4q_n', '4q_value', 'p-values')
+    rownames(a_results_2) <- all_vars
+    
+    a_results_2
+  }
+}
+
+final_table_a <- make_table_time(df_a, all_vars)
+final_table_b <- make_table_time(df_b, all_vars_b)
+final_table_c <- make_table_time(df_c, all_vars)
+
+name <- c('Figures/Final/5a_table_1a.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(final_table_a, file = data_dir)
+
+name <- c('Figures/Final/5a_table_1b.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(final_table_b, file = data_dir)
+
+name <- c('Figures/Final/5a_table_1c.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(final_table_c, file = data_dir)
+```

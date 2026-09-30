@@ -1,0 +1,1740 @@
+[1] "c_masc2_tot_t ~ c_dist_house_plant + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)         53.2048687542 4.4849616746 11.8629484 1.068510e-28 44.4145054000
+c_dist_house_plant   0.0001878282 0.0005595095  0.3357015 7.372402e-01 -0.0009087902
+c_gendermale        -1.8581945707 0.8658090217 -2.1461945 3.234991e-02 -3.5551490706
+c_racemestizo       -0.4940661706 1.1216334321 -0.4404881 6.597787e-01 -2.6924273014
+c_age                0.1394510110 0.3332833098  0.4184158 6.758272e-01 -0.5137722728
+c_zha               -0.1120528657 0.5165585341 -0.2169219 8.283599e-01 -1.1244889885
+c_i_d9educatyrspar  -0.3411135478 0.1402113347 -2.4328529 1.533864e-02 -0.6159227141
+c_i_g4salary_scaled  0.6409646449 0.5272509791  1.2156727 2.246974e-01 -0.3924282850
+c_tanner             1.0640155167 0.6119077426  1.7388496 8.269186e-02 -0.1353016206
+c_awakeningresponse  0.6135859785 0.4390141518  1.3976451 1.628547e-01 -0.2468659478
+c_currentnoflorag    0.4570196182 0.9718964142  0.4702349 6.383973e-01 -1.4478623502
+                        CI_upper
+(Intercept)         61.995232108
+c_dist_house_plant   0.001284447
+c_gendermale        -0.161240071
+c_racemestizo        1.704294960
+c_age                0.792674295
+c_zha                0.900383257
+c_i_d9educatyrspar  -0.066304381
+c_i_g4salary_scaled  1.674357575
+c_tanner             2.263332654
+c_awakeningresponse  1.474037905
+c_currentnoflorag    2.361901587
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_dist_house_plant + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..     CI_lower
+(Intercept)         56.1234368863 4.4175235842 12.7047283 3.996135e-32 47.465249760
+c_dist_house_plant  -0.0004075563 0.0005382081 -0.7572467 4.492698e-01 -0.001462425
+c_gendermale        -0.9905897166 0.8496178975 -1.1659238 2.442183e-01 -2.655810196
+c_racemestizo       -1.6564802355 1.0962257968 -1.5110758 1.314204e-01 -3.805043316
+c_age                0.2441303417 0.3226185138  0.7567152 4.495879e-01 -0.388190326
+c_zha                0.1233084977 0.5060077728  0.2436889 8.075748e-01 -0.868448513
+c_i_d9educatyrspar  -0.2667738836 0.1362986466 -1.9572746 5.088835e-02 -0.533914322
+c_i_g4salary_scaled -0.4174622582 0.5155604228 -0.8097252 4.184952e-01 -1.427942119
+c_tanner            -0.2741040354 0.5925622873 -0.4625742 6.438771e-01 -1.435504777
+c_awakeningresponse  0.2104703163 0.4286854086  0.4909668 6.236720e-01 -0.629737645
+c_currentnoflorag    0.8098598318 0.9495702233  0.8528699 3.941525e-01 -1.051263607
+                        CI_upper
+(Intercept)         6.478162e+01
+c_dist_house_plant  6.473122e-04
+c_gendermale        6.746308e-01
+c_racemestizo       4.920828e-01
+c_age               8.764510e-01
+c_zha               1.115066e+00
+c_i_d9educatyrspar  3.665548e-04
+c_i_g4salary_scaled 5.930176e-01
+c_tanner            8.872967e-01
+c_awakeningresponse 1.050678e+00
+c_currentnoflorag   2.670983e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_dist_house_plant_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)            51.0537200  4.8239561 10.5833715 1.052797e-23 41.5989397
+c_dist_house_plant_log  0.4160265  0.3352847  1.2408156 2.152700e-01 -0.2411194
+c_gendermale           -1.9700120  0.8695756 -2.2654867 2.392027e-02 -3.6743490
+c_racemestizo          -0.2680897  1.1240449 -0.2385045 8.115900e-01 -2.4711773
+c_age                   0.1209292  0.3330818  0.3630616 7.167160e-01 -0.5318992
+c_zha                  -0.1143494  0.5158058 -0.2216908 8.246474e-01 -1.1253103
+c_i_d9educatyrspar     -0.3471215  0.1400600 -2.4783766 1.353525e-02 -0.6216341
+c_i_g4salary_scaled     0.6812888  0.5275290  1.2914717 1.971515e-01 -0.3526490
+c_tanner                1.0373513  0.6114230  1.6966182 9.040656e-02 -0.1610157
+c_awakeningresponse     0.6395647  0.4382892  1.4592298 1.451452e-01 -0.2194664
+c_currentnoflorag       0.4959527  0.9710261  0.5107511 6.097563e-01 -1.4072234
+                          CI_upper
+(Intercept)            60.50850030
+c_dist_house_plant_log  1.07317238
+c_gendermale           -0.26567509
+c_racemestizo           1.93499786
+c_age                   0.77375763
+c_zha                   0.89661147
+c_i_d9educatyrspar     -0.07260889
+c_i_g4salary_scaled     1.71522656
+c_tanner                2.23571828
+c_awakeningresponse     1.49859580
+c_currentnoflorag       2.39912876
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_dist_house_plant_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                         Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)            56.9819478  4.7544605 11.9849450 3.601771e-29 47.6633764
+c_dist_house_plant_log -0.2065171  0.3271898 -0.6311844 5.282173e-01 -0.8477972
+c_gendermale           -0.9557996  0.8548319 -1.1181142 2.640718e-01 -2.6312394
+c_racemestizo          -1.6350222  1.0987339 -1.4880966 1.373753e-01 -3.7885010
+c_age                   0.2480372  0.3228877  0.7681841 4.427517e-01 -0.3848111
+c_zha                   0.1255755  0.5060776  0.2481348 8.041351e-01 -0.8663184
+c_i_d9educatyrspar     -0.2636990  0.1364443 -1.9326499 5.386123e-02 -0.5311249
+c_i_g4salary_scaled    -0.4348821  0.5164229 -0.8421046 4.001445e-01 -1.4470523
+c_tanner               -0.2637960  0.5932415 -0.4446687 6.567575e-01 -1.4265280
+c_awakeningresponse     0.2145803  0.4287317  0.5005002 6.169500e-01 -0.6257184
+c_currentnoflorag       0.8003151  0.9501915  0.8422671 4.000536e-01 -1.0620261
+                           CI_upper
+(Intercept)            66.300519136
+c_dist_house_plant_log  0.434763074
+c_gendermale            0.719640087
+c_racemestizo           0.518456655
+c_age                   0.880885510
+c_zha                   1.117469351
+c_i_d9educatyrspar      0.003726853
+c_i_g4salary_scaled     0.577288163
+c_tanner                0.898936071
+c_awakeningresponse     1.054878938
+c_currentnoflorag       2.662656174
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_50m + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate  Std..Error    t.value     Pr...t..     CI_lower
+(Intercept)         53.3712600655 4.474815612 11.9270300 5.893373e-29 44.600782628
+c_ha_50m            -0.0004272024 0.001068266 -0.3999026 6.894033e-01 -0.002520966
+c_gendermale        -1.8862442286 0.870664012 -2.1664433 3.076066e-02 -3.592714336
+c_racemestizo       -0.5244409776 1.104760038 -0.4747103 6.352058e-01 -2.689730863
+c_age                0.1407979647 0.333122438  0.4226613 6.727286e-01 -0.512110017
+c_zha               -0.1158935746 0.516602789 -0.2243379 8.225883e-01 -1.128416436
+c_i_d9educatyrspar  -0.3441528253 0.140318335 -2.4526576 1.452953e-02 -0.619171708
+c_i_g4salary_scaled  0.6516730924 0.528040533  1.2341346 2.177467e-01 -0.383267335
+c_tanner             1.0536874737 0.612631319  1.7199373 8.607784e-02 -0.147047847
+c_awakeningresponse  0.6146625402 0.438845838  1.4006343 1.619590e-01 -0.245459496
+c_currentnoflorag    0.4520870417 0.971809933  0.4652011 6.419950e-01 -1.452625426
+                        CI_upper
+(Intercept)         62.141737503
+c_ha_50m             0.001666561
+c_gendermale        -0.179774122
+c_racemestizo        1.640848908
+c_age                0.793705946
+c_zha                0.896629286
+c_i_d9educatyrspar  -0.069133943
+c_i_g4salary_scaled  1.686613520
+c_tanner             2.254422795
+c_awakeningresponse  1.474784577
+c_currentnoflorag    2.356799510
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_50m + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                        Estimate  Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)         55.673940760 4.402685577 12.6454501 7.051087e-32 47.0448355930
+c_ha_50m             0.001156396 0.001041707  1.1100970 2.675073e-01 -0.0008853125
+c_gendermale        -0.913303071 0.853542840 -1.0700143 2.851451e-01 -2.5862162961
+c_racemestizo       -1.608826103 1.077788542 -1.4927103 1.361632e-01 -3.7212528285
+c_age                0.247885693 0.322431634  0.7688008 4.423858e-01 -0.3840686963
+c_zha                0.136602846 0.505699234  0.2701267 7.871777e-01 -0.8545494397
+c_i_d9educatyrspar  -0.260462155 0.136345699 -1.9103071 5.668313e-02 -0.5276948140
+c_i_g4salary_scaled -0.447970889 0.515961127 -0.8682260 3.857000e-01 -1.4592361147
+c_tanner            -0.246476397 0.592914995 -0.4157028 6.778114e-01 -1.4085684338
+c_awakeningresponse  0.202565099 0.428222747  0.4730368 6.363998e-01 -0.6367360624
+c_currentnoflorag    0.825825572 0.948823574  0.8703679 3.845300e-01 -1.0338344605
+                        CI_upper
+(Intercept)         64.303045927
+c_ha_50m             0.003198104
+c_gendermale         0.759610154
+c_racemestizo        0.503600622
+c_age                0.879840083
+c_zha                1.127755132
+c_i_d9educatyrspar   0.006770504
+c_i_g4salary_scaled  0.563294337
+c_tanner             0.915615640
+c_awakeningresponse  1.041866261
+c_currentnoflorag    2.685485605
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_100m + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)         53.7801166390 4.4750576001 12.0177485 2.530834e-29 45.0091649141
+c_ha_100m           -0.0003668318 0.0002518092 -1.4567847 1.458189e-01 -0.0008603688
+c_gendermale        -1.9756494690 0.8678980796 -2.2763611 2.325671e-02 -3.6766984472
+c_racemestizo       -0.3267313541 1.1094513979 -0.2944981 7.685025e-01 -2.5012161365
+c_age                0.1188331268 0.3328188377  0.3570505 7.212084e-01 -0.5334798084
+c_zha               -0.1405784835 0.5158578333 -0.2725140 7.853421e-01 -1.1516412578
+c_i_d9educatyrspar  -0.3527534122 0.1401134406 -2.5176272 1.213393e-02 -0.6273707095
+c_i_g4salary_scaled  0.6586681937 0.5263171415  1.2514664 2.113639e-01 -0.3728944480
+c_tanner             1.0320263152 0.6110684710  1.6888882 9.187966e-02 -0.1656458801
+c_awakeningresponse  0.6876510226 0.4408704292  1.5597576 1.194654e-01 -0.1764391404
+c_currentnoflorag    0.5274624422 0.9711722319  0.5431194 5.872956e-01 -1.3760001551
+                         CI_upper
+(Intercept)         62.5510683640
+c_ha_100m            0.0001267052
+c_gendermale        -0.2746004908
+c_racemestizo        1.8477534283
+c_age                0.7711460620
+c_zha                0.8704842909
+c_i_d9educatyrspar  -0.0781361149
+c_i_g4salary_scaled  1.6902308353
+c_tanner             2.2296985105
+c_awakeningresponse  1.5517411856
+c_currentnoflorag    2.4309250396
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_100m + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                         Estimate  Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.583625e+01 4.417788024 12.6389611 7.502708e-32 47.1775454236
+c_ha_100m            1.063952e-05 0.000246833  0.0431041 9.656363e-01 -0.0004731444
+c_gendermale        -1.015135e+00 0.854106120 -1.1885350 2.352043e-01 -2.6891522685
+c_racemestizo       -1.492847e+00 1.085831402 -1.3748424 1.698151e-01 -3.6210374856
+c_age                2.405776e-01 0.323197752  0.7443664 4.570153e-01 -0.3928784019
+c_zha                1.283511e-01 0.506605351  0.2533552 8.001011e-01 -0.8645771673
+c_i_d9educatyrspar  -2.670476e-01 0.136567878 -1.9554205 5.110730e-02 -0.5347157432
+c_i_g4salary_scaled -4.175405e-01 0.515968911 -0.8092357 4.187764e-01 -1.4288209656
+c_tanner            -2.802958e-01 0.593294284 -0.4724397 6.368255e-01 -1.4431311897
+c_awakeningresponse  2.310096e-01 0.431773720  0.5350248 5.928779e-01 -0.6152513133
+c_currentnoflorag    8.191597e-01 0.950938143  0.8614227 3.894310e-01 -1.0446448052
+                        CI_upper
+(Intercept)         6.449496e+01
+c_ha_100m           4.944234e-04
+c_gendermale        6.588822e-01
+c_racemestizo       6.353434e-01
+c_age               8.740335e-01
+c_zha               1.121279e+00
+c_i_d9educatyrspar  6.204997e-04
+c_i_g4salary_scaled 5.937400e-01
+c_tanner            8.825397e-01
+c_awakeningresponse 1.077271e+00
+c_currentnoflorag   2.682964e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_150m + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)         53.8041656984 4.4795264134 12.0111281 2.692176e-29 45.0244552604
+c_ha_150m           -0.0001267568 0.0000935534 -1.3549136 1.760720e-01 -0.0003101181
+c_gendermale        -1.9722278565 0.8685768836 -2.2706428 2.360362e-02 -3.6746072662
+c_racemestizo       -0.3458144710 1.1095330250 -0.3116757 7.554201e-01 -2.5204592397
+c_age                0.1202796038 0.3329261251  0.3612802 7.180464e-01 -0.5322436108
+c_zha               -0.1333540281 0.5158778872 -0.2584992 7.961306e-01 -1.1444561074
+c_i_d9educatyrspar  -0.3520840475 0.1401582369 -2.5120468 1.232495e-02 -0.6267891439
+c_i_g4salary_scaled  0.6497710015 0.5263634935  1.2344530 2.176282e-01 -0.3818824886
+c_tanner             1.0425657421 0.6110462113  1.7061979 8.860749e-02 -0.1550628250
+c_awakeningresponse  0.6801924727 0.4408471183  1.5429214 1.234980e-01 -0.1838520019
+c_currentnoflorag    0.5186605422 0.9713188687  0.5339756 5.936016e-01 -1.3850894581
+                         CI_upper
+(Intercept)          6.258388e+01
+c_ha_150m            5.660452e-05
+c_gendermale        -2.698484e-01
+c_racemestizo        1.828830e+00
+c_age                7.728028e-01
+c_zha                8.777481e-01
+c_i_d9educatyrspar  -7.737895e-02
+c_i_g4salary_scaled  1.681424e+00
+c_tanner             2.240194e+00
+c_awakeningresponse  1.544237e+00
+c_currentnoflorag    2.422411e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_150m + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.613775e+01 4.4193596747 12.7026886 4.075073e-32 47.4759638746
+c_ha_150m           -6.884005e-05 0.0000915188 -0.7521957 4.522983e-01 -0.0002482136
+c_gendermale        -1.088867e+00 0.8538545660 -1.2752365 2.028360e-01 -2.7623907287
+c_racemestizo       -1.364719e+00 1.0848188353 -1.2580152 2.089916e-01 -3.4909244450
+c_age                2.269486e-01 0.3230273737  0.7025678 4.826622e-01 -0.4061733981
+c_zha                1.166497e-01 0.5061885013  0.2304472 8.178415e-01 -0.8754615131
+c_i_d9educatyrspar  -2.729231e-01 0.1364981112 -1.9994643 4.611550e-02 -0.5404544787
+c_i_g4salary_scaled -4.144142e-01 0.5155765273 -0.8037879 4.219133e-01 -1.4249255809
+c_tanner            -2.948931e-01 0.5927661564 -0.4974865 6.190715e-01 -1.4566934665
+c_awakeningresponse  2.760195e-01 0.4313257692  0.6399329 5.225184e-01 -0.5693634392
+c_currentnoflorag    8.523303e-01 0.9503797001  0.8968313 3.702539e-01 -1.0103797094
+                         CI_upper
+(Intercept)         64.7995354689
+c_ha_150m            0.0001105335
+c_gendermale         0.5846576662
+c_racemestizo        0.7614872490
+c_age                0.8600706389
+c_zha                1.1087609509
+c_i_d9educatyrspar  -0.0053917147
+c_i_g4salary_scaled  0.5960972686
+c_tanner             0.8669071692
+c_awakeningresponse  1.1214025072
+c_currentnoflorag    2.7150402583
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_200m + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.365346e+01 4.484622e+00 11.9638753 4.182587e-29 44.8637579814
+c_ha_200m           -4.158801e-05 4.526345e-05 -0.9187991 3.586546e-01 -0.0001303027
+c_gendermale        -1.922177e+00 8.683829e-01 -2.2135131 2.732404e-02 -3.6241762857
+c_racemestizo       -4.179627e-01 1.110586e+00 -0.3763444 7.068244e-01 -2.5946705934
+c_age                1.289509e-01 3.331971e-01  0.3870110 6.989167e-01 -0.5241032851
+c_zha               -1.209146e-01 5.162521e-01 -0.2342161 8.149154e-01 -1.1327501477
+c_i_d9educatyrspar  -3.479869e-01 1.402566e-01 -2.4810730 1.343458e-02 -0.6228847952
+c_i_g4salary_scaled  6.466145e-01 5.268974e-01  1.2272115 2.203348e-01 -0.3860854171
+c_tanner             1.046411e+00 6.117935e-01  1.7103982 8.782783e-02 -0.1526827007
+c_awakeningresponse  6.563049e-01 4.414056e-01  1.4868523 1.376996e-01 -0.2088341322
+c_currentnoflorag    4.676055e-01 9.712374e-01  0.4814533 6.304102e-01 -1.4359848912
+                         CI_upper
+(Intercept)          6.244315e+01
+c_ha_200m            4.712671e-05
+c_gendermale        -2.201778e-01
+c_racemestizo        1.758745e+00
+c_age                7.820052e-01
+c_zha                8.909210e-01
+c_i_d9educatyrspar  -7.308898e-02
+c_i_g4salary_scaled  1.679315e+00
+c_tanner             2.245504e+00
+c_awakeningresponse  1.521444e+00
+c_currentnoflorag    2.371196e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_200m + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.619510e+01 4.418884e+00 12.7170365 3.551106e-32 47.5342518526
+c_ha_200m           -3.927644e-05 4.422012e-05 -0.8882031 3.748718e-01 -0.0001259463
+c_gendermale        -1.091313e+00 8.524907e-01 -1.2801467 2.011055e-01 -2.7621642954
+c_racemestizo       -1.343062e+00 1.084536e+00 -1.2383752 2.161760e-01 -3.4687133775
+c_age                2.259842e-01 3.228752e-01  0.6999120 4.843179e-01 -0.4068395613
+c_zha                1.200128e-01 5.059358e-01  0.2372095 8.125944e-01 -0.8716030958
+c_i_d9educatyrspar  -2.735293e-01 1.364432e-01 -2.0047120 4.554916e-02 -0.5409530541
+c_i_g4salary_scaled -4.132647e-01 5.154638e-01 -0.8017336 4.230997e-01 -1.4235552636
+c_tanner            -3.019307e-01 5.928098e-01 -0.5093214 6.107586e-01 -1.4638165431
+c_awakeningresponse  2.841509e-01 4.312944e-01  0.6588327 5.103158e-01 -0.5611706067
+c_currentnoflorag    8.323709e-01 9.493333e-01  0.8767953 3.810319e-01 -1.0282880528
+                         CI_upper
+(Intercept)         64.8559575171
+c_ha_200m            0.0000473934
+c_gendermale         0.5795378850
+c_racemestizo        0.7825888195
+c_age                0.8588080123
+c_zha                1.1116286516
+c_i_d9educatyrspar  -0.0061055652
+c_i_g4salary_scaled  0.5970258720
+c_tanner             0.8599550781
+c_awakeningresponse  1.1294723147
+c_currentnoflorag    2.6930299510
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_300m + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.349857e+01 4.489260e+00 11.9170122 6.468609e-29  4.469978e+01
+c_ha_300m           -7.478238e-06 1.589312e-05 -0.4705330 6.381845e-01 -3.862818e-05
+c_gendermale        -1.879354e+00 8.677958e-01 -2.1656634 3.082060e-02 -3.580202e+00
+c_racemestizo       -5.067729e-01 1.106986e+00 -0.4577954 6.473032e-01 -2.676425e+00
+c_age                1.341730e-01 3.336156e-01  0.4021784 6.877288e-01 -5.197016e-01
+c_zha               -1.232787e-01 5.170097e-01 -0.2384456 8.116356e-01 -1.136599e+00
+c_i_d9educatyrspar  -3.441775e-01 1.402761e-01 -2.4535714 1.449312e-02 -6.191136e-01
+c_i_g4salary_scaled  6.424112e-01 5.272098e-01  1.2185113 2.236185e-01 -3.909011e-01
+c_tanner             1.061786e+00 6.118768e-01  1.7352933 8.332016e-02 -1.374708e-01
+c_awakeningresponse  6.343279e-01 4.428257e-01  1.4324549 1.526539e-01 -2.335946e-01
+c_currentnoflorag    4.526305e-01 9.717427e-01  0.4657925 6.415718e-01 -1.451950e+00
+                         CI_upper
+(Intercept)          6.229736e+01
+c_ha_300m            2.367171e-05
+c_gendermale        -1.785051e-01
+c_racemestizo        1.662879e+00
+c_age                7.880476e-01
+c_zha                8.900416e-01
+c_i_d9educatyrspar  -6.924133e-02
+c_i_g4salary_scaled  1.675723e+00
+c_tanner             2.261042e+00
+c_awakeningresponse  1.502250e+00
+c_currentnoflorag    2.357211e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_300m + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.624090e+01 4.416004e+00 12.7356986 2.968723e-32  4.758569e+01
+c_ha_300m           -1.633304e-05 1.552733e-05 -1.0518892 2.933742e-01 -4.676605e-05
+c_gendermale        -1.088943e+00 8.509201e-01 -1.2797235 2.012542e-01 -2.756715e+00
+c_racemestizo       -1.345176e+00 1.080515e+00 -1.2449389 2.137554e-01 -3.462947e+00
+c_age                2.229681e-01 3.227914e-01  0.6907498 4.900532e-01 -4.096915e-01
+c_zha                1.090196e-01 5.060062e-01  0.2154510 8.295063e-01 -8.827345e-01
+c_i_d9educatyrspar  -2.736820e-01 1.363543e-01 -2.0071391 4.528922e-02 -5.409314e-01
+c_i_g4salary_scaled -4.117546e-01 5.153024e-01 -0.7990542 4.246501e-01 -1.421729e+00
+c_tanner            -2.992423e-01 5.924067e-01 -0.5051299 6.136971e-01 -1.460338e+00
+c_awakeningresponse  3.006943e-01 4.321159e-01  0.6958648 4.868468e-01 -5.462373e-01
+c_currentnoflorag    8.200916e-01 9.489366e-01  0.8642217 3.878933e-01 -1.039790e+00
+                         CI_upper
+(Intercept)          6.489611e+01
+c_ha_300m            1.409998e-05
+c_gendermale         5.788303e-01
+c_racemestizo        7.725956e-01
+c_age                8.556277e-01
+c_zha                1.100774e+00
+c_i_d9educatyrspar  -6.432530e-03
+c_i_g4salary_scaled  5.982196e-01
+c_tanner             8.618535e-01
+c_awakeningresponse  1.147626e+00
+c_currentnoflorag    2.679973e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_500m + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.338701e+01 4.495266e+00 11.8762753 9.442742e-29  4.457645e+01
+c_ha_500m           -8.327078e-07 5.168801e-06 -0.1611027 8.720792e-01 -1.096337e-05
+c_gendermale        -1.858976e+00 8.684091e-01 -2.1406685 3.279569e-02 -3.561027e+00
+c_racemestizo       -5.501612e-01 1.105501e+00 -0.4976580 6.189493e-01 -2.716903e+00
+c_age                1.397253e-01 3.338890e-01  0.4184783 6.757815e-01 -5.146851e-01
+c_zha               -1.169104e-01 5.173363e-01 -0.2259852 8.213075e-01 -1.130871e+00
+c_i_d9educatyrspar  -3.432018e-01 1.404940e-01 -2.4428209 1.492656e-02 -6.185650e-01
+c_i_g4salary_scaled  6.421211e-01 5.274724e-01  1.2173548 2.240576e-01 -3.917058e-01
+c_tanner             1.066630e+00 6.119408e-01  1.7430273 8.195869e-02 -1.327524e-01
+c_awakeningresponse  6.127040e-01 4.418202e-01  1.3867723 1.661443e-01 -2.532477e-01
+c_currentnoflorag    4.490700e-01 9.723703e-01  0.4618302 6.444089e-01 -1.456741e+00
+                         CI_upper
+(Intercept)          6.219757e+01
+c_ha_500m            9.297956e-06
+c_gendermale        -1.569255e-01
+c_racemestizo        1.616580e+00
+c_age                7.941357e-01
+c_zha                8.970501e-01
+c_i_d9educatyrspar  -6.783852e-02
+c_i_g4salary_scaled  1.675948e+00
+c_tanner             2.266012e+00
+c_awakeningresponse  1.478656e+00
+c_currentnoflorag    2.354881e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_500m + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.590935e+01 4.423487e+00 12.6392035 7.485328e-32  4.723947e+01
+c_ha_500m           -7.435208e-07 5.063341e-06 -0.1468439 8.833162e-01 -1.066749e-05
+c_gendermale        -1.029506e+00 8.522547e-01 -1.2079793 2.276439e-01 -2.699895e+00
+c_racemestizo       -1.467701e+00 1.080462e+00 -1.3584013 1.749679e-01 -3.585366e+00
+c_age                2.373787e-01 3.231917e-01  0.7344826 4.630096e-01 -3.960654e-01
+c_zha                1.246996e-01 5.066395e-01  0.2461309 8.056851e-01 -8.682956e-01
+c_i_d9educatyrspar  -2.689220e-01 1.367887e-01 -1.9659658 4.987256e-02 -5.370230e-01
+c_i_g4salary_scaled -4.148958e-01 5.160701e-01 -0.8039524 4.218183e-01 -1.426375e+00
+c_tanner            -2.825090e-01 5.928800e-01 -0.4765027 6.339309e-01 -1.444532e+00
+c_awakeningresponse  2.417109e-01 4.314761e-01  0.5601954 5.756048e-01 -6.039667e-01
+c_currentnoflorag    8.177127e-01 9.502550e-01  0.8605192 3.899281e-01 -1.044753e+00
+                         CI_upper
+(Intercept)          6.457922e+01
+c_ha_500m            9.180445e-06
+c_gendermale         6.408825e-01
+c_racemestizo        6.499654e-01
+c_age                8.708227e-01
+c_zha                1.117695e+00
+c_i_d9educatyrspar  -8.209831e-04
+c_i_g4salary_scaled  5.965830e-01
+c_tanner             8.795145e-01
+c_awakeningresponse  1.087389e+00
+c_currentnoflorag    2.680178e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_1000m + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.281644e+01 4.473344e+00 11.8069250 1.795076e-28  4.404884e+01
+c_ha_1000m           1.843528e-06 1.172244e-06  1.5726480 1.164484e-01 -4.540290e-07
+c_gendermale        -1.760508e+00 8.648408e-01 -2.0356434 4.232584e-02 -3.455565e+00
+c_racemestizo       -7.371925e-01 1.101718e+00 -0.6691296 5.037292e-01 -2.896521e+00
+c_age                1.749245e-01 3.328756e-01  0.5254950 5.994778e-01 -4.774998e-01
+c_zha               -7.430964e-02 5.158836e-01 -0.1440434 8.855256e-01 -1.085423e+00
+c_i_d9educatyrspar  -3.396140e-01 1.398668e-01 -2.4281240 1.553763e-02 -6.137480e-01
+c_i_g4salary_scaled  5.845825e-01 5.271444e-01  1.1089608 2.679933e-01 -4.486016e-01
+c_tanner             1.057976e+00 6.104245e-01  1.7331810 8.369518e-02 -1.384339e-01
+c_awakeningresponse  5.175335e-01 4.402955e-01  1.1754232 2.403986e-01 -3.454298e-01
+c_currentnoflorag    5.040585e-01 9.700339e-01  0.5196298 6.035572e-01 -1.397173e+00
+                         CI_upper
+(Intercept)          6.158403e+01
+c_ha_1000m           4.141085e-06
+c_gendermale        -6.545069e-02
+c_racemestizo        1.422136e+00
+c_age                8.273487e-01
+c_zha                9.368036e-01
+c_i_d9educatyrspar  -6.548006e-02
+c_i_g4salary_scaled  1.617767e+00
+c_tanner             2.254386e+00
+c_awakeningresponse  1.380497e+00
+c_currentnoflorag    2.405290e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_1000m + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.541610e+01 4.401972e+00 12.5889268 1.210268e-31  4.678839e+01
+c_ha_1000m           1.839442e-06 1.143148e-06  1.6091020 1.082447e-01 -4.010874e-07
+c_gendermale        -9.386109e-01 8.485039e-01 -1.1061951 2.691905e-01 -2.601648e+00
+c_racemestizo       -1.654185e+00 1.075685e+00 -1.5377972 1.247503e-01 -3.762489e+00
+c_age                2.596484e-01 3.221366e-01  0.8060196 4.206266e-01 -3.717277e-01
+c_zha                1.557680e-01 5.052338e-01  0.3083087 7.579798e-01 -8.344720e-01
+c_i_d9educatyrspar  -2.613367e-01 1.360659e-01 -1.9206625 5.536026e-02 -5.280210e-01
+c_i_g4salary_scaled -4.722556e-01 5.156343e-01 -0.9158731 3.601886e-01 -1.482880e+00
+c_tanner            -2.669231e-01 5.913276e-01 -0.4513964 6.519056e-01 -1.425904e+00
+c_awakeningresponse  1.498306e-01 4.298766e-01  0.3485432 7.275836e-01 -6.927122e-01
+c_currentnoflorag    8.483417e-01 9.476451e-01  0.8952104 3.711187e-01 -1.009009e+00
+                        CI_upper
+(Intercept)         6.404380e+01
+c_ha_1000m          4.079972e-06
+c_gendermale        7.244263e-01
+c_racemestizo       4.541184e-01
+c_age               8.910245e-01
+c_zha               1.146008e+00
+c_i_d9educatyrspar  5.347595e-03
+c_i_g4salary_scaled 5.383691e-01
+c_tanner            8.920576e-01
+c_awakeningresponse 9.923733e-01
+c_currentnoflorag   2.705692e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_50m_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                      Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)         53.8261602  4.4927076 11.9807842 3.572906e-29 45.0206151
+c_ha_50m_log        -0.2570085  0.2368577 -1.0850757 2.784239e-01 -0.7212411
+c_gendermale        -1.9515301  0.8695778 -2.2442272 2.526522e-02 -3.6558712
+c_racemestizo       -0.4039954  1.1084569 -0.3644665 7.156676e-01 -2.5765309
+c_age                0.1214189  0.3333286  0.3642621 7.158201e-01 -0.5318930
+c_zha               -0.1193124  0.5160330 -0.2312107 8.172480e-01 -1.1307185
+c_i_d9educatyrspar  -0.3462293  0.1401057 -2.4712004 1.380642e-02 -0.6208315
+c_i_g4salary_scaled  0.6348303  0.5266874  1.2053266 2.286614e-01 -0.3974580
+c_tanner             1.0300051  0.6121141  1.6827011 9.307261e-02 -0.1697165
+c_awakeningresponse  0.6293368  0.4381333  1.4364047 1.515280e-01 -0.2293888
+c_currentnoflorag    0.4926940  0.9714526  0.5071725 6.122629e-01 -1.4113181
+                       CI_upper
+(Intercept)         62.63170527
+c_ha_50m_log         0.20722402
+c_gendermale        -0.24718899
+c_racemestizo        1.76854021
+c_age                0.77473090
+c_zha                0.89209381
+c_i_d9educatyrspar  -0.07162715
+c_i_g4salary_scaled  1.66711857
+c_tanner             2.22972667
+c_awakeningresponse  1.48806236
+c_currentnoflorag    2.39670610
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_50m_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                       Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)         55.71322159  4.4310697 12.5733119 1.404774e-31 47.0284846
+c_ha_50m_log         0.06641215  0.2320625  0.2861822 7.748608e-01 -0.3884220
+c_gendermale        -0.99109000  0.8548145 -1.1594212 2.468550e-01 -2.6664956
+c_racemestizo       -1.52877969  1.0838041 -1.4105683 1.590130e-01 -3.6529966
+c_age                0.24570119  0.3233790  0.7597933 4.477473e-01 -0.3881100
+c_zha                0.12926745  0.5062679  0.2553341 7.985733e-01 -0.8629995
+c_i_d9educatyrspar  -0.26618422  0.1364273 -1.9511073 5.161967e-02 -0.5335767
+c_i_g4salary_scaled -0.41539878  0.5158552 -0.8052623 4.210629e-01 -1.4264565
+c_tanner            -0.27189719  0.5936963 -0.4579735 6.471766e-01 -1.4355206
+c_awakeningresponse  0.22649906  0.4285219  0.5285589 5.973532e-01 -0.6133884
+c_currentnoflorag    0.81259515  0.9503879  0.8550142 3.929655e-01 -1.0501309
+                        CI_upper
+(Intercept)         64.397958612
+c_ha_50m_log         0.521246299
+c_gendermale         0.684315567
+c_racemestizo        0.595437246
+c_age                0.879512342
+c_zha                1.121534379
+c_i_d9educatyrspar   0.001208298
+c_i_g4salary_scaled  0.595658932
+c_tanner             0.891726252
+c_awakeningresponse  1.066386483
+c_currentnoflorag    2.675321245
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_100m_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                      Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)         53.8214854  4.4735949 12.0309250 2.237797e-29 45.0534004
+c_ha_100m_log       -0.2230638  0.1416217 -1.5750683 1.158887e-01 -0.5006373
+c_gendermale        -1.9685999  0.8665245 -2.2718340 2.353099e-02 -3.6669568
+c_racemestizo       -0.2347452  1.1168633 -0.2101826 8.336129e-01 -2.4237570
+c_age                0.1168994  0.3326955  0.3513706 7.254620e-01 -0.5351717
+c_zha               -0.1184704  0.5153225 -0.2298957 8.182692e-01 -1.1284840
+c_i_d9educatyrspar  -0.3491348  0.1399373 -2.4949370 1.292740e-02 -0.6234070
+c_i_g4salary_scaled  0.6803828  0.5265951  1.2920418 1.969542e-01 -0.3517245
+c_tanner             1.0107620  0.6114075  1.6531725 9.893890e-02 -0.1875746
+c_awakeningresponse  0.6467594  0.4377651  1.4774120 1.402103e-01 -0.2112444
+c_currentnoflorag    0.5909559  0.9734040  0.6071024 5.440653e-01 -1.3168809
+                       CI_upper
+(Intercept)         62.58957031
+c_ha_100m_log        0.05450958
+c_gendermale        -0.27024301
+c_racemestizo        1.95426658
+c_age                0.76897053
+c_zha                0.89154320
+c_i_d9educatyrspar  -0.07486270
+c_i_g4salary_scaled  1.71249016
+c_tanner             2.20909859
+c_awakeningresponse  1.50476322
+c_currentnoflorag    2.49879270
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_100m_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                      Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)         56.1071699  4.4147994 12.7088832 3.840018e-32 47.4543221
+c_ha_100m_log       -0.1091309  0.1393642 -0.7830630 4.339723e-01 -0.3822797
+c_gendermale        -1.0842374  0.8528259 -1.2713467 2.042147e-01 -2.7557454
+c_racemestizo       -1.3236235  1.0925658 -1.2114817 2.263008e-01 -3.4650132
+c_age                0.2273986  0.3229476  0.7041345 4.816869e-01 -0.4055672
+c_zha                0.1261699  0.5059590  0.2493679 8.031818e-01 -0.8654915
+c_i_d9educatyrspar  -0.2703110  0.1363430 -1.9825804 4.797813e-02 -0.5375383
+c_i_g4salary_scaled -0.4006791  0.5159650 -0.7765627 4.377954e-01 -1.4119519
+c_tanner            -0.3081118  0.5934502 -0.5191873 6.038670e-01 -1.4712529
+c_awakeningresponse  0.2562530  0.4285719  0.5979231 5.501703e-01 -0.5837324
+c_currentnoflorag    0.8758642  0.9520032  0.9200223 3.580185e-01 -0.9900278
+                        CI_upper
+(Intercept)         64.760017751
+c_ha_100m_log        0.164017856
+c_gendermale         0.587270667
+c_racemestizo        0.817766170
+c_age                0.860364341
+c_zha                1.117831349
+c_i_d9educatyrspar  -0.003083588
+c_i_g4salary_scaled  0.610593623
+c_tanner             0.855029262
+c_awakeningresponse  1.096238520
+c_currentnoflorag    2.741756125
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_150m_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                      Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)         53.8309466  4.4825263 12.0090643 2.744536e-29 45.0453565
+c_ha_150m_log       -0.1519024  0.1152512 -1.3180121 1.881179e-01 -0.3777905
+c_gendermale        -1.9520291  0.8674010 -2.2504343 2.486591e-02 -3.6521039
+c_racemestizo       -0.2720230  1.1202444 -0.2428247 8.082432e-01 -2.4676616
+c_age                0.1196696  0.3330091  0.3593583 7.194825e-01 -0.5330163
+c_zha               -0.1086693  0.5157077 -0.2107187 8.331947e-01 -1.1194377
+c_i_d9educatyrspar  -0.3519697  0.1401792 -2.5108545 1.236611e-02 -0.6267159
+c_i_g4salary_scaled  0.6776906  0.5271473  1.2855811 1.991990e-01 -0.3554991
+c_tanner             1.0408212  0.6111618  1.7030209 8.920089e-02 -0.1570338
+c_awakeningresponse  0.6301678  0.4377015  1.4397205 1.505876e-01 -0.2277113
+c_currentnoflorag    0.5514613  0.9730624  0.5667276 5.711598e-01 -1.3557059
+                       CI_upper
+(Intercept)         62.61653673
+c_ha_150m_log        0.07398570
+c_gendermale        -0.25195429
+c_racemestizo        1.92361558
+c_age                0.77235550
+c_zha                0.90209919
+c_i_d9educatyrspar  -0.07722341
+c_i_g4salary_scaled  1.71088021
+c_tanner             2.23867625
+c_awakeningresponse  1.48804701
+c_currentnoflorag    2.45862850
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_150m_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                      Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)         56.3277231  4.4174699 12.7511277 2.559831e-32 47.6696411
+c_ha_150m_log       -0.1333355  0.1126129 -1.1840156 2.369868e-01 -0.3540528
+c_gendermale        -1.1140313  0.8518500 -1.3077788 1.915679e-01 -2.7836265
+c_racemestizo       -1.2348423  1.0926423 -1.1301432 2.589745e-01 -3.3763818
+c_age                0.2208691  0.3226927  0.6844562 4.940141e-01 -0.4115971
+c_zha                0.1311843  0.5055548  0.2594858 7.953706e-01 -0.8596848
+c_i_d9educatyrspar  -0.2754506  0.1363517 -2.0201478 4.391730e-02 -0.5426950
+c_i_g4salary_scaled -0.3928646  0.5155272 -0.7620639 4.463923e-01 -1.4032793
+c_tanner            -0.3061304  0.5923525 -0.5168044 6.055283e-01 -1.4671200
+c_awakeningresponse  0.2590869  0.4277856  0.6056465 5.450328e-01 -0.5793575
+c_currentnoflorag    0.8976307  0.9508553  0.9440245 3.456271e-01 -0.9660115
+                        CI_upper
+(Intercept)         64.985805031
+c_ha_150m_log        0.087381820
+c_gendermale         0.555563930
+c_racemestizo        0.906697261
+c_age                0.853335198
+c_zha                1.122053394
+c_i_d9educatyrspar  -0.008206161
+c_i_g4salary_scaled  0.617550066
+c_tanner             0.854859282
+c_awakeningresponse  1.097531315
+c_currentnoflorag    2.761272964
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_200m_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                       Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)         53.84854982  4.4818606 12.0147758 2.602054e-29 45.0642645
+c_ha_200m_log       -0.14151813  0.1035872 -1.3661734 1.725138e-01 -0.3445454
+c_gendermale        -1.95292171  0.8670923 -2.2522650 2.474919e-02 -3.6523915
+c_racemestizo       -0.31345635  1.1130337 -0.2816234 7.783517e-01 -2.4949624
+c_age                0.12681552  0.3326995  0.3811713 7.032420e-01 -0.5252636
+c_zha               -0.09995582  0.5157129 -0.1938207 8.463970e-01 -1.1107346
+c_i_d9educatyrspar  -0.34758116  0.1400115 -2.4825184 1.338089e-02 -0.6219987
+c_i_g4salary_scaled  0.67146268  0.5268040  1.2745967 2.030586e-01 -0.3610543
+c_tanner             1.03769264  0.6111339  1.6979791 9.014921e-02 -0.1601079
+c_awakeningresponse  0.63962146  0.4379760  1.4604030 1.448228e-01 -0.2187957
+c_currentnoflorag    0.51553360  0.9711599  0.5308432 5.957690e-01 -1.3879049
+                       CI_upper
+(Intercept)         62.63283510
+c_ha_200m_log        0.06150913
+c_gendermale        -0.25345193
+c_racemestizo        1.86804968
+c_age                0.77889464
+c_zha                0.91082298
+c_i_d9educatyrspar  -0.07316364
+c_i_g4salary_scaled  1.70397963
+c_tanner             2.23549315
+c_awakeningresponse  1.49803864
+c_currentnoflorag    2.41897207
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_200m_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                      Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)         56.2735810  4.4155696 12.7443538 2.731941e-32 47.6192237
+c_ha_200m_log       -0.1141173  0.1011240 -1.1284889 2.596714e-01 -0.3123166
+c_gendermale        -1.1070108  0.8517503 -1.2996893 1.943249e-01 -2.7764108
+c_racemestizo       -1.2935834  1.0854763 -1.1917197 2.339540e-01 -3.4210778
+c_age                0.2320606  0.3224107  0.7197671 4.720151e-01 -0.3998527
+c_zha                0.1401244  0.5057348  0.2770709 7.818437e-01 -0.8510976
+c_i_d9educatyrspar  -0.2726522  0.1362791 -2.0006902 4.598267e-02 -0.5397542
+c_i_g4salary_scaled -0.3980518  0.5154651 -0.7722187 4.403610e-01 -1.4083449
+c_tanner            -0.3124230  0.5927013 -0.5271171 5.983533e-01 -1.4740963
+c_awakeningresponse  0.2634420  0.4281187  0.6153481 5.386135e-01 -0.5756552
+c_currentnoflorag    0.8715550  0.9498319  0.9175887 3.592903e-01 -0.9900813
+                        CI_upper
+(Intercept)         64.927938309
+c_ha_200m_log        0.084082076
+c_gendermale         0.562389144
+c_racemestizo        0.833910932
+c_age                0.863973947
+c_zha                1.131346317
+c_i_d9educatyrspar  -0.005550128
+c_i_g4salary_scaled  0.612241296
+c_tanner             0.849250248
+c_awakeningresponse  1.102539267
+c_currentnoflorag    2.733191181
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_300m_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                       Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)         53.76612093 4.50172899 11.9434380 5.059150e-29 44.9428942
+c_ha_300m_log       -0.07794105 0.09213271 -0.8459650 3.979869e-01 -0.2585178
+c_gendermale        -1.90218472 0.86709134 -2.1937536 2.872400e-02 -3.6016525
+c_racemestizo       -0.45857187 1.10622422 -0.4145379 6.786624e-01 -2.6267315
+c_age                0.12631992 0.33348148  0.3787914 7.050075e-01 -0.5272918
+c_zha               -0.11180927 0.51623885 -0.2165844 8.286228e-01 -1.1236188
+c_i_d9educatyrspar  -0.34670309 0.14023300 -2.4723360 1.376319e-02 -0.6215547
+c_i_g4salary_scaled  0.66386686 0.52767840  1.2580899 2.089609e-01 -0.3703638
+c_tanner             1.06686250 0.61150002  1.7446647 8.167278e-02 -0.1316555
+c_awakeningresponse  0.62987714 0.43880648  1.4354326 1.518045e-01 -0.2301678
+c_currentnoflorag    0.48561217 0.97197774  0.4996124 6.175732e-01 -1.4194292
+                       CI_upper
+(Intercept)         62.58934762
+c_ha_300m_log        0.10263574
+c_gendermale        -0.20271692
+c_racemestizo        1.70958777
+c_age                0.77993160
+c_zha                0.90000029
+c_i_d9educatyrspar  -0.07185146
+c_i_g4salary_scaled  1.69809752
+c_tanner             2.26538053
+c_awakeningresponse  1.48992205
+c_currentnoflorag    2.39065353
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_300m_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                      Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)         56.2901266 4.42572297 12.7188545 3.489695e-32 47.6158689
+c_ha_300m_log       -0.0854240 0.09017123 -0.9473532 3.439306e-01 -0.2621564
+c_gendermale        -1.0812695 0.85104248 -1.2705236 2.045073e-01 -2.7492821
+c_racemestizo       -1.3648832 1.08001233 -1.2637663 2.069210e-01 -3.4816685
+c_age                0.2301076 0.32262546  0.7132344 4.760437e-01 -0.4022267
+c_zha                0.1360470 0.50588713  0.2689275 7.880998e-01 -0.8554736
+c_i_d9educatyrspar  -0.2742756 0.13644647 -2.0101333 4.497028e-02 -0.5417058
+c_i_g4salary_scaled -0.3944266 0.51594325 -0.7644767 4.449550e-01 -1.4056568
+c_tanner            -0.2932629 0.59242300 -0.4950228 6.208082e-01 -1.4543906
+c_awakeningresponse  0.2628772 0.42858409  0.6133621 5.399245e-01 -0.5771322
+c_currentnoflorag    0.8599642 0.95003270  0.9051943 3.658119e-01 -1.0020657
+                       CI_upper
+(Intercept)         64.96438420
+c_ha_300m_log        0.09130836
+c_gendermale         0.58674309
+c_racemestizo        0.75190203
+c_age                0.86244188
+c_zha                1.12756753
+c_i_d9educatyrspar  -0.00684542
+c_i_g4salary_scaled  0.61680360
+c_tanner             0.86786488
+c_awakeningresponse  1.10288660
+c_currentnoflorag    2.72199408
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_500m_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                      Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)         52.9455374 4.55169392 11.6320513 8.986981e-28 44.0243813
+c_ha_500m_log        0.0378378 0.08648137  0.4375254 6.619239e-01 -0.1316626
+c_gendermale        -1.8069953 0.86993401 -2.0771636 3.830897e-02 -3.5120346
+c_racemestizo       -0.5963019 1.10084120 -0.5416784 5.882873e-01 -2.7539110
+c_age                0.1551400 0.33412463  0.4643177 6.426272e-01 -0.4997323
+c_zha               -0.1150756 0.51654957 -0.2227775 8.238019e-01 -1.1274942
+c_i_d9educatyrspar  -0.3373552 0.14054837 -2.4002782 1.675619e-02 -0.6128249
+c_i_g4salary_scaled  0.6235974 0.52850921  1.1799178 2.386078e-01 -0.4122616
+c_tanner             1.0632919 0.61186069  1.7378006 8.287678e-02 -0.1359330
+c_awakeningresponse  0.5924808 0.43862523  1.3507676 1.773959e-01 -0.2672089
+c_currentnoflorag    0.4581947 0.97182240  0.4714798 6.375088e-01 -1.4465423
+                       CI_upper
+(Intercept)         61.86669356
+c_ha_500m_log        0.20733817
+c_gendermale        -0.10195595
+c_racemestizo        1.56130721
+c_age                0.81001224
+c_zha                0.89734295
+c_i_d9educatyrspar  -0.06188545
+c_i_g4salary_scaled  1.65945643
+c_tanner             2.26251682
+c_awakeningresponse  1.45217041
+c_currentnoflorag    2.36293156
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_500m_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                      Estimate Std..Error    t.value     Pr...t..    CI_lower
+(Intercept)         54.7986957 4.47049884 12.2578481 2.796137e-30 46.03667901
+c_ha_500m_log        0.1107000 0.08459836  1.3085359 1.913113e-01 -0.05510975
+c_gendermale        -0.8959568 0.85299526 -1.0503655 2.940732e-01 -2.56779680
+c_racemestizo       -1.5687946 1.07342206 -1.4614890 1.445289e-01 -3.67266313
+c_age                0.2677733 0.32289723  0.8292834 4.073520e-01 -0.36509365
+c_zha                0.1128198 0.50550985  0.2231803 8.234892e-01 -0.87796127
+c_i_d9educatyrspar  -0.2514164 0.13668100 -1.8394393 6.646162e-02 -0.51930623
+c_i_g4salary_scaled -0.4619197 0.51609494 -0.8950286 3.712158e-01 -1.47344721
+c_tanner            -0.2836487 0.59179519 -0.4793022 6.319397e-01 -1.44354600
+c_awakeningresponse  0.1997046 0.42788434  0.4667257 6.409057e-01 -0.63893326
+c_currentnoflorag    0.8286473 0.94836371  0.8737653 3.826785e-01 -1.03011146
+                       CI_upper
+(Intercept)         63.56071246
+c_ha_500m_log        0.27650974
+c_gendermale         0.77588318
+c_racemestizo        0.53507401
+c_age                0.90064024
+c_zha                1.10360092
+c_i_d9educatyrspar   0.01647343
+c_i_g4salary_scaled  0.54960777
+c_tanner             0.87624852
+c_awakeningresponse  1.03834253
+c_currentnoflorag    2.68740598
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_1000m_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                        Estimate Std..Error     t.value     Pr...t..   CI_lower
+(Intercept)         53.366501804  4.5402998 11.75395992 2.927895e-28 44.4676777
+c_ha_1000m_log      -0.006878763  0.1046250 -0.06574682 9.476063e-01 -0.2119400
+c_gendermale        -1.848387781  0.8655070 -2.13561285 3.320815e-02 -3.5447502
+c_racemestizo       -0.557590312  1.1130259 -0.50096796 6.166196e-01 -2.7390810
+c_age                0.142985122  0.3331745  0.42915981 6.679963e-01 -0.5100250
+c_zha               -0.113696800  0.5169489 -0.21993816 8.260113e-01 -1.1268981
+c_i_d9educatyrspar  -0.341191283  0.1404841 -2.42868309 1.551398e-02 -0.6165350
+c_i_g4salary_scaled  0.642210393  0.5284965  1.21516485 2.248908e-01 -0.3936238
+c_tanner             1.064784577  0.6122610  1.73910232 8.264735e-02 -0.1352250
+c_awakeningresponse  0.606226629  0.4401729  1.37724650 1.690674e-01 -0.2564965
+c_currentnoflorag    0.456353727  0.9727557  0.46913500 6.391827e-01 -1.4502123
+                       CI_upper
+(Intercept)         62.26532588
+c_ha_1000m_log       0.19818252
+c_gendermale        -0.15202532
+c_racemestizo        1.62390036
+c_age                0.79599522
+c_zha                0.89950450
+c_i_d9educatyrspar  -0.06584757
+c_i_g4salary_scaled  1.67804454
+c_tanner             2.26479415
+c_awakeningresponse  1.46894972
+c_currentnoflorag    2.36291977
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_1000m_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                      Estimate Std..Error    t.value     Pr...t..    CI_lower
+(Intercept)         54.4377088  4.4446929 12.2477997 3.073669e-30 45.72627077
+c_ha_1000m_log       0.2018308  0.1014933  1.9886125 4.730551e-02  0.00290763
+c_gendermale        -0.9876912  0.8459939 -1.1674921 2.435853e-01 -2.64580865
+c_racemestizo       -1.8166644  1.0819561 -1.6790556 9.378529e-02 -3.93725944
+c_age                0.2375290  0.3214539  0.7389207 4.603126e-01 -0.39250916
+c_zha                0.1445095  0.5042961  0.2865568 7.745740e-01 -0.84389276
+c_i_d9educatyrspar  -0.2773345  0.1359170 -2.0404697 4.184461e-02 -0.54372690
+c_i_g4salary_scaled -0.4850626  0.5149102 -0.9420332 3.466446e-01 -1.49426805
+c_tanner            -0.2261056  0.5910860 -0.3825257 7.022391e-01 -1.38461283
+c_awakeningresponse  0.1469774  0.4283392  0.3431331 7.316470e-01 -0.69255213
+c_currentnoflorag    0.7232871  0.9474426  0.7634099 4.455902e-01 -1.13366629
+                       CI_upper
+(Intercept)         63.14914685
+c_ha_1000m_log       0.40075396
+c_gendermale         0.67042630
+c_racemestizo        0.30393057
+c_age                0.86756709
+c_zha                1.13291178
+c_i_d9educatyrspar  -0.01094209
+c_i_g4salary_scaled  0.52414294
+c_tanner             0.93240170
+c_awakeningresponse  0.98650686
+c_currentnoflorag    2.58024040
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_50m_scaled + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate  Std..Error    t.value     Pr...t..     CI_lower
+(Intercept)         53.3712600655 4.474815612 11.9270300 5.893373e-29 44.600782628
+c_ha_50m_scaled     -0.0004272024 0.001068266 -0.3999026 6.894033e-01 -0.002520966
+c_gendermale        -1.8862442286 0.870664012 -2.1664433 3.076066e-02 -3.592714336
+c_racemestizo       -0.5244409776 1.104760038 -0.4747103 6.352058e-01 -2.689730863
+c_age                0.1407979647 0.333122438  0.4226613 6.727286e-01 -0.512110017
+c_zha               -0.1158935746 0.516602789 -0.2243379 8.225883e-01 -1.128416436
+c_i_d9educatyrspar  -0.3441528253 0.140318335 -2.4526576 1.452953e-02 -0.619171708
+c_i_g4salary_scaled  0.6516730924 0.528040533  1.2341346 2.177467e-01 -0.383267335
+c_tanner             1.0536874737 0.612631319  1.7199373 8.607784e-02 -0.147047847
+c_awakeningresponse  0.6146625402 0.438845838  1.4006343 1.619590e-01 -0.245459496
+c_currentnoflorag    0.4520870417 0.971809933  0.4652011 6.419950e-01 -1.452625426
+                        CI_upper
+(Intercept)         62.141737503
+c_ha_50m_scaled      0.001666561
+c_gendermale        -0.179774122
+c_racemestizo        1.640848908
+c_age                0.793705946
+c_zha                0.896629286
+c_i_d9educatyrspar  -0.069133943
+c_i_g4salary_scaled  1.686613520
+c_tanner             2.254422795
+c_awakeningresponse  1.474784577
+c_currentnoflorag    2.356799510
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_50m_scaled + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                        Estimate  Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)         55.673940760 4.402685577 12.6454501 7.051087e-32 47.0448355930
+c_ha_50m_scaled      0.001156396 0.001041707  1.1100970 2.675073e-01 -0.0008853125
+c_gendermale        -0.913303071 0.853542840 -1.0700143 2.851451e-01 -2.5862162961
+c_racemestizo       -1.608826103 1.077788542 -1.4927103 1.361632e-01 -3.7212528285
+c_age                0.247885693 0.322431634  0.7688008 4.423858e-01 -0.3840686963
+c_zha                0.136602846 0.505699234  0.2701267 7.871777e-01 -0.8545494397
+c_i_d9educatyrspar  -0.260462155 0.136345699 -1.9103071 5.668313e-02 -0.5276948140
+c_i_g4salary_scaled -0.447970889 0.515961127 -0.8682260 3.857000e-01 -1.4592361147
+c_tanner            -0.246476397 0.592914995 -0.4157028 6.778114e-01 -1.4085684338
+c_awakeningresponse  0.202565099 0.428222747  0.4730368 6.363998e-01 -0.6367360624
+c_currentnoflorag    0.825825572 0.948823574  0.8703679 3.845300e-01 -1.0338344605
+                        CI_upper
+(Intercept)         64.303045927
+c_ha_50m_scaled      0.003198104
+c_gendermale         0.759610154
+c_racemestizo        0.503600622
+c_age                0.879840083
+c_zha                1.127755132
+c_i_d9educatyrspar   0.006770504
+c_i_g4salary_scaled  0.563294337
+c_tanner             0.915615640
+c_awakeningresponse  1.041866261
+c_currentnoflorag    2.685485605
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_100m_scaled + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..     CI_lower
+(Intercept)         53.7027715570 4.4754044724 11.9995348 2.999755e-29 44.931139975
+c_ha_100m_scaled    -0.0002771779 0.0002121943 -1.3062458 1.920843e-01 -0.000693071
+c_gendermale        -1.9696486522 0.8688477370 -2.2669664 2.382902e-02 -3.672558925
+c_racemestizo       -0.3570100840 1.1093179819 -0.3218284 7.477205e-01 -2.531233376
+c_age                0.1231443752 0.3328938272  0.3699209 7.116019e-01 -0.529315537
+c_zha               -0.1359283489 0.5160283220 -0.2634126 7.923438e-01 -1.147325275
+c_i_d9educatyrspar  -0.3516174121 0.1401727426 -2.5084578 1.244922e-02 -0.626350939
+c_i_g4salary_scaled  0.6617307540 0.5266482895  1.2564946 2.095378e-01 -0.370480926
+c_tanner             1.0323092819 0.6114272775  1.6883599 9.198104e-02 -0.166066161
+c_awakeningresponse  0.6743846505 0.4406104077  1.5305690 1.265239e-01 -0.189195880
+c_currentnoflorag    0.5083637672 0.9711654078  0.5234574 6.008936e-01 -1.395085455
+                         CI_upper
+(Intercept)         62.4744031391
+c_ha_100m_scaled     0.0001387153
+c_gendermale        -0.2667383797
+c_racemestizo        1.8172132080
+c_age                0.7756042871
+c_zha                0.8754685772
+c_i_d9educatyrspar  -0.0768838850
+c_i_g4salary_scaled  1.6939424339
+c_tanner             2.2306847251
+c_awakeningresponse  1.5379651808
+c_currentnoflorag    2.4118129896
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_100m_scaled + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.577074e+01 4.4160024967 12.6292366 8.233997e-32 47.1155343571
+c_ha_100m_scaled     5.343941e-05 0.0002077853  0.2571857 7.971445e-01 -0.0003538122
+c_gendermale        -9.945381e-01 0.8545577622 -1.1638045 2.450755e-01 -2.6694405646
+c_racemestizo       -1.526902e+00 1.0851985103 -1.4070258 1.600602e-01 -3.6538522918
+c_age                2.438677e-01 0.3231151642  0.7547394 4.507717e-01 -0.3894263372
+c_zha                1.319424e-01 0.5065275012  0.2604841 7.946009e-01 -0.8608332944
+c_i_d9educatyrspar  -2.654765e-01 0.1365639978 -1.9439714 5.247683e-02 -0.5331370189
+c_i_g4salary_scaled -4.207725e-01 0.5160282001 -0.8154060 4.152402e-01 -1.4321691799
+c_tanner            -2.746396e-01 0.5933614919 -0.4628537 6.436768e-01 -1.4376067143
+c_awakeningresponse  2.195171e-01 0.4312739887  0.5089968 6.109860e-01 -0.6257644164
+c_currentnoflorag    8.121257e-01 0.9505747445  0.8543523 3.933316e-01 -1.0509665827
+                        CI_upper
+(Intercept)         6.442595e+01
+c_ha_100m_scaled    4.606911e-04
+c_gendermale        6.803643e-01
+c_racemestizo       6.000477e-01
+c_age               8.771618e-01
+c_zha               1.124718e+00
+c_i_d9educatyrspar  2.184016e-03
+c_i_g4salary_scaled 5.906242e-01
+c_tanner            8.883276e-01
+c_awakeningresponse 1.064799e+00
+c_currentnoflorag   2.675218e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_150m_scaled + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)         53.7853346350 4.478871e+00 12.0086801 2.754396e-29 45.0069078398
+c_ha_150m_scaled    -0.0001002974 7.477977e-05 -1.3412370 1.804674e-01 -0.0002468631
+c_gendermale        -1.9774807230 8.691394e-01 -2.2752170 2.332576e-02 -3.6809626205
+c_racemestizo       -0.3435757992 1.110076e+00 -0.3095065 7.570684e-01 -2.5192850352
+c_age                0.1208277345 3.329267e-01  0.3629260 7.168173e-01 -0.5316965620
+c_zha               -0.1340418068 5.159177e-01 -0.2598124 7.951181e-01 -1.1452219853
+c_i_d9educatyrspar  -0.3522733562 1.401756e-01 -2.5130869 1.228915e-02 -0.6270124007
+c_i_g4salary_scaled  0.6544298938 5.264445e-01  1.2431128 2.144232e-01 -0.3773823611
+c_tanner             1.0384550410 6.111698e-01  1.6991268 8.993262e-02 -0.1594158466
+c_awakeningresponse  0.6796587027 4.408867e-01  1.5415724 1.238257e-01 -0.1844632805
+c_currentnoflorag    0.5145994343 9.712334e-01  0.5298411 5.964630e-01 -1.3889831043
+                         CI_upper
+(Intercept)          6.256376e+01
+c_ha_150m_scaled     4.626826e-05
+c_gendermale        -2.739988e-01
+c_racemestizo        1.832133e+00
+c_age                7.733520e-01
+c_zha                8.771384e-01
+c_i_d9educatyrspar  -7.753431e-02
+c_i_g4salary_scaled  1.686242e+00
+c_tanner             2.236326e+00
+c_awakeningresponse  1.543781e+00
+c_currentnoflorag    2.418182e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_150m_scaled + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                         Estimate  Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.602785e+01 4.419967664 12.6760770 5.259070e-32 47.3648732224
+c_ha_150m_scaled    -3.496771e-05 0.000073173 -0.4778772 6.329529e-01 -0.0001783842
+c_gendermale        -1.065723e+00 0.854689434 -1.2469124 2.130314e-01 -2.7408833619
+c_racemestizo       -1.407124e+00 1.085736896 -1.2960081 1.955891e-01 -3.5351290584
+c_age                2.317408e-01 0.323129797  0.7171757 4.736109e-01 -0.4015819289
+c_zha                1.203127e-01 0.506383751  0.2375919 8.122980e-01 -0.8721812290
+c_i_d9educatyrspar  -2.710097e-01 0.136558769 -1.9845648 4.775597e-02 -0.5386599954
+c_i_g4salary_scaled -4.135937e-01 0.515795415 -0.8018561 4.230289e-01 -1.4245341370
+c_tanner            -2.914383e-01 0.593076120 -0.4914012 6.233650e-01 -1.4538461680
+c_awakeningresponse  2.606177e-01 0.431500758  0.6039796 5.461396e-01 -0.5851082796
+c_currentnoflorag    8.396414e-01 0.950598327  0.8832768 3.775244e-01 -1.0234970559
+                         CI_upper
+(Intercept)         64.6908280922
+c_ha_150m_scaled     0.0001084487
+c_gendermale         0.6094376565
+c_racemestizo        0.7208813667
+c_age                0.8650636004
+c_zha                1.1128065987
+c_i_d9educatyrspar  -0.0033594583
+c_i_g4salary_scaled  0.5973467385
+c_tanner             0.8709695019
+c_awakeningresponse  1.1063436099
+c_currentnoflorag    2.7027799143
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_200m_scaled + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.369768e+01 4.483536e+00 11.9766351 3.713780e-29 44.9101086996
+c_ha_200m_scaled    -3.633862e-05 3.496263e-05 -1.0393560 2.991539e-01 -0.0001048641
+c_gendermale        -1.939816e+00 8.689123e-01 -2.2324650 2.603718e-02 -3.6428531387
+c_racemestizo       -3.921088e-01 1.111197e+00 -0.3528705 7.243379e-01 -2.5700157438
+c_age                1.264979e-01 3.331425e-01  0.3797112 7.043250e-01 -0.5264493621
+c_zha               -1.242822e-01 5.161708e-01 -0.2407773 8.098288e-01 -1.1359584728
+c_i_d9educatyrspar  -3.493197e-01 1.402477e-01 -2.4907337 1.307935e-02 -0.6242001416
+c_i_g4salary_scaled  6.499582e-01 5.268085e-01  1.2337654 2.178842e-01 -0.3825675924
+c_tanner             1.042289e+00 6.116997e-01  1.7039235 8.903197e-02 -0.1566198792
+c_awakeningresponse  6.644541e-01 4.414533e-01  1.5051514 1.329321e-01 -0.2007785515
+c_currentnoflorag    4.766423e-01 9.711357e-01  0.4908092 6.237820e-01 -1.4267486677
+                         CI_upper
+(Intercept)          6.248525e+01
+c_ha_200m_scaled     3.218688e-05
+c_gendermale        -2.367795e-01
+c_racemestizo        1.785798e+00
+c_age                7.794452e-01
+c_zha                8.873940e-01
+c_i_d9educatyrspar  -7.443923e-02
+c_i_g4salary_scaled  1.682484e+00
+c_tanner             2.241199e+00
+c_awakeningresponse  1.529687e+00
+c_currentnoflorag    2.380033e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_200m_scaled + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.612351e+01 4.420249e+00 12.6969131 4.307111e-32  4.745999e+01
+c_ha_200m_scaled    -2.402554e-05 3.417716e-05 -0.7029705 4.824114e-01 -9.101154e-05
+c_gendermale        -1.081646e+00 8.535151e-01 -1.2672842 2.056618e-01 -2.754505e+00
+c_racemestizo       -1.368670e+00 1.085750e+00 -1.2605762 2.080677e-01 -3.496701e+00
+c_age                2.284417e-01 3.230035e-01  0.7072424 4.797556e-01 -4.046334e-01
+c_zha                1.201114e-01 5.061289e-01  0.2373139 8.125135e-01 -8.718830e-01
+c_i_d9educatyrspar  -2.725360e-01 1.365064e-01 -1.9965071 4.643726e-02 -5.400835e-01
+c_i_g4salary_scaled -4.124806e-01 5.156440e-01 -0.7999330 4.241412e-01 -1.423124e+00
+c_tanner            -2.984633e-01 5.930371e-01 -0.5032792 6.149964e-01 -1.460795e+00
+c_awakeningresponse  2.744844e-01 4.315930e-01  0.6359797 5.250896e-01 -5.714223e-01
+c_currentnoflorag    8.341051e-01 9.497185e-01  0.8782657 3.802345e-01 -1.027309e+00
+                         CI_upper
+(Intercept)          6.478704e+01
+c_ha_200m_scaled     4.296047e-05
+c_gendermale         5.912127e-01
+c_racemestizo        7.593601e-01
+c_age                8.615169e-01
+c_zha                1.112106e+00
+c_i_d9educatyrspar  -4.988364e-03
+c_i_g4salary_scaled  5.981630e-01
+c_tanner             8.638681e-01
+c_awakeningresponse  1.120391e+00
+c_currentnoflorag    2.695519e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_300m_scaled + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.357439e+01 4.488626e+00 11.9355880 5.442478e-29 44.7768456458
+c_ha_300m_scaled    -8.057155e-06 1.222979e-05 -0.6588139 5.103260e-01 -0.0000320271
+c_gendermale        -1.898152e+00 8.683589e-01 -2.1859069 2.929689e-02 -3.6001036863
+c_racemestizo       -4.723744e-01 1.108561e+00 -0.4261151 6.702119e-01 -2.6451130431
+c_age                1.306341e-01 3.335292e-01  0.3916722 6.954714e-01 -0.5230711296
+c_zha               -1.264071e-01 5.168199e-01 -0.2445863 8.068796e-01 -1.1393555471
+c_i_d9educatyrspar  -3.456716e-01 1.402772e-01 -2.4642027 1.407548e-02 -0.6206098911
+c_i_g4salary_scaled  6.446557e-01 5.271175e-01  1.2229830 2.219264e-01 -0.3884755396
+c_tanner             1.057352e+00 6.118190e-01  1.7282105 8.458307e-02 -0.1417911906
+c_awakeningresponse  6.467875e-01 4.427466e-01  1.4608526 1.446994e-01 -0.2209798551
+c_currentnoflorag    4.574708e-01 9.715445e-01  0.4708697 6.379442e-01 -1.4467214262
+                         CI_upper
+(Intercept)          6.237194e+01
+c_ha_300m_scaled     1.591279e-05
+c_gendermale        -1.961995e-01
+c_racemestizo        1.700364e+00
+c_age                7.843394e-01
+c_zha                8.865414e-01
+c_i_d9educatyrspar  -7.073321e-02
+c_i_g4salary_scaled  1.677787e+00
+c_tanner             2.256495e+00
+c_awakeningresponse  1.514555e+00
+c_currentnoflorag    2.361663e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_300m_scaled + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.621104e+01 4.418162e+00 12.7227202 3.362611e-32  4.755160e+01
+c_ha_300m_scaled    -1.120591e-05 1.194781e-05 -0.9379052 3.487599e-01 -3.462319e-05
+c_gendermale        -1.090180e+00 8.519026e-01 -1.2797003 2.012624e-01 -2.759878e+00
+c_racemestizo       -1.348097e+00 1.082466e+00 -1.2453940 2.135883e-01 -3.469692e+00
+c_age                2.242419e-01 3.228966e-01  0.6944695 4.877203e-01 -4.086238e-01
+c_zha                1.117815e-01 5.060969e-01  0.2208697 8.252869e-01 -8.801502e-01
+c_i_d9educatyrspar  -2.735586e-01 1.364137e-01 -2.0053597 4.547967e-02 -5.409246e-01
+c_i_g4salary_scaled -4.112958e-01 5.154347e-01 -0.7979590 4.252848e-01 -1.421529e+00
+c_tanner            -2.997316e-01 5.926252e-01 -0.5057692 6.132485e-01 -1.461256e+00
+c_awakeningresponse  2.938227e-01 4.322791e-01  0.6797060 4.970149e-01 -5.534288e-01
+c_currentnoflorag    8.263048e-01 9.491748e-01  0.8705507 3.844302e-01 -1.034044e+00
+                         CI_upper
+(Intercept)          6.487048e+01
+c_ha_300m_scaled     1.221136e-05
+c_gendermale         5.795184e-01
+c_racemestizo        7.734979e-01
+c_age                8.571075e-01
+c_zha                1.103713e+00
+c_i_d9educatyrspar  -6.192598e-03
+c_i_g4salary_scaled  5.989377e-01
+c_tanner             8.617924e-01
+c_awakeningresponse  1.141074e+00
+c_currentnoflorag    2.686653e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_500m_scaled + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.346899e+01 4.494390e+00 11.8968293 7.802682e-29  4.466015e+01
+c_ha_500m_scaled    -1.334812e-06 3.823626e-06 -0.3490958 7.271680e-01 -8.828980e-06
+c_gendermale        -1.874509e+00 8.687322e-01 -2.1577529 3.143431e-02 -3.577193e+00
+c_racemestizo       -5.231929e-01 1.106978e+00 -0.4726315 6.366874e-01 -2.692831e+00
+c_age                1.356236e-01 3.338176e-01  0.4062806 6.847145e-01 -5.186468e-01
+c_zha               -1.215038e-01 5.171993e-01 -0.2349264 8.143644e-01 -1.135196e+00
+c_i_d9educatyrspar  -3.447167e-01 1.404515e-01 -2.4543471 1.446228e-02 -6.199965e-01
+c_i_g4salary_scaled  6.443441e-01 5.273915e-01  1.2217566 2.223895e-01 -3.893243e-01
+c_tanner             1.065319e+00 6.118750e-01  1.7410727 8.230104e-02 -1.339341e-01
+c_awakeningresponse  6.248035e-01 4.422392e-01  1.4128180 1.583467e-01 -2.419694e-01
+c_currentnoflorag    4.474677e-01 9.720060e-01  0.4603549 6.454666e-01 -1.457629e+00
+                         CI_upper
+(Intercept)          6.227783e+01
+c_ha_500m_scaled     6.159357e-06
+c_gendermale        -1.718256e-01
+c_racemestizo        1.646445e+00
+c_age                7.898940e-01
+c_zha                8.921883e-01
+c_i_d9educatyrspar  -6.943684e-02
+c_i_g4salary_scaled  1.678012e+00
+c_tanner             2.264572e+00
+c_awakeningresponse  1.491576e+00
+c_currentnoflorag    2.352564e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_500m_scaled + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.599080e+01 4.423657e+00 12.6571316 6.305247e-32  4.732060e+01
+c_ha_500m_scaled    -1.288788e-06 3.742208e-06 -0.3443925 7.307004e-01 -8.623382e-06
+c_gendermale        -1.045302e+00 8.526013e-01 -1.2260145 2.207881e-01 -2.716369e+00
+c_racemestizo       -1.439133e+00 1.081823e+00 -1.3302844 1.840498e-01 -3.559467e+00
+c_age                2.339049e-01 3.231819e-01  0.7237564 4.695642e-01 -3.995199e-01
+c_zha                1.210386e-01 5.065680e-01  0.2389385 8.112542e-01 -8.718165e-01
+c_i_d9educatyrspar  -2.707577e-01 1.367170e-01 -1.9804248 4.822044e-02 -5.387181e-01
+c_i_g4salary_scaled -4.125956e-01 5.159670e-01 -0.7996549 4.243022e-01 -1.423872e+00
+c_tanner            -2.855113e-01 5.928897e-01 -0.4815589 6.303366e-01 -1.447554e+00
+c_awakeningresponse  2.539839e-01 4.319151e-01  0.5880412 5.567783e-01 -5.925542e-01
+c_currentnoflorag    8.164207e-01 9.499936e-01  0.8593961 3.905466e-01 -1.045532e+00
+                         CI_upper
+(Intercept)          6.466101e+01
+c_ha_500m_scaled     6.045805e-06
+c_gendermale         6.257663e-01
+c_racemestizo        6.812020e-01
+c_age                8.673298e-01
+c_zha                1.113894e+00
+c_i_d9educatyrspar  -2.797337e-03
+c_i_g4salary_scaled  5.986812e-01
+c_tanner             8.765312e-01
+c_awakeningresponse  1.100522e+00
+c_currentnoflorag    2.678374e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_1000m_scaled + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..      CI_lower
+(Intercept)          5.292684e+01 4.483015e+00 11.8060817 1.809129e-28  4.414029e+01
+c_ha_1000m_scaled    8.680084e-07 8.142432e-07  1.0660309 2.869368e-01 -7.278790e-07
+c_gendermale        -1.778974e+00 8.666230e-01 -2.0527654 4.062802e-02 -3.477524e+00
+c_racemestizo       -6.952188e-01 1.104376e+00 -0.6295129 5.293079e-01 -2.859755e+00
+c_age                1.657895e-01 3.333872e-01  0.4972881 6.192098e-01 -4.876375e-01
+c_zha               -8.570807e-02 5.166267e-01 -0.1658994 8.683048e-01 -1.098278e+00
+c_i_d9educatyrspar  -3.379352e-01 1.400972e-01 -2.4121485 1.622680e-02 -6.125207e-01
+c_i_g4salary_scaled  6.088233e-01 5.274937e-01  1.1541812 2.489908e-01 -4.250453e-01
+c_tanner             1.063241e+00 6.112420e-01  1.7394757 8.258163e-02 -1.347717e-01
+c_awakeningresponse  5.412374e-01 4.413607e-01  1.2262928 2.206799e-01 -3.238136e-01
+c_currentnoflorag    4.827564e-01 9.712113e-01  0.4970663 6.193662e-01 -1.420783e+00
+                         CI_upper
+(Intercept)          6.171339e+01
+c_ha_1000m_scaled    2.463896e-06
+c_gendermale        -8.042386e-02
+c_racemestizo        1.469318e+00
+c_age                8.192165e-01
+c_zha                9.268616e-01
+c_i_d9educatyrspar  -6.334978e-02
+c_i_g4salary_scaled  1.642692e+00
+c_tanner             2.261253e+00
+c_awakeningresponse  1.406288e+00
+c_currentnoflorag    2.386296e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_1000m_scaled + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                         Estimate   Std..Error    t.value     Pr...t..    CI_lower
+(Intercept)          5.549745e+01 4.411461e+00 12.5802892 1.314286e-31 46.85114958
+c_ha_1000m_scaled    8.781166e-07 7.949720e-07  1.1045880 2.698858e-01 -0.00000068
+c_gendermale        -9.533992e-01 8.503012e-01 -1.1212488 2.627368e-01 -2.61995905
+c_racemestizo       -1.615741e+00 1.078524e+00 -1.4981038 1.347568e-01 -3.72960818
+c_age                2.550459e-01 3.226478e-01  0.7904779 4.296351e-01 -0.37733213
+c_zha                1.475466e-01 5.059636e-01  0.2916151 7.707056e-01 -0.84412373
+c_i_d9educatyrspar  -2.609653e-01 1.363287e-01 -1.9142355 5.617821e-02 -0.52816467
+c_i_g4salary_scaled -4.487607e-01 5.160143e-01 -0.8696671 3.849126e-01 -1.46013013
+c_tanner            -2.694035e-01 5.921899e-01 -0.4549276 6.493649e-01 -1.43007433
+c_awakeningresponse  1.719102e-01 4.309435e-01  0.3989159 6.901308e-01 -0.67272349
+c_currentnoflorag    8.370734e-01 9.489374e-01  0.8821165 3.781508e-01 -1.02280984
+                        CI_upper
+(Intercept)         6.414376e+01
+c_ha_1000m_scaled   2.436233e-06
+c_gendermale        7.131606e-01
+c_racemestizo       4.981272e-01
+c_age               8.874240e-01
+c_zha               1.139217e+00
+c_i_d9educatyrspar  6.234104e-03
+c_i_g4salary_scaled 5.626088e-01
+c_tanner            8.912673e-01
+c_awakeningresponse 1.016544e+00
+c_currentnoflorag   2.696957e+00
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_50m_scaled_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                      Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)         53.8261602  4.4927076 11.9807842 3.572906e-29 45.0206151
+c_ha_50m_scaled_log -0.2570085  0.2368577 -1.0850757 2.784239e-01 -0.7212411
+c_gendermale        -1.9515301  0.8695778 -2.2442272 2.526522e-02 -3.6558712
+c_racemestizo       -0.4039954  1.1084569 -0.3644665 7.156676e-01 -2.5765309
+c_age                0.1214189  0.3333286  0.3642621 7.158201e-01 -0.5318930
+c_zha               -0.1193124  0.5160330 -0.2312107 8.172480e-01 -1.1307185
+c_i_d9educatyrspar  -0.3462293  0.1401057 -2.4712004 1.380642e-02 -0.6208315
+c_i_g4salary_scaled  0.6348303  0.5266874  1.2053266 2.286614e-01 -0.3974580
+c_tanner             1.0300051  0.6121141  1.6827011 9.307261e-02 -0.1697165
+c_awakeningresponse  0.6293368  0.4381333  1.4364047 1.515280e-01 -0.2293888
+c_currentnoflorag    0.4926940  0.9714526  0.5071725 6.122629e-01 -1.4113181
+                       CI_upper
+(Intercept)         62.63170527
+c_ha_50m_scaled_log  0.20722402
+c_gendermale        -0.24718899
+c_racemestizo        1.76854021
+c_age                0.77473090
+c_zha                0.89209381
+c_i_d9educatyrspar  -0.07162715
+c_i_g4salary_scaled  1.66711857
+c_tanner             2.22972667
+c_awakeningresponse  1.48806236
+c_currentnoflorag    2.39670610
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_50m_scaled_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                       Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)         55.71322159  4.4310697 12.5733119 1.404774e-31 47.0284846
+c_ha_50m_scaled_log  0.06641215  0.2320625  0.2861822 7.748608e-01 -0.3884220
+c_gendermale        -0.99109000  0.8548145 -1.1594212 2.468550e-01 -2.6664956
+c_racemestizo       -1.52877969  1.0838041 -1.4105683 1.590130e-01 -3.6529966
+c_age                0.24570119  0.3233790  0.7597933 4.477473e-01 -0.3881100
+c_zha                0.12926745  0.5062679  0.2553341 7.985733e-01 -0.8629995
+c_i_d9educatyrspar  -0.26618422  0.1364273 -1.9511073 5.161967e-02 -0.5335767
+c_i_g4salary_scaled -0.41539878  0.5158552 -0.8052623 4.210629e-01 -1.4264565
+c_tanner            -0.27189719  0.5936963 -0.4579735 6.471766e-01 -1.4355206
+c_awakeningresponse  0.22649906  0.4285219  0.5285589 5.973532e-01 -0.6133884
+c_currentnoflorag    0.81259515  0.9503879  0.8550142 3.929655e-01 -1.0501309
+                        CI_upper
+(Intercept)         64.397958612
+c_ha_50m_scaled_log  0.521246299
+c_gendermale         0.684315567
+c_racemestizo        0.595437246
+c_age                0.879512342
+c_zha                1.121534379
+c_i_d9educatyrspar   0.001208298
+c_i_g4salary_scaled  0.595658932
+c_tanner             0.891726252
+c_awakeningresponse  1.066386483
+c_currentnoflorag    2.675321245
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_100m_scaled_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                       Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)          53.8216611  4.4740931 12.0296248 2.265144e-29 45.0525998
+c_ha_100m_scaled_log -0.2181073  0.1399709 -1.5582334 1.198262e-01 -0.4924453
+c_gendermale         -1.9689427  0.8666652 -2.2718606 2.352936e-02 -3.6675753
+c_racemestizo        -0.2373578  1.1170385 -0.2124885 8.318147e-01 -2.4267130
+c_age                 0.1169902  0.3327196  0.3516180 7.252766e-01 -0.5351282
+c_zha                -0.1182104  0.5153493 -0.2293792 8.186703e-01 -1.1282766
+c_i_d9educatyrspar   -0.3491040  0.1399459 -2.4945641 1.294082e-02 -0.6233929
+c_i_g4salary_scaled   0.6800033  0.5266250  1.2912476 1.972291e-01 -0.3521627
+c_tanner              1.0107910  0.6114611  1.6530749 9.895875e-02 -0.1876507
+c_awakeningresponse   0.6459458  0.4377745  1.4755219 1.407172e-01 -0.2120764
+c_currentnoflorag     0.5868347  0.9733050  0.6029299 5.468354e-01 -1.3208080
+                        CI_upper
+(Intercept)          62.59072239
+c_ha_100m_scaled_log  0.05623060
+c_gendermale         -0.27030999
+c_racemestizo         1.95199732
+c_age                 0.76910859
+c_zha                 0.89185571
+c_i_d9educatyrspar   -0.07481509
+c_i_g4salary_scaled   1.71216924
+c_tanner              2.20923264
+c_awakeningresponse   1.50396802
+c_currentnoflorag     2.49447737
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_100m_scaled_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                       Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)          56.1009553  4.4152854 12.7060769 3.944782e-32 47.4471550
+c_ha_100m_scaled_log -0.1039919  0.1377179 -0.7551079 4.505508e-01 -0.3739140
+c_gendermale         -1.0826186  0.8529554 -1.2692557 2.049586e-01 -2.7543805
+c_racemestizo        -1.3289264  1.0927348 -1.2161472 2.245204e-01 -3.4706472
+c_age                 0.2277355  0.3229690  0.7051313 4.810670e-01 -0.4052720
+c_zha                 0.1263027  0.5059810  0.2496195 8.029873e-01 -0.8654019
+c_i_d9educatyrspar   -0.2702444  0.1363505 -1.9819840 4.804506e-02 -0.5374865
+c_i_g4salary_scaled  -0.4012237  0.5159900 -0.7775804 4.371955e-01 -1.4125455
+c_tanner             -0.3074522  0.5934993 -0.5180330 6.046715e-01 -1.4706894
+c_awakeningresponse   0.2552564  0.4285743  0.5955942 5.517241e-01 -0.5847338
+c_currentnoflorag     0.8727721  0.9519359  0.9168391 3.596826e-01 -0.9929880
+                         CI_upper
+(Intercept)          64.754755623
+c_ha_100m_scaled_log  0.165930231
+c_gendermale          0.589143358
+c_racemestizo         0.812794501
+c_age                 0.860743048
+c_zha                 1.118007317
+c_i_d9educatyrspar   -0.003002441
+c_i_g4salary_scaled   0.610098087
+c_tanner              0.855785006
+c_awakeningresponse   1.095246492
+c_currentnoflorag     2.738532089
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_150m_scaled_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                       Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)          53.8384395  4.4824424 12.0109607 2.696386e-29 45.0530139
+c_ha_150m_scaled_log -0.1505664  0.1129298 -1.3332741 1.830639e-01 -0.3719047
+c_gendermale         -1.9537616  0.8674012 -2.2524313 2.473861e-02 -3.6538367
+c_racemestizo        -0.2658376  1.1206161 -0.2372245 8.125822e-01 -2.4622048
+c_age                 0.1192334  0.3330020  0.3580562 7.204560e-01 -0.5334384
+c_zha                -0.1087253  0.5156859 -0.2108364 8.331030e-01 -1.1194512
+c_i_d9educatyrspar   -0.3519835  0.1401692 -2.5111333 1.235648e-02 -0.6267100
+c_i_g4salary_scaled   0.6786526  0.5271471  1.2874066 1.985629e-01 -0.3545367
+c_tanner              1.0391162  0.6111707  1.7002063 8.972928e-02 -0.1587563
+c_awakeningresponse   0.6301638  0.4376726  1.4398065 1.505633e-01 -0.2276587
+c_currentnoflorag     0.5508755  0.9729251  0.5662054 5.715144e-01 -1.3560228
+                        CI_upper
+(Intercept)          62.62386518
+c_ha_150m_scaled_log  0.07077196
+c_gendermale         -0.25368651
+c_racemestizo         1.93052963
+c_age                 0.77190532
+c_zha                 0.90200054
+c_i_d9educatyrspar   -0.07725695
+c_i_g4salary_scaled   1.71184193
+c_tanner              2.23698874
+c_awakeningresponse   1.48798624
+c_currentnoflorag     2.45777367
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_150m_scaled_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                       Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)          56.3134275  4.4179456 12.7465189 2.675714e-32 47.6544132
+c_ha_150m_scaled_log -0.1265152  0.1103859 -1.1461182 2.523114e-01 -0.3428676
+c_gendermale         -1.1116316  0.8519794 -1.3047634 1.925922e-01 -2.7814806
+c_racemestizo        -1.2403463  1.0931678 -1.1346349 2.570888e-01 -3.3829158
+c_age                 0.2213354  0.3227281  0.6858263 4.931503e-01 -0.4112000
+c_zha                 0.1310190  0.5056004  0.2591354 7.956407e-01 -0.8599396
+c_i_d9educatyrspar   -0.2751046  0.1363603 -2.0174833 4.419540e-02 -0.5423658
+c_i_g4salary_scaled  -0.3931033  0.5155927 -0.7624300 4.461741e-01 -1.4036464
+c_tanner             -0.3064955  0.5924429 -0.5173418 6.051535e-01 -1.4676623
+c_awakeningresponse   0.2580319  0.4278140  0.6031403 5.466973e-01 -0.5804682
+c_currentnoflorag     0.8935008  0.9508428  0.9396935 3.478426e-01 -0.9701169
+                         CI_upper
+(Intercept)          64.972441904
+c_ha_150m_scaled_log  0.089837072
+c_gendermale          0.558217440
+c_racemestizo         0.902223127
+c_age                 0.853870899
+c_zha                 1.121977536
+c_i_d9educatyrspar   -0.007843347
+c_i_g4salary_scaled   0.617439807
+c_tanner              0.854671338
+c_awakeningresponse   1.096531908
+c_currentnoflorag     2.757118433
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_200m_scaled_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                       Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)          53.8629650  4.4814374 12.0191270 2.498469e-29 45.0795091
+c_ha_200m_scaled_log -0.1413656  0.1008314 -1.4020002 1.615509e-01 -0.3389914
+c_gendermale         -1.9563017  0.8670439 -2.2562891 2.449430e-02 -3.6556764
+c_racemestizo        -0.3022269  1.1134716 -0.2714276 7.861770e-01 -2.4845911
+c_age                 0.1259482  0.3326773  0.3785898 7.051571e-01 -0.5260873
+c_zha                -0.1001109  0.5156548 -0.1941432 8.461445e-01 -1.1107756
+c_i_d9educatyrspar   -0.3477172  0.1399970 -2.4837476 1.333539e-02 -0.6221063
+c_i_g4salary_scaled   0.6734337  0.5267872  1.2783789 2.017235e-01 -0.3590503
+c_tanner              1.0358589  0.6110991  1.6950752 9.069908e-02 -0.1618733
+c_awakeningresponse   0.6393890  0.4378815  1.4601874 1.448821e-01 -0.2188429
+c_currentnoflorag     0.5182697  0.9710992  0.5336939 5.937964e-01 -1.3850498
+                        CI_upper
+(Intercept)          62.64642088
+c_ha_200m_scaled_log  0.05626025
+c_gendermale         -0.25692689
+c_racemestizo         1.88013728
+c_age                 0.77798378
+c_zha                 0.91055388
+c_i_d9educatyrspar   -0.07332814
+c_i_g4salary_scaled   1.70591765
+c_tanner              2.23359105
+c_awakeningresponse   1.49762093
+c_currentnoflorag     2.42158922
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_200m_scaled_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                       Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)          56.2667935 4.41584354 12.7420261 2.793707e-32 47.6118992
+c_ha_200m_scaled_log -0.1091150 0.09847663 -1.1080297 2.683982e-01 -0.3021257
+c_gendermale         -1.1060802 0.85184515 -1.2984522 1.947491e-01 -2.7756660
+c_racemestizo        -1.2933992 1.08605054 -1.1909199 2.342675e-01 -3.4220192
+c_age                 0.2317911 0.32243401  0.7188790 4.725616e-01 -0.4001680
+c_zha                 0.1395032 0.50575087  0.2758338 7.827932e-01 -0.8517503
+c_i_d9educatyrspar   -0.2724911 0.13628345 -1.9994436 4.611775e-02 -0.5396017
+c_i_g4salary_scaled  -0.3975697 0.51551435 -0.7712098 4.409582e-01 -1.4079593
+c_tanner             -0.3125282 0.59275758 -0.5272445 5.982649e-01 -1.4743117
+c_awakeningresponse   0.2620572 0.42809235  0.6121511 5.407246e-01 -0.5769884
+c_currentnoflorag     0.8709715 0.94989071  0.9169176 3.596415e-01 -0.9907800
+                         CI_upper
+(Intercept)          64.921687848
+c_ha_200m_scaled_log  0.083895619
+c_gendermale          0.563505615
+c_racemestizo         0.835220727
+c_age                 0.863750095
+c_zha                 1.130756672
+c_i_d9educatyrspar   -0.005380415
+c_i_g4salary_scaled   0.612819858
+c_tanner              0.849255332
+c_awakeningresponse   1.101102811
+c_currentnoflorag     2.732723129
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_300m_scaled_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                        Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)          53.79901052 4.50137332 11.9516882 4.685209e-29 44.9764809
+c_ha_300m_scaled_log -0.08100848 0.08941772 -0.9059555 3.654065e-01 -0.2562640
+c_gendermale         -1.90685308 0.86706201 -2.1992119 2.833122e-02 -3.6062634
+c_racemestizo        -0.44545496 1.10681052 -0.4024672 6.875164e-01 -2.6147637
+c_age                 0.12501582 0.33345193  0.3749141 7.078873e-01 -0.5285380
+c_zha                -0.11066457 0.51618662 -0.2143887 8.303335e-01 -1.1223718
+c_i_d9educatyrspar   -0.34714451 0.14022218 -2.4756748 1.363679e-02 -0.6219749
+c_i_g4salary_scaled   0.66631834 0.52766698  1.2627630 2.072774e-01 -0.3678899
+c_tanner              1.06574061 0.61143369  1.7430191 8.196012e-02 -0.1326474
+c_awakeningresponse   0.63032739 0.43864957  1.4369725 1.513666e-01 -0.2294100
+c_currentnoflorag     0.48921040 0.97193180  0.5033382 6.149536e-01 -1.4157409
+                        CI_upper
+(Intercept)          62.62154010
+c_ha_300m_scaled_log  0.09424704
+c_gendermale         -0.20744277
+c_racemestizo         1.72385379
+c_age                 0.77856959
+c_zha                 0.90104262
+c_i_d9educatyrspar   -0.07231409
+c_i_g4salary_scaled   1.70052663
+c_tanner              2.26412863
+c_awakeningresponse   1.49006474
+c_currentnoflorag     2.39416173
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_300m_scaled_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                        Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)          56.27746593 4.42631020 12.7143068 3.645336e-32 47.6020574
+c_ha_300m_scaled_log -0.08000842 0.08751097 -0.9142674 3.610307e-01 -0.2515268
+c_gendermale         -1.07979828 0.85115572 -1.2686260 2.051830e-01 -2.7480328
+c_racemestizo        -1.36433310 1.08070916 -1.2624424 2.073963e-01 -3.4824841
+c_age                 0.23020917 0.32265432  0.7134855 4.758886e-01 -0.4021817
+c_zha                 0.13659231 0.50593632  0.2699793 7.872910e-01 -0.8550247
+c_i_d9educatyrspar   -0.27406387 0.13645685 -2.0084289 4.515160e-02 -0.5415144
+c_i_g4salary_scaled  -0.39463776 0.51600571 -0.7647934 4.447665e-01 -1.4059904
+c_tanner             -0.29378692 0.59248338 -0.4958568 6.202201e-01 -1.4550330
+c_awakeningresponse   0.26048646 0.42850571  0.6078950 5.435417e-01 -0.5793693
+c_currentnoflorag     0.85969645 0.95014542  0.9048051 3.660179e-01 -1.0025543
+                         CI_upper
+(Intercept)          64.952874513
+c_ha_300m_scaled_log  0.091509921
+c_gendermale          0.588436270
+c_racemestizo         0.753817927
+c_age                 0.862600017
+c_zha                 1.128209281
+c_i_d9educatyrspar   -0.006613367
+c_i_g4salary_scaled   0.616714843
+c_tanner              0.867459174
+c_awakeningresponse   1.100342218
+c_currentnoflorag     2.721947245
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_500m_scaled_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                       Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)          52.9774182 4.54953352 11.6445825 8.010825e-28 44.0604963
+c_ha_500m_scaled_log  0.0341449 0.08415225  0.4057515 6.851031e-01 -0.1307905
+c_gendermale         -1.8104964 0.86980525 -2.0814963 3.790917e-02 -3.5152834
+c_racemestizo        -0.5981080 1.10143845 -0.5430244 5.873609e-01 -2.7568876
+c_age                 0.1541319 0.33410305  0.4613304 6.447671e-01 -0.5006981
+c_zha                -0.1152940 0.51657628 -0.2231888 8.234819e-01 -1.1277650
+c_i_d9educatyrspar   -0.3378034 0.14052992 -2.4037830 1.659833e-02 -0.6132370
+c_i_g4salary_scaled   0.6244436 0.52858254  1.1813549 2.380372e-01 -0.4115592
+c_tanner              1.0643275 0.61185956  1.7394963 8.257801e-02 -0.1348952
+c_awakeningresponse   0.5936465 0.43858570  1.3535474 1.765074e-01 -0.2659656
+c_currentnoflorag     0.4565008 0.97181969  0.4697382 6.387519e-01 -1.4482308
+                        CI_upper
+(Intercept)          61.89434002
+c_ha_500m_scaled_log  0.19908028
+c_gendermale         -0.10570946
+c_racemestizo         1.56067172
+c_age                 0.80896184
+c_zha                 0.89717686
+c_i_d9educatyrspar   -0.06236986
+c_i_g4salary_scaled   1.66044630
+c_tanner              2.26355016
+c_awakeningresponse   1.45325871
+c_currentnoflorag     2.36123244
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_500m_scaled_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                       Estimate Std..Error    t.value     Pr...t..    CI_lower
+(Intercept)          54.8383344 4.46854739 12.2720718 2.445415e-30 46.08014242
+c_ha_500m_scaled_log  0.1053311 0.08231533  1.2796052 2.012958e-01 -0.05600395
+c_gendermale         -0.9005567 0.85289946 -1.0558767 2.915502e-01 -2.57220888
+c_racemestizo        -1.5777142 1.07403372 -1.4689615 1.424915e-01 -3.68278163
+c_age                 0.2665200 0.32288950  0.8254217 4.095380e-01 -0.36633180
+c_zha                 0.1120256 0.50556898  0.2215833 8.247315e-01 -0.87887135
+c_i_d9educatyrspar   -0.2522875 0.13665590 -1.8461515 6.547936e-02 -0.52012813
+c_i_g4salary_scaled  -0.4616546 0.51617244 -0.8943807 3.715619e-01 -1.47333403
+c_tanner             -0.2808853 0.59183809 -0.4745983 6.352869e-01 -1.44086669
+c_awakeningresponse   0.2015616 0.42786566  0.4710862 6.377910e-01 -0.63703969
+c_currentnoflorag     0.8247797 0.94842318  0.8696326 3.849314e-01 -1.03409559
+                        CI_upper
+(Intercept)          63.59652630
+c_ha_500m_scaled_log  0.26666620
+c_gendermale          0.77109555
+c_racemestizo         0.52735319
+c_age                 0.89937180
+c_zha                 1.10292265
+c_i_d9educatyrspar    0.01555315
+c_i_g4salary_scaled   0.55002474
+c_tanner              0.87909599
+c_awakeningresponse   1.04016288
+c_currentnoflorag     2.68365496
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_masc2_tot_t ~ c_ha_1000m_scaled_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 499
+[[1]]
+                         Estimate Std..Error    t.value     Pr...t..   CI_lower
+(Intercept)           53.50431505  4.5439883 11.7747475 2.416721e-28 44.5982616
+c_ha_1000m_scaled_log -0.02409395  0.1019725 -0.2362788 8.133155e-01 -0.2239565
+c_gendermale          -1.85322955  0.8656179 -2.1409326 3.277427e-02 -3.5498094
+c_racemestizo         -0.52566855  1.1144600 -0.4716801 6.373660e-01 -2.7099700
+c_age                  0.14166063  0.3331763  0.4251823 6.708912e-01 -0.5113528
+c_zha                 -0.11676103  0.5169056 -0.2258846 8.213857e-01 -1.1298774
+c_i_d9educatyrspar    -0.33997406  0.1404107 -2.4212836 1.582949e-02 -0.6151739
+c_i_g4salary_scaled    0.64818736  0.5284445  1.2265948 2.205664e-01 -0.3875449
+c_tanner               1.06140805  0.6122317  1.7336706 8.360814e-02 -0.1385440
+c_awakeningresponse    0.61327776  0.4399889  1.3938483 1.639978e-01 -0.2490846
+c_currentnoflorag      0.46320077  0.9727254  0.4761886 6.341531e-01 -1.4433060
+                        CI_upper
+(Intercept)           62.4103685
+c_ha_1000m_scaled_log  0.1757686
+c_gendermale          -0.1566497
+c_racemestizo          1.6586329
+c_age                  0.7946741
+c_zha                  0.8963553
+c_i_d9educatyrspar    -0.0647742
+c_i_g4salary_scaled    1.6839196
+c_tanner               2.2613601
+c_awakeningresponse    1.4756401
+c_currentnoflorag      2.3697075
+
+[1] "---------------------------------------------------------------------------"
+[1] "c_cdi2_tot_t ~ c_ha_1000m_scaled_log + c_gender + c_race + c_age + c_zha + c_i_d9educatyrspar + c_i_g4salary_scaled + c_tanner + c_awakeningresponse + c_currentnoflorag"
+[1] 496
+[[1]]
+                        Estimate Std..Error    t.value     Pr...t..     CI_lower
+(Intercept)           54.4804255 4.45064485 12.2410184 3.276299e-30 45.757321942
+c_ha_1000m_scaled_log  0.1847517 0.09900579  1.8660696 6.263499e-02 -0.009296083
+c_gendermale          -0.9780419 0.84654098 -1.1553391 2.485205e-01 -2.637231708
+c_racemestizo         -1.8137688 1.08394723 -1.6732999 9.491308e-02 -3.938266311
+c_age                  0.2395986 0.32160722  0.7450038 4.566303e-01 -0.390739979
+c_zha                  0.1425116 0.50453147  0.2824632 7.777089e-01 -0.846351943
+c_i_d9educatyrspar    -0.2747439 0.13594766 -2.0209536 4.383348e-02 -0.541196430
+c_i_g4salary_scaled   -0.4801510 0.51513246 -0.9320922 3.517526e-01 -1.489792050
+c_tanner              -0.2299241 0.59136064 -0.3888052 6.975909e-01 -1.388969616
+c_awakeningresponse    0.1550814 0.42839590  0.3620048 7.175061e-01 -0.684559155
+c_currentnoflorag      0.7298437 0.94788445  0.7699712 4.416918e-01 -1.127975660
+                        CI_upper
+(Intercept)           63.2035292
+c_ha_1000m_scaled_log  0.3787995
+c_gendermale           0.6811480
+c_racemestizo          0.3107288
+c_age                  0.8699372
+c_zha                  1.1313751
+c_i_d9educatyrspar    -0.0082914
+c_i_g4salary_scaled    0.5294901
+c_tanner               0.9291215
+c_awakeningresponse    0.9947219
+c_currentnoflorag      2.5876631
+
+[1] "---------------------------------------------------------------------------"

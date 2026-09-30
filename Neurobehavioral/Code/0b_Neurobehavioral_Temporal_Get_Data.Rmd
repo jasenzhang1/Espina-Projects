@@ -1,0 +1,185 @@
+---
+title: "summer"
+author: "Jasen"
+date: "7/7/2021"
+output: pdf_document
+---
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(gridExtra)
+library(geepack)
+library(scales)
+library(reshape2)
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Code/00_Codes.R", sep = '')
+source(codes_dir)
+```
+
+# load the data
+
+```{r}
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/df1_2024.RData", sep = '')
+load(codes_dir)
+
+# want to see how many subjects have all 3 distance variables
+is_a <- c(T,F)
+is_b <- c(T,F)
+is_c <- c(T,F)
+vars <- colnames(df1)
+
+for(i in is_a){
+  for(j in is_b){
+    for(k in is_c){
+      wow <- c()
+      if(i){
+        wow <- append(wow, 'a_dist_house_plant')
+      }
+      if(j){
+        wow <- append(wow, 'b_dist_house_plant')
+      }
+      if(k){
+        wow <- append(wow, 'c_dist_house_plant')
+      }
+      
+      df2 <- df1 %>% select(wow)
+      temp <- c(i,j,k)
+      temp2 <- c('a','b','c')
+      print(temp2[temp])
+      print(nrow(na.omit(df2)))
+    }
+  }
+}
+
+```
+
+#modify the names of the variables so that they are the same across timepoints
+
+```{r}
+
+df1 <- df1 %>% mutate(a_i_g4salary_scaled = a_i_income) %>%
+  mutate(a_i_d9educatpar = a_d9educatyrspar)
+
+#transferring salary
+df1 <- df1 %>% mutate(b_i_g4salary_scaled = c_i_g4salary_scaled)
+
+df1 <- df1 %>% mutate(b_i_d9educatpar = c_i_d9educatyrspar) %>%
+  mutate(c_i_d9educatpar = c_i_d9educatyrspar) %>%
+  mutate(b_currentnoflorag = c_currentnoflorag)
+
+```
+
+# Change the data to long format
+
+```{r}
+
+temp_dist_vars <- as.character( c(50, 100, 150, 200, 300, 500, 750, 1000))
+temp_dist_vars2 <- paste('ha_', temp_dist_vars, sep = '')
+temp_dist_vars3 <- paste(temp_dist_vars2, 'm', sep = '')
+temp_dist_vars_log <- paste(temp_dist_vars3, '_log', sep = '')
+temp_dist_vars_scaled <- paste(temp_dist_vars3, '_scaled', sep = '')
+temp_dist_vars_scaled_log <- paste(temp_dist_vars3, '_scaled_log', sep = '')
+
+merged_vars_abc <- c('age', 'gender', 'race', 'zha', 'zba', 'ache',
+                     'i_g4salary_scaled', 'i_d9educatpar', 'currentnoflorag',
+                     'dist_house_plant',  'dist_house_plant_log', 'days_after_mdh',
+                     temp_dist_vars3,
+                     temp_dist_vars_log,
+                     temp_dist_vars_scaled,
+                     temp_dist_vars_scaled_log,
+                     'aac', 'rsc', 'iic', 'inc', 'isc')
+
+
+
+merged_vars_ac <- c('cits', 'snc', 'mffts', 'mffdts', 'dcgts', 'gpts')
+
+merged_vars_total <- c(merged_vars_abc, merged_vars_ac)
+
+first = T
+for(i in merged_vars_abc){
+  temp_long_vars <- paste(c('a_','b_','c_'), i, sep = '')
+  if(first){
+    longitudinal_vars <- temp_long_vars
+    first = F
+  } else{
+    longitudinal_vars <- rbind(longitudinal_vars, temp_long_vars)
+  }
+}
+
+for(i in merged_vars_ac){
+  temp_long_vars <- paste(c('a_','c_'), i, sep = '')
+  longitudinal_vars <- rbind(longitudinal_vars, c(temp_long_vars, NA))
+}
+
+for(i in 1:nrow(longitudinal_vars)){
+  slice <- longitudinal_vars[i,]
+
+
+  df1_long <- reshape(df1, varying = slice[!is.na(slice)], 
+                      idvar = 'nid',
+                      timevar = 'Index',
+                      direction = 'long',
+                      v.names = 'temp')
+  
+  if(length(slice[!is.na(slice)]) == 2){
+    temp <- df1_long$Index
+    temp[temp == 2] <- 3
+    df1_long$Index <- temp
+  }
+
+  if(i == 1){
+    df2_long <- df1_long %>% select(nid, Index, temp)
+    colnames(df2_long) <- c('nid', 'Index', merged_vars_total[i])
+  } else{
+    df1_long <- df1_long %>% select(nid, Index, temp)
+    colnames(df1_long) <- c('nid', 'Index', merged_vars_total[i])
+    df2_long <- df2_long %>% full_join(df1_long, by = c('nid', 'Index'))
+  }
+}
+
+df2_long <- df2_long %>% mutate(Index = as.factor(Index))
+
+#generate domain scores
+
+aic_vars1 <- c('aac', 'rsc')
+aic_vars2 <- c('iic', 'isc')
+df_aic1 <- df2_long %>% select(aic_vars1)
+df_aic2 <- df2_long %>% select(aic_vars2)
+
+subscore1 <- apply(df_aic1, 1, function(x){mean(x, na.rm = T)})
+subscore2 <- apply(df_aic2, 1, function(x){mean(x, na.rm = T)})
+temp_df <- data.frame(subscore1, subscore2)
+domain_1 <- apply(temp_df, 1, function(x){mean(x,na.rm = T)})
+
+
+language_vars <- c('cits', 'snc')
+df_language <- df2_long %>% select(language_vars)
+domain_2 <- apply(df_language, 1, function(x){mean(x,na.rm = T)})
+
+ml_vars <- c('mffts', 'mffdts')
+df_ml <- df2_long %>% select(ml_vars)
+domain_3 <- apply(df_ml, 1, function(x){mean(x,na.rm = T)})
+
+vp_vars <- c('dcgts', 'gpts')
+df_vp <- df2_long %>% select(vp_vars)
+domain_4 <- apply(df_vp, 1, function(x){mean(x,na.rm = T)})
+
+domain_df <- data.frame(domain_1, domain_2, domain_3, domain_4)
+overall_score <- apply(domain_df, 1, function(x){mean(x,na.rm = T)})
+
+df2_long <- df2_long %>% mutate(auditory_attention_response_set = subscore1) %>%
+  mutate(inhibition = subscore2) %>%
+  mutate(attention_inhibitory_control = domain_1) %>%
+  mutate(language = domain_2) %>%
+  mutate(memory_and_learning = domain_3) %>%
+  mutate(visuospatial_processing = domain_4) %>% 
+  mutate(nepsy = overall_score)
+
+name <- c('Data/long_temporal_data_V012522.RData')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+
+df2_long <- df2_long %>% mutate(octoberness = as.numeric(days_after_mdh > 140))
+
+save(df2_long,file=data_dir)
+```

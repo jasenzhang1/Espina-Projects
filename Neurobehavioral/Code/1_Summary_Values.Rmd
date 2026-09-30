@@ -1,0 +1,746 @@
+---
+title: "Summary Values"
+author: "Jasen"
+date: "2024-09-05"
+output: pdf_document
+---
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(gridExtra)
+library(geepack)
+library(scales)
+library(reshape2)
+library(lsmeans)
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Code/00_Codes.R", sep = '')
+source(codes_dir)
+```
+
+# load the data
+
+```{r}
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/long_temporal_data_V012522.RData", sep = '')
+load(codes_dir)
+```
+
+# How many children
+
+```{r}
+table(df2_long$Index)
+```
+
+# How many children in each time-period
+
+```{r}
+wow <- table(df2_long$nid, df2_long$Index)
+
+covariates <- c('age',  'race','gender', 'Index', 'days_after_mdh', 'zha', 'i_g4salary_scaled', 'i_d9educatpar', 'currentnoflorag')
+
+df3_long <- df2_long[!is.na(df2_long$age),]
+df3_long <- df2_long[!is.na(df2_long$dist_house_plant),]
+df4_long <- df3_long %>% filter(!if_any(covariates, is.na))
+
+table(df3_long$Index)
+table(df4_long$Index)
+
+round(100 * table(df3_long$Index) / sum(df2_long$Index == 1), 2)
+
+
+# how many missing values for the outcomes
+NEPSY <- colnames(df4_long)[47:63]
+df4_long_NEPSY <- df4_long %>% select(NEPSY) 
+
+df4_long <- df4_long[!apply(df4_long_NEPSY, 1, function(x) all(is.na(x))), ]
+
+table(df4_long$Index)
+
+length(unique(df4_long$nid))
+
+missing_NID <- setdiff(unique(df2_long$nid), unique(df4_long$nid))
+
+df5_long <- df2_long %>% filter(nid %in% missing_NID)
+```
+# how many in 2008 came back in spring 2016
+
+```{r}
+df3_2008 <- df3_long %>% filter(Index == 1)
+ID_2008 <- df3_2008$nid
+df3_2008_v2 <- df3_long %>% filter(nid %in% ID_2008)
+
+table(df3_2008_v2$Index)
+
+# how many new recruits not in 2008
+
+ID_not_2008 <- setdiff(unique(df3_long$nid), ID_2008)
+
+df3_newcomers <- df3_long %>% filter(nid %in% ID_not_2008)
+
+table(df3_newcomers$Index)
+
+table(df3_2008_v2$Index) + table(df3_newcomers$Index)
+```
+
+
+# venn diagram of membership
+
+```{r}
+# 629 unique children
+length(unique(df3_long$nid))
+
+wow <- tapply(df3_long$Index, factor(df3_long$nid), table)
+
+values <- data.frame()
+
+for(i in 1:length(wow)){
+  values <- rbind(values, unname(wow[[i]]))
+}
+
+colnames(values) <- c('Summer 2008', 'Spring 2016', 'Summer 2016')
+
+row_counts <- values %>%
+  group_by(across(everything())) %>%
+  summarise(Frequency = n(), .groups = 'drop')
+
+print(row_counts)
+
+sum(row_counts$Frequency)
+```
+
+# how many ppl in an actual aac model
+
+- df2_long = 1887 = 629 * 3
+
+```{r}
+covariates <- c('dist_house_plant_log',
+                                  'age',
+                                  'race',
+                                  'gender',
+                                  'days_after_mdh',
+                                  'zha',
+                                  'i_g4salary_scaled',
+                                  'i_d9educatpar',
+                                  'currentnoflorag')
+
+df_model <- df2_long %>% select(c('nid',
+                                  'Index',
+                                  'dist_house_plant_log',
+                                  'age',
+                                  'race',
+                                  'gender',
+                                  'days_after_mdh',
+                                  'zha',
+                                  'i_g4salary_scaled',
+                                  'i_d9educatpar',
+                                  'currentnoflorag',
+                                  'aac'))
+
+table(df_model$Index)
+length(unique(df_model$nid))
+
+df_model2 <- df_model %>% filter(!is.na(dist_house_plant_log))
+table(df_model2$Index)
+length(unique(df_model2$nid))
+
+df_model3 <- df_model2 %>% filter(!is.na(aac))
+table(df_model3$Index)
+length(unique(df_model3$nid))
+
+# any missing covariates? Yes
+apply(df_model3, 2, function(x){sum(is.na(x))})
+
+df_model4 <- df_model3 %>% na.omit()
+
+table(df_model4$Index)
+
+length(unique(df_model4$nid))
+```
+
+# distribution of 2008 cohabitation
+
+```{r}
+df_summer_08 <- df2_long %>% filter(Index == 1) %>% 
+  filter(!is.na(age))
+
+table(df_summer_08$currentnoflorag)
+
+round(100 * table(df_summer_08$currentnoflorag) / nrow(df_summer_08), 2)
+```
+
+# TABLE 2 CALCULATIONS (9/19/2025)
+
+```{r}
+
+df3_long <- df4_long
+
+cont_calc <- function(var_name){
+  r1 <- round(tapply(df3_long[[var_name]], df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+  
+  r2 <- round(tapply(df3_long[[var_name]], df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+  
+  result <- matrix(paste0(r1, ' (', r2, ')'), nrow = 1)
+  rownames(result) <- var_name
+  
+  return(result)
+}
+
+
+
+cat_calc <- function(var_name){
+  counts <- table(df3_long[[var_name]], df3_long$Index)
+  
+  pcts <- sweep(table(df3_long[[var_name]], df3_long$Index),
+        2,
+        colSums(table(df3_long[[var_name]], df3_long$Index)), '/') %>% round(3) * 100
+  
+  result <- matrix(paste0(counts, ' (', pcts, ')'), nrow = 2)
+  
+  rownames(result) <- paste0(var_name, c('_yes', '_no'))
+  
+  return(result)
+}
+
+area_calc <- function(var_names){
+  
+  first <- T
+  for(area_name in var_names){
+    
+    print(area_name)
+  
+
+    counts <- table(df3_long[[area_name]] > 0, df3_long$Index)
+    
+    pcts <- sweep(table(df3_long[[area_name]] > 0, df3_long$Index),
+          2,
+          colSums(table(df3_long[[area_name]] > 0, df3_long$Index)), '/') %>% round(3) * 100 
+    
+    result <- matrix(matrix(paste0(counts, ' (', pcts, ')'), nrow = 2)[2,], nrow = 1)
+    
+    rownames(result) <- area_name
+    
+    if(first){
+      first <- F
+      results <- result
+    } else{
+      results <- rbind(results, result)
+    }
+  }
+  
+  return(results)
+  
+}
+
+# cont_calc('age')
+# cat_calc('race')
+# 
+# area_calc(c('ha_50m', 'ha_100m', 'ha_150m', 'ha_200m', 'ha_300m', 'ha_500m', 'ha_1000m'))
+```
+
+# TABLE 2
+
+```{r}
+vars <- c('age', 'race', 'gender', 'days_after_mdh', 'zha', 'i_g4salary_scaled', 'i_d9educatpar', 'currentnoflorag', 'dist_house_plant')
+
+area <- c('ha_50m', 'ha_100m', 'ha_150m', 'ha_200m', 'ha_300m', 'ha_500m', 'ha_1000m')
+
+NEPSY_table_2_vars <- c("nepsy", "attention_inhibitory_control", "auditory_attention_response_set", "aac", "rsc", 
+                   "inhibition", "iic", "inc", "isc", 
+                   "language", "cits", "snc", 
+                   "memory_and_learning", "mffts", "mffdts", 
+                   "visuospatial_processing", "dcgts", "gpts")
+
+table_2_covariates <- matrix(nrow = 1, ncol = 3)
+for(i in vars){
+  if(i %in% c('age', 'days_after_mdh', 'zha', 'i_g4salary_scaled', 'i_d9educatpar', 'dist_house_plant')){
+    table_2_covariates <- rbind(table_2_covariates, cont_calc(i))
+  } else{
+    table_2_covariates <- rbind(table_2_covariates, cat_calc(i))
+  }
+}
+
+table_2_area <- area_calc(area)
+
+table_2_nepsy <- matrix(nrow = 1, ncol = 3)
+
+for(i in NEPSY_table_2_vars){
+  table_2_nepsy <- rbind(table_2_nepsy, cont_calc(i))
+}
+
+table_2 <- rbind(table_2_covariates, table_2_area, table_2_nepsy)
+
+write.csv(table_2, file = "../Figures/Final/Table_2.csv")
+
+```
+
+# Age 
+
+```{r}
+df3_long <- df4_long
+
+round(tapply(df3_long$age, df3_long$Index, mean), 1)
+
+round(tapply(df3_long$age, df3_long$Index, sd), 1)
+```
+# race
+
+```{r}
+table(df3_long$race, df3_long$Index)
+
+sweep(table(df3_long$race, df3_long$Index),
+      2,
+      colSums(table(df3_long$race, df3_long$Index)), '/') %>% round(3)
+```
+
+
+
+
+
+
+# gender
+
+```{r}
+table(df3_long$gender, df3_long$Index)
+
+sweep(table(df3_long$gender, df3_long$Index),
+      2,
+      colSums(table(df3_long$gender, df3_long$Index)), '/') %>% round(3)
+```
+
+# mothers day
+
+```{r}
+round(tapply(df3_long$days_after_mdh, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$days_after_mdh, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# ZHA 
+
+```{r}
+round(tapply(df3_long$zha, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$zha, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+# scaled salary 
+
+```{r}
+round(tapply(df3_long$i_g4salary_scaled, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$i_g4salary_scaled, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# education 
+
+```{r}
+round(tapply(df3_long$i_d9educatpar, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$i_d9educatpar, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# cohabitation
+
+```{r}
+table(df3_long$currentnoflorag, df3_long$Index)
+
+sweep(table(df3_long$currentnoflorag, df3_long$Index),
+      2,
+      colSums(table(df3_long$currentnoflorag, df3_long$Index)), '/') %>% round(3)
+```
+
+# distance
+
+```{r}
+round(tapply(df3_long$dist_house_plant, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$dist_house_plant, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# area within 500m
+
+```{r}
+table(df3_long$ha_500m > 0, df3_long$Index)
+
+sweep(table(df3_long$ha_500m > 0, df3_long$Index),
+      2,
+      colSums(table(df3_long$ha_500m > 0, df3_long$Index)), '/') %>% round(3)
+```
+# area within 50m
+
+```{r}
+table(df3_long$ha_50m > 0, df3_long$Index)
+
+sweep(table(df3_long$ha_50m > 0, df3_long$Index),
+      2,
+      colSums(table(df3_long$ha_50m > 0, df3_long$Index)), '/') %>% round(3)
+```
+
+# area within 100m
+
+```{r}
+table(df3_long$ha_100m > 0, df3_long$Index)
+
+sweep(table(df3_long$ha_100m > 0, df3_long$Index),
+      2,
+      colSums(table(df3_long$ha_100m > 0, df3_long$Index)), '/') %>% round(3)
+```
+# area within 150m
+
+```{r}
+table(df3_long$ha_150m > 0, df3_long$Index)
+
+sweep(table(df3_long$ha_150m > 0, df3_long$Index),
+      2,
+      colSums(table(df3_long$ha_150m > 0, df3_long$Index)), '/') %>% round(3)
+```
+# area within 200m
+
+```{r}
+table(df3_long$ha_200m > 0, df3_long$Index)
+
+sweep(table(df3_long$ha_200m > 0, df3_long$Index),
+      2,
+      colSums(table(df3_long$ha_200m > 0, df3_long$Index)), '/') %>% round(3)
+```
+# area within 300m
+
+```{r}
+table(df3_long$ha_300m > 0, df3_long$Index)
+
+sweep(table(df3_long$ha_300m > 0, df3_long$Index),
+      2,
+      colSums(table(df3_long$ha_300m > 0, df3_long$Index)), '/') %>% round(3)
+```
+# area within 750m
+
+```{r}
+table(df3_long$ha_750m > 0, df3_long$Index)
+
+sweep(table(df3_long$ha_750m > 0, df3_long$Index),
+      2,
+      colSums(table(df3_long$ha_750m > 0, df3_long$Index)), '/') %>% round(3)
+```
+# area within 1000m
+
+```{r}
+table(df3_long$ha_1000m > 0, df3_long$Index)
+
+sweep(table(df3_long$ha_1000m > 0, df3_long$Index),
+      2,
+      colSums(table(df3_long$ha_1000m > 0, df3_long$Index)), '/') %>% round(3)
+```
+
+# distance < 500
+
+```{r}
+table(df3_long$ha_500m < 500, df3_long$Index)
+
+sweep(table(df3_long$ha_500m < 500, df3_long$Index),
+      2,
+      colSums(table(df3_long$ha_500m < 500, df3_long$Index)), '/') %>% round(2)
+```
+
+# attention domain 
+
+```{r}
+round(tapply(df3_long$attention_inhibitory_control, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$attention_inhibitory_control, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# aac 
+
+```{r}
+round(tapply(df3_long$aac, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$aac, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+# rsc 
+
+```{r}
+round(tapply(df3_long$rsc, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$rsc, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+# iic 
+
+```{r}
+round(tapply(df3_long$iic, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$iic, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# inc 
+
+```{r}
+round(tapply(df3_long$inc, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$inc, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# isc 
+
+```{r}
+round(tapply(df3_long$isc, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$isc, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# language 
+
+```{r}
+round(tapply(df3_long$language, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$language, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# cits 
+
+```{r}
+round(tapply(df3_long$cits, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$cits, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# snc 
+
+```{r}
+round(tapply(df3_long$snc, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$snc, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+# memory/learning 
+
+```{r}
+round(tapply(df3_long$memory_and_learning, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$memory_and_learning, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# mffts 
+
+```{r}
+round(tapply(df3_long$mffts, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$mffts, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# mffdts 
+
+```{r}
+round(tapply(df3_long$mffdts, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$mffdts, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+# visual processing 
+
+```{r}
+round(tapply(df3_long$visuospatial_processing, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$visuospatial_processing, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# dcgts 
+
+```{r}
+round(tapply(df3_long$dcgts, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$dcgts, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# gpts 
+
+```{r}
+round(tapply(df3_long$gpts, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$gpts, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# arts 
+
+```{r}
+# round(tapply(df3_long$arts, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+# 
+# round(tapply(df3_long$arts, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+
+# overall
+
+```{r}
+vars <- c('aac', 'rsc', 'iic', 'inc', 'isc', 'cits', 'snc', 'mffts', 'mffdts', 
+          'dcgts', 'gpts')
+
+df3_long$nepsy <- rowMeans(select(df3_long, vars), na.rm = TRUE)
+
+round(tapply(df3_long$nepsy, df3_long$Index, function(x){mean(x, na.rm = T)}), 1)
+
+round(tapply(df3_long$nepsy, df3_long$Index, function(x){sd(x, na.rm = T)}), 1)
+```
+# supplemental tables - variables stratified by distance and time
+
+```{r}
+get_results <- function(value_name, distance_name, df){
+  
+  distance <- dplyr::pull(df, distance_name)
+  value <- dplyr::pull(df, value_name)
+  
+  quantile_levels <- cut(distance, 
+                       breaks = quantile(distance, probs = seq(0, 1, 0.25), na.rm = T), 
+                       include.lowest = TRUE, 
+                       labels = c("Q1", "Q2", "Q3", "Q4"))
+  
+  # num not na
+  
+  num_not_na <- sum(!is.na(distance) & !is.na(value))
+  
+  # means
+  
+  strat_means <- round(tapply(value, quantile_levels, function(x){mean(x, na.rm = T)}), 2)
+  
+  strat_sds <- round(tapply(value, quantile_levels, function(x){sd(x, na.rm = T)}), 2)
+  
+  results <- paste(strat_means, strat_sds, sep = ', ')
+  
+  # p-value
+  
+
+  
+  the_formula <- paste(value_name, 'quantile_levels', sep = ' ~ ')
+  m <- aov(formula(the_formula), data = df)
+  s <- summary(m)
+  p_value <- s[[1]][["Pr(>F)"]][1] %>% signif(3)
+  return(c(num_not_na, results, p_value))
+}
+
+get_results_repeated <- function(value_name, distance_name, time_name, ID_name, df){
+  
+  df2 <- df %>% select(distance_name, value_name, time_name, ID_name) %>% na.omit()
+  
+  distance <- dplyr::pull(df2, distance_name)
+  value <- dplyr::pull(df2, value_name)
+  time <- dplyr::pull(df2, time_name)
+  
+  quantile_levels <- cut(distance, 
+                       breaks = quantile(distance, probs = seq(0, 1, 0.25), na.rm = T), 
+                       include.lowest = TRUE, 
+                       labels = c("Q1", "Q2", "Q3", "Q4"))
+  
+  df2$quantile_levels <- quantile_levels
+  
+  # num not na
+  
+  num_not_na <- sum(!is.na(distance) & !is.na(value))
+  
+  # means
+  
+  strat_means <- round(tapply(value, list(quantile_levels, time), function(x){mean(x, na.rm = T)}), 2)
+  
+  strat_sds <- round(tapply(value, list(quantile_levels, time), function(x){sd(x, na.rm = T)}), 2)
+  
+  results <- paste(strat_means, strat_sds, sep = ', ') %>% matrix(nrow = 4, ncol = 3)
+  
+  colnames(results) <- c('Summer 2008', 'Spring 2016', 'Summer 2016')
+  rownames(results) <- c('Q1', 'Q2', 'Q3', 'Q4')
+  
+  # p-value FROM REPEATED MEASURES ANOVA
+  
+  res.aov <- anova_test(data = df2, 
+                        dv = value_name, 
+                        wid = ID_name,
+                        within = c(quantile_levels, time_name)
+  )
+  
+  anova_result <- get_anova_table(res.aov)  
+  
+  return(list(results, anova_result))
+}
+
+dfa <- df3_long %>% filter(Index == 1)
+dfb <- df3_long %>% filter(Index == 2)
+dfc <- df3_long %>% filter(Index == 3)
+```
+
+```{r}
+get_results_repeated('aac', 'dist_house_plant', 'Index', 'nid', df3_long)
+```
+
+# aac
+
+```{r}
+get_results('aac', 'dist_house_plant', dfa)
+get_results('aac', 'dist_house_plant', dfb)
+get_results('aac', 'dist_house_plant', dfc)
+```
+
+
+# rsc
+
+```{r}
+get_results('rsc', 'dist_house_plant', dfa)
+get_results('rsc', 'dist_house_plant', dfb)
+get_results('rsc', 'dist_house_plant', dfc)
+```
+# iic
+
+```{r}
+get_results('iic', 'dist_house_plant', dfa)
+get_results('iic', 'dist_house_plant', dfb)
+get_results('iic', 'dist_house_plant', dfc)
+```
+# inc
+
+```{r}
+get_results('inc', 'dist_house_plant', dfa)
+get_results('inc', 'dist_house_plant', dfb)
+get_results('inc', 'dist_house_plant', dfc)
+```
+# isc
+
+```{r}
+get_results('isc', 'dist_house_plant', dfa)
+get_results('isc', 'dist_house_plant', dfb)
+get_results('isc', 'dist_house_plant', dfc)
+```
+# cits
+
+```{r}
+get_results('cits', 'dist_house_plant', dfa)
+# get_results('cits', 'dist_house_plant', dfb)
+get_results('cits', 'dist_house_plant', dfc)
+```
+
+# snc
+
+```{r}
+get_results('snc', 'dist_house_plant', dfa)
+get_results('snc', 'dist_house_plant', dfc)
+```
+
+# mffts
+
+```{r}
+get_results('mffts', 'dist_house_plant', dfa)
+get_results('mffts', 'dist_house_plant', dfc)
+```
+
+# mffdts
+
+```{r}
+get_results('mffdts', 'dist_house_plant', dfa)
+get_results('mffdts', 'dist_house_plant', dfc)
+```
+
+# dcgts
+
+```{r}
+get_results('dcgts', 'dist_house_plant', dfa)
+get_results('dcgts', 'dist_house_plant', dfc)
+```
+
+# gpts
+
+```{r}
+get_results('gpts', 'dist_house_plant', dfa)
+get_results('gpts', 'dist_house_plant', dfc)
+```
+

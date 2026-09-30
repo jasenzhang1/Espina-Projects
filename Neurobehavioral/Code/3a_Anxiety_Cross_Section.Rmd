@@ -1,0 +1,123 @@
+---
+title: "summer"
+author: "Jasen"
+date: "7/7/2021"
+output: pdf_document
+---
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(gridExtra)
+library(geepack)
+library(scales)
+
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Code/00_Codes.R", sep = '')
+source(codes_dir)
+
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/df_summer_V012522.Rdata", sep = '')
+load(codes_dir)
+```
+
+# Select the cross sectional variables
+
+```{r}
+
+
+outcomes <- c('c_masc2_tot_t', 'c_cdi2_tot_t')
+
+
+
+
+area_var <- c('50','100','150','200','300','500','1000')
+area_var <- paste('c_ha_', area_var, sep = '')
+area_var <- paste(area_var, 'm', sep = '')
+area_var_log <- paste(area_var, '_log', sep = '')
+area_var_scaled <- paste(area_var, '_scaled', sep = '')
+area_var_scaled_log <- paste(area_var, '_scaled_log', sep = '')
+
+independent_var <- c('c_dist_house_plant', 'c_dist_house_plant_log', area_var, area_var_log, area_var_scaled, area_var_scaled_log)
+
+
+covariates <- c('c_gender', 'c_race', 'c_age', 'c_zha', 'c_i_d9educatyrspar', 'c_i_g4salary_scaled', 'c_tanner', 'c_awakeningresponse', 'c_currentnoflorag')
+
+
+important_vars <- c(independent_var, outcomes, covariates)
+
+df2 <- df_summer %>% select(important_vars) %>%
+  filter(!is.na(c_dist_house_plant)) %>% 
+  filter(! c_dist_house_plant == 0)
+
+pvalues <- data.frame()
+
+output_dir <- paste(substr(dir,1, nchar(dir)-4), "Figures/3a_Anxiety_Models.txt", sep = '')
+sink(output_dir)
+
+for(j in independent_var){
+  p_val_array <- c()
+  for(i in outcomes){
+
+    model_covariates <- covariates
+
+    
+    relevant_vars <- c(i, j, model_covariates)
+    df2[df2 == -Inf] <- NA
+    df3 <- df2 %>% select(relevant_vars) %>% na.omit()
+    
+    #if all 1 race, remove it
+    if(0 %in% table(df3$c_race)){
+      model_covariates <- setdiff(model_covariates, 'c_race')
+    }
+    
+
+    if(0 %in% table(df3$c_gender)){
+      model_covariates <- setdiff(model_covariates, 'c_gender')
+    }
+
+    
+    eq <- paste(model_covariates, collapse = ' + ')
+    eq <- paste(j, eq, sep = ' + ')
+    eq <- paste(i, eq, sep = ' ~ ')
+  
+    m <- lm(eq, data = df3)
+    s <- summary(m)
+    z <- qnorm(0.975)
+    s_coefficients <- data.frame(s$coefficients) %>% 
+      mutate(CI_lower = Estimate - z * Std..Error) %>%
+      mutate(CI_upper = Estimate + z * Std..Error)
+    
+    beta_sign_positive <- s_coefficients[2,1] > 0
+    if(beta_sign_positive){
+      p_val <- s_coefficients[2,4] 
+    } else{
+      p_val <- s_coefficients[2,4] * (-1)
+    }
+    
+    p_val_array <- append(p_val_array, p_val)
+    
+    
+    
+    print(eq)
+    print(nrow(df3))
+    print(list(s_coefficients))
+    print('---------------------------------------------------------------------------')
+  }
+  pvalues <- rbind(pvalues, p_val_array)
+}
+sink()
+
+```
+
+#create pvalue matrix
+
+```{r}
+
+rownames(pvalues) <- independent_var
+colnames(pvalues) <- outcomes
+
+name <- c('Figures/3a_Anxiety_Pvalues.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(pvalues, file = data_dir)
+```
+
+

@@ -1,0 +1,289 @@
+---
+title: "summer"
+author: "Jasen"
+date: "7/7/2021"
+output: pdf_document
+---
+
+
+# libraries
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(gridExtra)
+library(geepack)
+library(scales)
+library(reshape2)
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Code/00_Codes.R", sep = '')
+source(codes_dir)
+```
+
+# load the data
+
+```{r}
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/long_temporal_data_V012522.RData", sep = '')
+load(codes_dir)
+```
+
+#creating longitudinal model
+
+```{r}
+response_vars <- c('aac', 'rsc', 'iic', 'inc', 'isc', 'cits', 'snc', 'mffts', 'mffdts', 'dcgts', 'gpts', 'auditory_attention_response_set', 
+                   'inhibition', 
+                   'attention_inhibitory_control', 
+                   'language', 
+                   'memory_and_learning', 
+                   'visuospatial_processing')
+
+#restricting to a and c timepoints
+
+df3_long <- df2_long 
+df3_long$Index <- factor(df3_long$Index, levels = c(1,2,3))
+
+# two_levels <- c(F,F,F,F,F,T,T,T,T,T,T,
+#                 F,T,T,T)
+
+area_var <- c('50','100','150','200','300','500','1000')
+area_var <- paste('ha_', area_var, sep = '')
+area_var <- paste(area_var, 'm', sep = '')
+area_var_log <- paste(area_var, '_log', sep = '')
+area_var_scaled <- paste(area_var, '_scaled', sep = '')
+area_var_scaled_log <- paste(area_var, '_scaled_log', sep = '')
+
+distance_vars <- c('dist_house_plant', 'dist_house_plant_log', area_var, area_var_log, area_var_scaled, area_var_scaled_log)
+distance_vars <- c('dist_house_plant_log', area_var_log)
+
+distance_vars_graph <- c('Distance', 'Area 50m', 'Area 100m', 'Area 150m', 'Area 200m', 'Area 300m' ,'Area 500m', 'Area 1000m')
+
+pvalues <- data.frame()
+estimates <- data.frame()
+lows <- data.frame()
+highs <- data.frame()
+CIs <- c()
+
+
+output_dir <- paste(substr(dir,1, nchar(dir)-4), "Figures/Final/5_Neurobehavioral_Temporal_Models.txt", sep = '')
+sink(output_dir)
+for(k in 1:length(response_vars)){
+  pval_array <- c()
+  est_array <- c()
+  low_array <- c()
+  high_array <- c()
+  ci_array <- c()
+  
+  for(j in distance_vars){
+    covariates <- c('age', 'race', 'gender', 'Index', 'octoberness', 'zha', 'i_g4salary_scaled',  'i_d9educatpar', 'currentnoflorag')
+    covariates <- c('age', 'race', 'gender', 'Index', 'days_after_mdh', 'zha', 'i_g4salary_scaled',  'i_d9educatpar', 'currentnoflorag')
+    
+    i <- response_vars[k]
+    
+    important_vars <- c('nid', covariates, i, j)
+    
+    if(i == 'iic' | i == 'isc' | i == 'inhibition'){
+      important_vars <- append(important_vars, 'inc')
+      covariates <- append(covariates, 'inc')
+    }
+    if(i == 'mffdts' | i == 'memory_and_learning'){
+      important_vars <- append(important_vars, 'mffts')
+      covariates <- append(covariates, 'mffts')
+    }
+    
+    
+    
+    df4_long <- df3_long %>% select(important_vars) %>% na.omit()
+    
+    if(0 %in% table(df4_long$Index)){
+      df4_long$Index <- factor(df4_long$Index, levels = c(1,3))
+    }
+    
+    # if(two_levels[k]){
+    #   df3_long$Index <- factor(df3_long$Index, levels = c(1,3))
+    # }
+    
+    eq <- paste(i, j, sep = ' ~ ')
+    temp <- paste(covariates, collapse = ' + ')
+    eq <- paste(eq, temp, sep = ' + ')
+    
+    m <- geeglm(formula = formula(eq), id = nid, data=df4_long,
+                family='gaussian', corstr="exchangeable")
+    s <- summary(m)
+    
+    
+    
+    s_coeffs <- s$coefficients
+    s_confint <- broom::tidy(m, conf.int = T)
+    
+    temp_est <- as.numeric(s_confint[2,2]) * log(2)
+    temp_lower <- as.numeric(s_confint[2,6]) * log(2)
+    temp_upper <- as.numeric(s_confint[2,7]) * log(2)
+    
+    temp_CI <- paste(round(temp_est, 3), round(temp_lower,3), sep = ' (')
+    temp_CI <- paste(temp_CI, round(temp_upper, 3), sep = ', ')
+    temp_CI <- paste(temp_CI, ')', sep = '')
+    
+    pvalue <- s_coeffs[2,4]
+    
+    
+    
+    beta_sign_positive <- (s_coeffs[2,1] > 0)
+    if(beta_sign_positive){
+      the_sign <- 1
+    } else{
+      the_sign <- -1
+    }
+    
+    pval_array <- append(pval_array, pvalue * the_sign)
+    est_array <- append(est_array, temp_est)
+    low_array <- append(low_array, temp_lower)
+    high_array <- append(high_array, temp_upper)
+    ci_array <- append(ci_array, temp_CI)
+    
+    print(eq)
+    print(table(df4_long$Index))
+    print(s)
+    print('-------------------------------')
+  }
+  pvalues <- rbind(pvalues, pval_array)
+  estimates <- rbind(estimates, est_array)
+  CIs <- rbind(CIs, ci_array)
+  lows <- rbind(lows, low_array)
+  highs <- rbind(highs, high_array)
+}
+sink()
+
+```
+
+#create pvalue matrix
+
+```{r}
+estimates2 <- t(CIs)
+rownames(estimates2) <- distance_vars
+colnames(estimates2) <- response_vars
+
+name <- c('Figures/Final/5_NEPSY_Estimates.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(estimates2, file = data_dir)
+
+pvalues2 <- t(pvalues)
+rownames(pvalues2) <- distance_vars
+colnames(pvalues2) <- response_vars
+
+name <- c('Figures/Final/5_NEPSY_Pvalues.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(pvalues2, file = data_dir)
+
+pvalues3 <- pvalues2
+pvalues3[abs(pvalues3) > 0.05] <- NA
+
+name <- c('Figures/Final/5_NEPSY_Pvalues_significant.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(pvalues3, file = data_dir)
+```
+
+# create figures
+
+```{r}
+highs2 <- t(highs)
+rownames(highs2) <- distance_vars
+colnames(highs2) <- paste(response_vars, 'high', sep = '_')
+
+lows2 <- t(lows)
+rownames(lows2) <- distance_vars
+colnames(lows2) <- paste(response_vars, 'low', sep = '_')
+
+estimates3 <- as.data.frame(t(estimates))
+rownames(estimates3) <- distance_vars
+colnames(estimates3) <- paste(response_vars, 'est', sep = '_')
+
+lows3 <- as.data.frame(lows2)
+highs3 <- as.data.frame(highs2)
+ 
+
+temp_name <- factor(rownames(estimates3), levels = c('dist_house_plant_log', 'ha_50m_log', 'ha_100m_log', 'ha_150m_log', 'ha_200m_log', 'ha_300m_log', 'ha_500m_log', 'ha_1000m_log'))
+
+all_results <- cbind(estimates3, lows3, highs3)
+all_results <- all_results %>% mutate(var_name = temp_name) %>%
+  mutate(sig_line = rep(0,nrow(all_results)))
+
+all_results2 <- all_results
+
+all_results2$var_name <- all_results$var_name
+
+all_results2$iic_sig <- c('*', '*', '*', '*', '*', '*', '*', '')
+all_results2$isc_sig <- c('', '', '', '*', '', '*', '*', '')
+all_results2$inhibition_sig <- c('*', '*', '*', '*', '*', '*', '*', '')
+all_results2$attention_inhibitory_control_sig <- c('*', '', '*', '*', '*', '*', '*', '')
+
+nepsy_names <- c('IIC', 'ISC', 'Inhibition Subdomain', 'Attention Inhibitory Control Domain')
+
+graphs <- list()
+graph_index <- 1
+
+for(j in 1:length(response_vars)){
+  
+  
+  
+  i <- response_vars[j]
+  sig_name <- paste(i, 'sig', sep = '_')
+  low_name <- paste(i, 'low', sep = '_')
+  est_name <- paste(i, 'est', sep = '_')
+  high_name <- paste(i, 'high', sep = '_')
+  temp_title <- paste(i, 'NEPSY Score', sep = ' ')
+  
+  g1 <- ggplot(data = all_results2) +
+    geom_errorbar(aes(x = var_name, y = !!as.name(est_name), ymin = !!as.name(low_name), ymax = !!as.name(high_name)), width = 0.5) + 
+    geom_point(aes(x = var_name, y = !!as.name(est_name))) + 
+    geom_hline(aes(yintercept = 0), linetype = "dashed", color = 'red') + 
+    theme(axis.text.x = element_text(angle = 30, hjust = 1, size = 7)) + 
+    scale_x_discrete(labels = distance_vars_graph) + 
+    ylab(nepsy_names[j]) + 
+    xlab('Distance/Area Variable') +
+    geom_text(aes(x = var_name,
+                      y = !!as.name(high_name) + 0.01,
+                      label = !!as.name(sig_name)),
+                      position = position_dodge(0.5),
+                      size = 6)
+  
+  graphs[[graph_index]] <- g1
+  graph_index <- graph_index + 1
+}
+
+
+
+
+  
+lay2 <- rbind(c(1,2),
+              c(3,4))
+
+plot_dir <- paste(substr(dir,1, nchar(dir)-4), "Figures/Final/5_NEPSY_Model_Estimates.pdf", sep = '')
+pdf(plot_dir) 
+
+i <- 0 
+wow <- graph_index - 1
+while(i < wow){
+  if(wow - i == 1){
+    grid.arrange(graphs[[i+1]], layout_matrix = lay2)    
+  }
+  if(wow - i == 2){
+    grid.arrange(graphs[[i+1]], 
+                 graphs[[i+2]], layout_matrix = lay2)    
+  }  
+  if(wow - i == 3){
+    grid.arrange(graphs[[i+1]], 
+                 graphs[[i+2]], 
+                 graphs[[i+3]], layout_matrix = lay2)    
+  }  
+  if(wow - i >= 4){
+    grid.arrange(graphs[[i+1]], 
+                 graphs[[i+2]], 
+                 graphs[[i+3]], 
+                 graphs[[i+4]], layout_matrix = lay2)    
+  }    
+
+  i <- i + 4
+}
+
+dev.off()
+  
+```

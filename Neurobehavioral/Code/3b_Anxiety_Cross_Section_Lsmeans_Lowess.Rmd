@@ -1,0 +1,210 @@
+---
+title: "Lsmeans_Lowess"
+author: "Jasen Zhang"
+date: "9/4/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Adjusted means of AChE activity across quintiles  of metabolites for PAR, OPM and CPM
+
+
+```{r}
+library(tidyverse)
+library(lsmeans)
+library(gridExtra)
+library(msir)
+library(geepack)
+library(scales)
+
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Code/00_Codes.R", sep = '')
+source(codes_dir)
+
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/df_summer_V012522.Rdata", sep = '')
+load(codes_dir)
+
+y_vars <- c('c_masc2_tot_t', 'c_cdi2_tot_t')
+
+titles <- c('c_masc2_tot_t', 'c_cdi2_tot_t')
+
+area_var <- c('50','100','150','200','300','500', '750', '1000')
+area_var <- paste('c_ha_', area_var, sep = '')
+area_var <- paste(area_var, 'm', sep = '')
+area_var_log <- paste(area_var, '_log', sep = '')
+area_var_scaled <- paste(area_var, '_scaled', sep = '')
+area_var_scaled_log <- paste(area_var, '_scaled_log', sep = '')
+
+var_of_interest <- rbind(c('c_dist_house_plant',     area_var),
+                         c('c_dist_house_plant_log', area_var_log))
+
+
+covariates <- c('c_gender', 
+                'c_race', 
+                'c_age', 
+                'c_zha', 
+                'c_currentnoflorag', 
+                'c_i_d9educatyrspar', 
+                'c_i_g4salary_scaled', 
+                'c_tanner', 
+                'c_awakeningresponse')
+
+
+
+
+x_maxes <- matrix(10^7,nrow = dim(var_of_interest)[2], ncol = 4)
+x_mins <- matrix(0.1,nrow = dim(var_of_interest)[2], ncol = 4)
+
+y_maxes <- matrix(100,nrow = dim(var_of_interest)[2], ncol = 4)
+y_mins <- matrix(0,nrow = dim(var_of_interest)[2], ncol = 4)
+
+
+graphs1 <- list()
+graph1_count <- 1
+
+##Compute Least Squares Means
+
+for(i in 1:length(y_vars)){
+  for(j in 1:dim(var_of_interest)[1]){ #log or no log
+    for(l in 1:dim(var_of_interest)[2]){ #which distance variable
+      
+      dis <- var_of_interest[j,l]
+      
+      #select the important variables
+      final_covariates <- covariates
+      cov_df <- df_summer %>% select(y_vars[i], dis, final_covariates)
+
+    
+      cov_df2 <- na.omit(cov_df) %>% filter(!!as.name(var_of_interest[j,l]) != 0) %>%
+        filter(!!as.name(var_of_interest[j,l]) != -Inf)
+    
+    
+      distances <- dplyr::pull(cov_df2, dis)
+      
+      temp_layers <- c(30,80,150, 180, 200, 300, 350,400)
+    
+    
+    
+      num_layers_all <-  t(rbind(c(450, temp_layers),
+                                 c(450, temp_layers)))
+                               #c(100,100,40,100))
+
+      num_layers <- num_layers_all[l,i]
+  
+      print(nrow(cov_df2))
+    
+      layers <- 1:num_layers/num_layers
+      layers2 <- quantile(distances, layers)
+    
+      quantile_index <- integer(nrow(cov_df2)) + 1
+      for(k in layers2){
+        gain_one <- as.numeric(distances > k)
+        quantile_index <- quantile_index + gain_one
+      }
+      cov_df2$layers <- factor(quantile_index)
+    
+  
+    
+      temp <- paste(final_covariates, collapse = ' + ')                     #eq: y_vars ~ met + covariates
+      eq2 <- paste(y_vars[i], temp, sep = ' ~ ')
+  
+      eq2 <- paste(eq2, 'layers', sep = ' + ')
+      
+      model = lm(formula(eq2), data = cov_df2)
+      model2 <- lsmeans(model, specs = 'layers')
+      sum4 <- summary(model2)
+      sum5 <- sum4 %>% select('layers', 'lsmean')
+      colnames(sum5) <- c('layers', 'lsmean_y')
+    
+    
+      cov_layers <- cov_df2$layers
+      lsmean_outcome <- c()
+      for(k in cov_layers){
+        temp <- sum5 %>% filter(layers == k)
+        temp2 <- as.numeric(temp[2])                             #extracting the lsmean_y value
+        lsmean_outcome <- append(lsmean_outcome, temp2)
+      }
+      
+      cov_df2$adjusted_outcome <- lsmean_outcome
+      
+      loess_eq1 <- paste('adjusted_outcome', dis, sep = ' ~ ')
+      temp <- predict(loess(formula(loess_eq1), data = cov_df2, span = 0.75), se=TRUE)              #get loess the normal way
+      cov_df2$loess <- temp$fit
+      cov_df2$lower <- temp$fit - 1.96 * temp$se.fit
+      cov_df2$upper <- temp$fit + 1.96 * temp$se.fit
+    
+    
+      graph_title <- paste(y_vars[i], var_of_interest[j,l], sep = ' vs ')
+
+      y_min <- y_mins[l,i]
+      y_max <- y_maxes[l,i]
+      x_min <- x_mins[l,i]
+      x_max <- x_maxes[l,i]
+
+      ylab_name <- y_vars[i]
+      xlab_name <- var_of_interest[2,l]
+    
+      if(j == 1){
+        g1  <- ggplot(cov_df2) + 
+          geom_point(aes(x = !!as.name(dis), y = adjusted_outcome), size = 0.6, alpha = 0.5) + 
+          geom_line(aes(x = !!as.name(dis), y = loess), color = 'red', size = 0.6) + 
+          geom_ribbon(aes(ymin = lower, ymax = upper, x = !!as.name(dis)), fill = 'red', linetype=1, alpha=0.1) +
+          ylim(y_min, y_max) +
+          ylab(ylab_name) + 
+          ggtitle(graph_title) + 
+          scale_x_continuous(trans='log10', limits = c(x_min, x_max)) + 
+          theme(plot.title = element_text(size = 6),
+                axis.text=element_text(size=8),
+                axis.title=element_text(size=8,face="bold"))
+      } else{
+        g1  <- ggplot(cov_df2) + 
+          geom_point(aes(x = exp(!!as.name(dis)), y = adjusted_outcome), size = 0.6, alpha = 0.5) + 
+          geom_line(aes(x = exp(!!as.name(dis)), y = loess), color = 'red', size = 0.6) + 
+          geom_ribbon(aes(ymin = lower, ymax = upper, x = exp(!!as.name(dis))), fill = 'red', linetype=1, alpha=0.1) +
+          ylim(y_min, y_max) +
+          scale_x_continuous(trans='log10', limits = c(x_min, x_max)) + 
+          xlab(xlab_name) + 
+          ylab(ylab_name) + 
+          ggtitle(graph_title) + 
+          theme(plot.title = element_text(size = 6),
+                axis.text=element_text(size=8),
+                axis.title=element_text(size=8,face="bold"))
+      }
+      
+      graphs1[[graph1_count]] <- g1
+      graph1_count <- graph1_count + 1
+    }
+  }
+}
+
+lay2 <- rbind(c(1,2,3),
+              c(4,5,6),
+              c(7,8,9))
+
+plot_dir <- paste(substr(dir,1, nchar(dir)-4), "Figures/3b_Anxiety_Loess.pdf", sep = '')
+pdf(plot_dir) 
+
+temp_index <- 1
+
+while(temp_index < graph1_count){
+  grid.arrange(graphs1[[temp_index]],
+               graphs1[[temp_index + 1]],
+               graphs1[[temp_index + 2]],
+               graphs1[[temp_index + 3]],
+               graphs1[[temp_index + 4]],
+               graphs1[[temp_index + 5]],
+               graphs1[[temp_index + 6]],
+               graphs1[[temp_index + 7]],
+               graphs1[[temp_index + 8]], layout_matrix = lay2)
+  temp_index <- temp_index + 9
+}
+
+dev.off()
+
+
+```
+
+

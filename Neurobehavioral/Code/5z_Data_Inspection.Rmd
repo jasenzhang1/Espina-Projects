@@ -1,0 +1,54 @@
+---
+title: "5z_Data_Inspection"
+author: "Jasen"
+date: "1/27/2022"
+output: pdf_document
+---
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(gridExtra)
+library(geepack)
+library(scales)
+library(reshape2)
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Code/00_Codes.R", sep = '')
+source(codes_dir)
+```
+
+# load the data
+
+```{r}
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/long_temporal_data_V012522.RData", sep = '')
+load(codes_dir)
+```
+
+# Inspect NA of NEPSY Variables
+
+```{r}
+response_vars <- c('aac', 'rsc', 'iic', 'inc', 'isc', 'cits', 'snc', 'mffts', 'mffdts', 'dcgts', 'gpts',
+                   'auditory_attention_response_set', 'inhibition',
+                   'attention_inhibitory_control', 'language', 'memory_and_learning', 'visuospatial_processing')
+
+output_dir <- paste(substr(dir,1, nchar(dir)-4), "Figures/Neurobehavioral/5z_NEPSY_Missingness.txt", sep = '')
+sink(output_dir)
+
+for(i in response_vars){
+  temp_df <- df2_long %>% filter(!is.na(age)) %>%
+    select(c(i, 'Index')) 
+  colnames(temp_df) <- c('var', 'Index')
+  temp_vec <- ! is.na(temp_df$var)
+  temp_vec[temp_vec == F] <- 'Missing'
+  temp_vec[temp_vec == T] <- 'Present'
+  temp_df$var <- temp_vec
+  print(i)
+  temp_table <- table(temp_df$var, temp_df$Index)
+  temp_table <- rbind(temp_table, colSums(temp_table))
+  rownames(temp_table) <- c('Missing', 'Present', 'Total')
+  print(temp_table)
+  cat('------------------------------------------\n')
+}
+
+sink()
+```

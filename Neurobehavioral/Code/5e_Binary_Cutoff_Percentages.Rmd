@@ -1,0 +1,105 @@
+---
+title: "Untitled"
+author: "Jasen"
+date: "2025-08-10"
+output: pdf_document
+---
+
+# We want to know how many subjects have NEPSY scores of <= x. 
+
+# basically construct the CDF
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(gridExtra)
+library(geepack)
+library(scales)
+library(reshape2)
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Code/00_Codes.R", sep = '')
+source(codes_dir)
+```
+
+# load the data
+
+```{r}
+dir <- getwd()
+codes_dir <- paste(substr(dir,1, nchar(dir)-4), "Data/long_temporal_data_V012522.RData", sep = '')
+load(codes_dir)
+```
+
+```{r}
+cdf_df <-data.frame()
+
+thresholds <- 2:12
+
+response_vars <- c('aac', 'rsc', 'iic', 'inc', 'isc', 'cits', 'snc', 'mffts', 'mffdts', 'dcgts', 'gpts',
+                   'auditory_attention_response_set', 'inhibition',
+                   'attention_inhibitory_control', 'language', 'memory_and_learning', 'visuospatial_processing')
+
+
+
+df3_long <- df2_long 
+df3_long$Index <- factor(df3_long$Index, levels = c(1,2,3))
+
+for(k in 1:length(response_vars)){ # 1) for each NEPSY score
+  
+  pct_cdfs <- c()
+  
+  covariates <- c('age', 'race', 'gender', 'Index', 'zha', 'i_g4salary_scaled',  'i_d9educatpar', 'currentnoflorag', 'days_after_mdh')
+    
+  i <- response_vars[k]
+  
+  important_vars <- c('nid', covariates, i, 'dist_house_plant_log')
+  
+  if(i == 'iic' | i == 'isc' | i == 'inhibition'){
+    important_vars <- append(important_vars, 'inc')
+    covariates <- append(covariates, 'inc')
+  }
+  if(i == 'mffdts' | i == 'memory_and_learning'){
+    important_vars <- append(important_vars, 'mffts')
+    covariates <- append(covariates, 'mffts')
+  }
+    
+  # 1.1) remove NA's 
+    
+  df4_long <- df3_long %>% dplyr::select(important_vars) %>% na.omit()
+    
+  if(0 %in% table(df4_long$Index)){
+    df4_long$Index <- factor(df4_long$Index, levels = c(1,3))
+  }
+  
+  # define binary variable and calculate percentage of values <= the threshold
+    
+  binary_outcome <- paste(i, 'binary', sep = '_')
+  
+  for(thresh in thresholds){ # 1.2) vary across each threshold and calculate pct below
+    
+
+    df4_long <- df4_long %>% mutate(!!as.name(binary_outcome) := (!!as.name(i) <= thresh)) ## switched from > thresh to <= to measure how doubling area lead to more low scores. 
+      
+    num_low <- sum(dplyr::pull(df4_long, binary_outcome))
+    num_total <- length(dplyr::pull(df4_long, binary_outcome))
+    
+    pct_below <- 100 * num_low/num_total
+      
+    pct_cdfs <- c(pct_cdfs, pct_below)
+  }
+  
+  cdf_df <- rbind(cdf_df, pct_cdfs)
+  
+}
+
+```
+
+
+```{r}
+rownames(cdf_df) <- response_vars
+colnames(cdf_df) <- thresholds
+
+name <- c('Figures/Final/5e_Cutoff_Distributions.csv')
+data_dir <- paste(substr(dir,1, nchar(dir)-4), name, sep = '')
+write.csv(cdf_df, file = data_dir)
+```
+
+

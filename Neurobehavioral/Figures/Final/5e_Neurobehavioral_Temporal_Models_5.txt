@@ -1,0 +1,5002 @@
+null device 
+          1 
+null device 
+          1 
+nder + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  832   237 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                     Estimate  Std.err Wald Pr(>|W|)   
+(Intercept)          -0.04607  0.82064 0.00   0.9552   
+dist_house_plant_log -0.06076  0.05532 1.21   0.2721   
+age                   0.04361  0.04118 1.12   0.2896   
+race                 -0.45621  0.17147 7.08   0.0078 **
+gender                0.19387  0.15003 1.67   0.1963   
+Index2               -0.62123  0.71094 0.76   0.3822   
+Index3               -0.48244  0.39265 1.51   0.2192   
+zha                  -0.05527  0.08159 0.46   0.4981   
+i_g4salary_scaled     0.05776  0.09446 0.37   0.5409   
+i_d9educatpar        -0.03715  0.02417 2.36   0.1243   
+currentnoflorag      -0.08569  0.16621 0.27   0.6062   
+days_after_mdh       -0.00500  0.00601 0.69   0.4052   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "aac_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  832   237 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)   
+(Intercept)       -0.43936  0.73970 0.35   0.5525   
+ha_50m_log         0.03579  0.03948 0.82   0.3647   
+age                0.04448  0.04118 1.17   0.2801   
+race              -0.44500  0.17133 6.75   0.0094 **
+gender             0.19116  0.14966 1.63   0.2015   
+Index2            -0.64546  0.71101 0.82   0.3640   
+Index3            -0.49481  0.39409 1.58   0.2093   
+zha               -0.05608  0.08162 0.47   0.4920   
+i_g4salary_scaled  0.06311  0.09410 0.45   0.5024   
+i_d9educatpar     -0.03656  0.02430 2.26   0.1324   
+currentnoflorag   -0.08628  0.16700 0.27   0.6054   
+days_after_mdh    -0.00513  0.00602 0.73   0.3941   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "aac_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  832   237 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)   
+(Intercept)       -0.39959  0.73901 0.29   0.5887   
+ha_100m_log        0.01404  0.02532 0.31   0.5792   
+age                0.04317  0.04141 1.09   0.2971   
+race              -0.44613  0.17295 6.65   0.0099 **
+gender             0.18834  0.14943 1.59   0.2075   
+Index2            -0.64992  0.71306 0.83   0.3621   
+Index3            -0.48038  0.39559 1.47   0.2246   
+zha               -0.05521  0.08149 0.46   0.4981   
+i_g4salary_scaled  0.05978  0.09463 0.40   0.5276   
+i_d9educatpar     -0.03704  0.02419 2.35   0.1256   
+currentnoflorag   -0.08526  0.16736 0.26   0.6104   
+days_after_mdh    -0.00526  0.00600 0.77   0.3805   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "aac_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  832   237 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)       -0.412233  0.736893 0.31    0.576  
+ha_150m_log        0.000715  0.020868 0.00    0.973  
+age                0.041606  0.041471 1.01    0.316  
+race              -0.431374  0.172812 6.23    0.013 *
+gender             0.185804  0.149528 1.54    0.214  
+Index2            -0.625679  0.709262 0.78    0.378  
+Index3            -0.464750  0.398137 1.36    0.243  
+zha               -0.055557  0.081495 0.46    0.495  
+i_g4salary_scaled  0.062919  0.094742 0.44    0.507  
+i_d9educatpar     -0.038051  0.024183 2.48    0.116  
+currentnoflorag   -0.078442  0.166959 0.22    0.638  
+days_after_mdh    -0.005183  0.005964 0.76    0.385  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "aac_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  832   237 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)   
+(Intercept)       -0.42249  0.73677 0.33   0.5664   
+ha_200m_log        0.00993  0.01806 0.30   0.5825   
+age                0.04233  0.04125 1.05   0.3048   
+race              -0.44206  0.17125 6.66   0.0098 **
+gender             0.18982  0.14961 1.61   0.2045   
+Index2            -0.63229  0.70981 0.79   0.3730   
+Index3            -0.48062  0.39582 1.47   0.2247   
+zha               -0.05561  0.08147 0.47   0.4949   
+i_g4salary_scaled  0.06049  0.09465 0.41   0.5227   
+i_d9educatpar     -0.03766  0.02415 2.43   0.1189   
+currentnoflorag   -0.08178  0.16627 0.24   0.6228   
+days_after_mdh    -0.00509  0.00598 0.73   0.3940   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "aac_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  832   237 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)   
+(Intercept)       -0.47336  0.74063 0.41     0.52   
+ha_300m_log        0.01411  0.01603 0.78     0.38   
+age                0.04287  0.04116 1.08     0.30   
+race              -0.43892  0.17039 6.64     0.01 **
+gender             0.19011  0.14949 1.62     0.20   
+Index2            -0.61576  0.70936 0.75     0.39   
+Index3            -0.48625  0.39429 1.52     0.22   
+zha               -0.05498  0.08158 0.45     0.50   
+i_g4salary_scaled  0.05890  0.09450 0.39     0.53   
+i_d9educatpar     -0.03773  0.02412 2.45     0.12   
+currentnoflorag   -0.08141  0.16581 0.24     0.62   
+days_after_mdh    -0.00490  0.00599 0.67     0.41   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "aac_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  832   237 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)  
+(Intercept)       -0.58329  0.74700 0.61    0.435  
+ha_500m_log        0.02192  0.01553 1.99    0.158  
+age                0.04514  0.04124 1.20    0.274  
+race              -0.43098  0.17125 6.33    0.012 *
+gender             0.19834  0.15044 1.74    0.187  
+Index2            -0.61239  0.70818 0.75    0.387  
+Index3            -0.50242  0.39282 1.64    0.201  
+zha               -0.05265  0.08190 0.41    0.520  
+i_g4salary_scaled  0.05381  0.09474 0.32    0.570  
+i_d9educatpar     -0.03706  0.02410 2.37    0.124  
+currentnoflorag   -0.07068  0.16591 0.18    0.670  
+days_after_mdh    -0.00478  0.00599 0.64    0.425  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "aac_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  832   237 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)   
+(Intercept)       -0.63906  0.75821 0.71   0.3993   
+ha_1000m_log       0.03297  0.01935 2.90   0.0885 . 
+age                0.04188  0.04103 1.04   0.3074   
+race              -0.45534  0.17155 7.05   0.0079 **
+gender             0.19309  0.15008 1.66   0.1982   
+Index2            -0.62612  0.70942 0.78   0.3775   
+Index3            -0.46014  0.39052 1.39   0.2387   
+zha               -0.05176  0.08218 0.40   0.5288   
+i_g4salary_scaled  0.05422  0.09399 0.33   0.5640   
+i_d9educatpar     -0.04141  0.02428 2.91   0.0881 . 
+currentnoflorag   -0.07898  0.16578 0.23   0.6338   
+days_after_mdh    -0.00520  0.00601 0.75   0.3869   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "rsc_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+118 320 523 
+
+FALSE  TRUE 
+  864    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                     Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)           1.94430  1.39578  1.94  0.16362    
+dist_house_plant_log -0.07599  0.08654  0.77  0.37993    
+age                  -0.00271  0.06161  0.00  0.96487    
+race                 -0.88291  0.24174 13.34  0.00026 ***
+gender                0.45339  0.22357  4.11  0.04257 *  
+Index2               -2.10580  1.40536  2.25  0.13403    
+Index3               -0.25823  0.52178  0.24  0.62067    
+zha                  -0.16088  0.12014  1.79  0.18055    
+i_g4salary_scaled    -0.12183  0.14234  0.73  0.39205    
+i_d9educatpar        -0.02048  0.03434  0.36  0.55087    
+currentnoflorag       0.04937  0.23881  0.04  0.83621    
+days_after_mdh       -0.02019  0.01339  2.27  0.13169    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   961  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "rsc_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+118 320 523 
+
+FALSE  TRUE 
+  864    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        1.44206  1.31613  1.20  0.27322    
+ha_50m_log         0.07350  0.05271  1.94  0.16315    
+age                0.00152  0.06075  0.00  0.98000    
+race              -0.88256  0.23823 13.72  0.00021 ***
+gender             0.46241  0.22382  4.27  0.03883 *  
+Index2            -2.18362  1.41718  2.37  0.12336    
+Index3            -0.28087  0.51716  0.29  0.58706    
+zha               -0.16610  0.12143  1.87  0.17137    
+i_g4salary_scaled -0.11846  0.14194  0.70  0.40396    
+i_d9educatpar     -0.01797  0.03437  0.27  0.60117    
+currentnoflorag    0.04932  0.24116  0.04  0.83795    
+days_after_mdh    -0.02075  0.01357  2.34  0.12628    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   961  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "rsc_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+118 320 523 
+
+FALSE  TRUE 
+  864    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        1.51044  1.29618  1.36  0.24390    
+ha_100m_log        0.02537  0.03612  0.49  0.48236    
+age               -0.00186  0.06192  0.00  0.97604    
+race              -0.87999  0.24003 13.44  0.00025 ***
+gender             0.44920  0.22291  4.06  0.04389 *  
+Index2            -2.15225  1.39778  2.37  0.12362    
+Index3            -0.26264  0.51934  0.26  0.61305    
+zha               -0.16066  0.12003  1.79  0.18074    
+i_g4salary_scaled -0.12430  0.14326  0.75  0.38559    
+i_d9educatpar     -0.01937  0.03412  0.32  0.57017    
+currentnoflorag    0.04759  0.24054  0.04  0.84317    
+days_after_mdh    -0.02056  0.01329  2.39  0.12191    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   961  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "rsc_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+118 320 523 
+
+FALSE  TRUE 
+  864    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        1.51249  1.29013  1.37  0.24105    
+ha_150m_log        0.00545  0.03020  0.03  0.85678    
+age               -0.00498  0.06205  0.01  0.93607    
+race              -0.86036  0.24236 12.60  0.00039 ***
+gender             0.44643  0.22297  4.01  0.04526 *  
+Index2            -2.12130  1.38440  2.35  0.12545    
+Index3            -0.24944  0.52211  0.23  0.63283    
+zha               -0.15866  0.12023  1.74  0.18696    
+i_g4salary_scaled -0.11966  0.14368  0.69  0.40495    
+i_d9educatpar     -0.02099  0.03427  0.38  0.54018    
+currentnoflorag    0.05920  0.23883  0.06  0.80425    
+days_after_mdh    -0.02038  0.01316  2.40  0.12137    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   961  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "rsc_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+118 320 523 
+
+FALSE  TRUE 
+  864    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        1.48949  1.29562  1.32  0.25029    
+ha_200m_log        0.01635  0.02631  0.39  0.53437    
+age               -0.00452  0.06163  0.01  0.94154    
+race              -0.87260  0.24196 13.01  0.00031 ***
+gender             0.45090  0.22301  4.09  0.04319 *  
+Index2            -2.12055  1.39410  2.31  0.12824    
+Index3            -0.26351  0.52074  0.26  0.61283    
+zha               -0.16033  0.12026  1.78  0.18244    
+i_g4salary_scaled -0.12149  0.14372  0.71  0.39793    
+i_d9educatpar     -0.02087  0.03429  0.37  0.54265    
+currentnoflorag    0.05325  0.23813  0.05  0.82305    
+days_after_mdh    -0.02024  0.01326  2.33  0.12677    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   961  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "rsc_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+118 320 523 
+
+FALSE  TRUE 
+  864    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        1.53198  1.28716  1.42  0.23397    
+ha_300m_log       -0.00474  0.02349  0.04  0.84004    
+age               -0.00579  0.06215  0.01  0.92573    
+race              -0.85025  0.23877 12.68  0.00037 ***
+gender             0.44429  0.22325  3.96  0.04658 *  
+Index2            -2.11651  1.37558  2.37  0.12389    
+Index3            -0.23649  0.52347  0.20  0.65143    
+zha               -0.15791  0.12038  1.72  0.18963    
+i_g4salary_scaled -0.11762  0.14318  0.67  0.41137    
+i_d9educatpar     -0.02153  0.03434  0.39  0.53057    
+currentnoflorag    0.06612  0.23947  0.08  0.78248    
+days_after_mdh    -0.02046  0.01306  2.45  0.11731    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   961  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "rsc_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+118 320 523 
+
+FALSE  TRUE 
+  864    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        1.52366  1.31320  1.35  0.24594    
+ha_500m_log       -0.00129  0.02247  0.00  0.95439    
+age               -0.00575  0.06254  0.01  0.92675    
+race              -0.85311  0.23887 12.75  0.00036 ***
+gender             0.44493  0.22362  3.96  0.04663 *  
+Index2            -2.11510  1.37931  2.35  0.12517    
+Index3            -0.24032  0.52702  0.21  0.64839    
+zha               -0.15850  0.12072  1.72  0.18919    
+i_g4salary_scaled -0.11818  0.14397  0.67  0.41173    
+i_d9educatpar     -0.02149  0.03435  0.39  0.53165    
+currentnoflorag    0.06339  0.24194  0.07  0.79331    
+days_after_mdh    -0.02040  0.01314  2.41  0.12047    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   961  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "rsc_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+118 320 523 
+
+FALSE  TRUE 
+  864    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        1.62310  1.31464  1.52  0.21697    
+ha_1000m_log      -0.01333  0.02525  0.28  0.59739    
+age               -0.00637  0.06234  0.01  0.91862    
+race              -0.84441  0.24043 12.33  0.00044 ***
+gender             0.44692  0.22322  4.01  0.04526 *  
+Index2            -2.11850  1.36944  2.39  0.12187    
+Index3            -0.24069  0.52399  0.21  0.64599    
+zha               -0.15986  0.12014  1.77  0.18330    
+i_g4salary_scaled -0.11769  0.14359  0.67  0.41243    
+i_d9educatpar     -0.01978  0.03437  0.33  0.56488    
+currentnoflorag    0.06784  0.24057  0.08  0.77794    
+days_after_mdh    -0.02045  0.01299  2.48  0.11544    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   961  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "iic_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  662   399 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                      Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)           1.808396  0.721812  6.28   0.0122 *  
+dist_house_plant_log -0.165569  0.052041 10.12   0.0015 ** 
+age                   0.060774  0.040298  2.27   0.1315    
+race                 -0.347034  0.168379  4.25   0.0393 *  
+gender               -0.022923  0.133392  0.03   0.8636    
+Index2               -0.466421  0.581219  0.64   0.4223    
+Index3               -0.291887  0.376688  0.60   0.4384    
+zha                  -0.168327  0.079526  4.48   0.0343 *  
+i_g4salary_scaled    -0.075848  0.082477  0.85   0.3578    
+i_d9educatpar         0.000908  0.020955  0.00   0.9654    
+currentnoflorag       0.122963  0.145301  0.72   0.3974    
+days_after_mdh       -0.001181  0.004556  0.07   0.7955    
+inc                  -0.187771  0.023872 61.87  3.7e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "iic_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  662   399 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        0.72454  0.63844  1.29   0.2564    
+ha_50m_log         0.10044  0.03590  7.83   0.0051 ** 
+age                0.06285  0.04034  2.43   0.1193    
+race              -0.30789  0.16608  3.44   0.0638 .  
+gender            -0.03007  0.13313  0.05   0.8213    
+Index2            -0.52304  0.57982  0.81   0.3670    
+Index3            -0.32515  0.37714  0.74   0.3886    
+zha               -0.17051  0.07932  4.62   0.0316 *  
+i_g4salary_scaled -0.06079  0.08191  0.55   0.4580    
+i_d9educatpar      0.00211  0.02080  0.01   0.9193    
+currentnoflorag    0.12019  0.14429  0.69   0.4049    
+days_after_mdh    -0.00147  0.00457  0.10   0.7473    
+inc               -0.18878  0.02384 62.70  2.4e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "iic_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  662   399 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        0.86185  0.63494  1.84   0.1747    
+ha_100m_log        0.05858  0.02206  7.05   0.0079 ** 
+age                0.06092  0.04017  2.30   0.1294    
+race              -0.33603  0.16771  4.01   0.0451 *  
+gender            -0.03297  0.13321  0.06   0.8045    
+Index2            -0.57857  0.58248  0.99   0.3206    
+Index3            -0.30086  0.37417  0.65   0.4214    
+zha               -0.16604  0.07901  4.42   0.0356 *  
+i_g4salary_scaled -0.07418  0.08201  0.82   0.3657    
+i_d9educatpar      0.00221  0.02093  0.01   0.9158    
+currentnoflorag    0.11329  0.14488  0.61   0.4342    
+days_after_mdh    -0.00208  0.00456  0.21   0.6486    
+inc               -0.18717  0.02386 61.54  4.3e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "iic_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  662   399 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        0.85047  0.63746  1.78  0.18216    
+ha_150m_log        0.06051  0.01827 10.97  0.00092 ***
+age                0.06152  0.04023  2.34  0.12622    
+race              -0.36484  0.16888  4.67  0.03075 *  
+gender            -0.02483  0.13359  0.03  0.85256    
+Index2            -0.56788  0.58636  0.94  0.33280    
+Index3            -0.34223  0.37566  0.83  0.36228    
+zha               -0.16625  0.07924  4.40  0.03589 *  
+i_g4salary_scaled -0.07875  0.08274  0.91  0.34123    
+i_d9educatpar      0.00282  0.02111  0.02  0.89363    
+currentnoflorag    0.11083  0.14570  0.58  0.44686    
+days_after_mdh    -0.00165  0.00459  0.13  0.71971    
+inc               -0.18826  0.02398 61.63  4.1e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "iic_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  662   399 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)        0.766958  0.637275  1.45    0.229    
+ha_200m_log        0.041141  0.016315  6.36    0.012 *  
+age                0.057613  0.040174  2.06    0.152    
+race              -0.320723  0.167380  3.67    0.055 .  
+gender            -0.028589  0.133277  0.05    0.830    
+Index2            -0.502830  0.582195  0.75    0.388    
+Index3            -0.301104  0.376505  0.64    0.424    
+zha               -0.168360  0.079033  4.54    0.033 *  
+i_g4salary_scaled -0.072114  0.082188  0.77    0.380    
+i_d9educatpar     -0.000348  0.021018  0.00    0.987    
+currentnoflorag    0.129192  0.145113  0.79    0.373    
+days_after_mdh    -0.001384  0.004567  0.09    0.762    
+inc               -0.186882  0.023958 60.85  6.2e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "iic_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  662   399 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)        0.629556  0.641696  0.96   0.3266    
+ha_300m_log        0.041811  0.014386  8.45   0.0037 ** 
+age                0.057912  0.040093  2.09   0.1486    
+race              -0.300436  0.166335  3.26   0.0709 .  
+gender            -0.030960  0.133360  0.05   0.8164    
+Index2            -0.443980  0.580571  0.58   0.4444    
+Index3            -0.298536  0.377160  0.63   0.4286    
+zha               -0.166793  0.079151  4.44   0.0351 *  
+i_g4salary_scaled -0.073329  0.082474  0.79   0.3739    
+i_d9educatpar     -0.000963  0.021085  0.00   0.9636    
+currentnoflorag    0.132218  0.145193  0.83   0.3625    
+days_after_mdh    -0.000909  0.004574  0.04   0.8425    
+inc               -0.186022  0.023923 60.47  7.4e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "iic_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  662   399 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)        0.570419  0.645864  0.78    0.377    
+ha_500m_log        0.031233  0.013408  5.43    0.020 *  
+age                0.058941  0.040195  2.15    0.143    
+race              -0.269492  0.165751  2.64    0.104    
+gender            -0.027733  0.133108  0.04    0.835    
+Index2            -0.457008  0.577419  0.63    0.429    
+Index3            -0.286330  0.378468  0.57    0.449    
+zha               -0.166412  0.079395  4.39    0.036 *  
+i_g4salary_scaled -0.072692  0.081989  0.79    0.375    
+i_d9educatpar     -0.000529  0.020878  0.00    0.980    
+currentnoflorag    0.151673  0.144835  1.10    0.295    
+days_after_mdh    -0.001200  0.004555  0.07    0.792    
+inc               -0.188616  0.023895 62.31  2.9e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "iic_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  662   399 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        0.61176  0.64099  0.91    0.340    
+ha_1000m_log       0.03135  0.01659  3.57    0.059 .  
+age                0.05373  0.04020  1.79    0.181    
+race              -0.29337  0.16596  3.12    0.077 .  
+gender            -0.04009  0.13279  0.09    0.763    
+Index2            -0.47168  0.57689  0.67    0.414    
+Index3            -0.22559  0.37637  0.36    0.549    
+zha               -0.16567  0.07940  4.35    0.037 *  
+i_g4salary_scaled -0.06788  0.08137  0.70    0.404    
+i_d9educatpar     -0.00532  0.02085  0.07    0.799    
+currentnoflorag    0.13904  0.14461  0.92    0.336    
+days_after_mdh    -0.00175  0.00454  0.15    0.700    
+inc               -0.18941  0.02384 63.10    2e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inc_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 318 523 
+
+FALSE  TRUE 
+  640   429 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                     Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)           1.49931  0.64972  5.33  0.02102 *  
+dist_house_plant_log -0.11573  0.04936  5.50  0.01905 *  
+age                  -0.09540  0.03865  6.09  0.01357 *  
+race                 -0.37608  0.15769  5.69  0.01708 *  
+gender                0.10516  0.12767  0.68  0.41013    
+Index2                0.29532  0.57083  0.27  0.60491    
+Index3                1.13783  0.34210 11.06  0.00088 ***
+zha                  -0.15111  0.07268  4.32  0.03760 *  
+i_g4salary_scaled     0.04854  0.07781  0.39  0.53272    
+i_d9educatpar        -0.01384  0.02050  0.46  0.49945    
+currentnoflorag      -0.03069  0.13984  0.05  0.82628    
+days_after_mdh       -0.00570  0.00454  1.58  0.20878    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inc_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 318 523 
+
+FALSE  TRUE 
+  640   429 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)   
+(Intercept)        0.76395  0.58679  1.69    0.193   
+ha_50m_log         0.05129  0.03424  2.24    0.134   
+age               -0.09522  0.03872  6.05    0.014 * 
+race              -0.34447  0.15624  4.86    0.027 * 
+gender             0.09598  0.12734  0.57    0.451   
+Index2             0.25347  0.57245  0.20    0.658   
+Index3             1.13111  0.34405 10.81    0.001 **
+zha               -0.15207  0.07258  4.39    0.036 * 
+i_g4salary_scaled  0.05932  0.07796  0.58    0.447   
+i_d9educatpar     -0.01369  0.02054  0.44    0.505   
+currentnoflorag   -0.02906  0.14055  0.04    0.836   
+days_after_mdh    -0.00605  0.00458  1.75    0.186   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inc_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 318 523 
+
+FALSE  TRUE 
+  640   429 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)   
+(Intercept)        0.84469  0.58313  2.10   0.1475   
+ha_100m_log        0.04603  0.02109  4.76   0.0291 * 
+age               -0.09373  0.03861  5.89   0.0152 * 
+race              -0.37838  0.15765  5.76   0.0164 * 
+gender             0.09851  0.12748  0.60   0.4397   
+Index2             0.19995  0.57097  0.12   0.7262   
+Index3             1.11425  0.34262 10.58   0.0011 **
+zha               -0.14917  0.07258  4.22   0.0399 * 
+i_g4salary_scaled  0.04886  0.07792  0.39   0.5307   
+i_d9educatpar     -0.01240  0.02054  0.36   0.5459   
+currentnoflorag   -0.04133  0.14060  0.09   0.7688   
+days_after_mdh    -0.00633  0.00453  1.95   0.1625   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inc_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 318 523 
+
+FALSE  TRUE 
+  640   429 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)   
+(Intercept)        0.82095  0.58402  1.98   0.1598   
+ha_150m_log        0.03094  0.01729  3.20   0.0735 . 
+age               -0.09583  0.03861  6.16   0.0131 * 
+race              -0.37200  0.15821  5.53   0.0187 * 
+gender             0.09869  0.12744  0.60   0.4387   
+Index2             0.23537  0.57069  0.17   0.6800   
+Index3             1.11813  0.34394 10.57   0.0012 **
+zha               -0.15015  0.07254  4.28   0.0385 * 
+i_g4salary_scaled  0.05060  0.07803  0.42   0.5167   
+i_d9educatpar     -0.01334  0.02051  0.42   0.5156   
+currentnoflorag   -0.03407  0.14039  0.06   0.8082   
+days_after_mdh    -0.00606  0.00454  1.78   0.1820   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inc_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 318 523 
+
+FALSE  TRUE 
+  640   429 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)   
+(Intercept)        0.76407  0.58400  1.71   0.1908   
+ha_200m_log        0.03837  0.01541  6.20   0.0128 * 
+age               -0.09622  0.03856  6.23   0.0126 * 
+race              -0.37308  0.15758  5.61   0.0179 * 
+gender             0.10495  0.12780  0.67   0.4115   
+Index2             0.25646  0.57123  0.20   0.6535   
+Index3             1.10597  0.34276 10.41   0.0013 **
+zha               -0.15118  0.07277  4.32   0.0378 * 
+i_g4salary_scaled  0.04916  0.07812  0.40   0.5291   
+i_d9educatpar     -0.01392  0.02053  0.46   0.4976   
+currentnoflorag   -0.03033  0.13992  0.05   0.8284   
+days_after_mdh    -0.00573  0.00454  1.59   0.2075   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inc_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 318 523 
+
+FALSE  TRUE 
+  640   429 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)   
+(Intercept)        0.62697  0.58674  1.14   0.2853   
+ha_300m_log        0.04194  0.01371  9.35   0.0022 **
+age               -0.09588  0.03863  6.16   0.0131 * 
+race              -0.35477  0.15733  5.08   0.0241 * 
+gender             0.10288  0.12781  0.65   0.4209   
+Index2             0.32096  0.57001  0.32   0.5734   
+Index3             1.11063  0.34232 10.53   0.0012 **
+zha               -0.14942  0.07281  4.21   0.0401 * 
+i_g4salary_scaled  0.04616  0.07794  0.35   0.5537   
+i_d9educatpar     -0.01455  0.02054  0.50   0.4787   
+currentnoflorag   -0.02660  0.13957  0.04   0.8488   
+days_after_mdh    -0.00521  0.00453  1.32   0.2501   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inc_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 318 523 
+
+FALSE  TRUE 
+  640   429 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        0.60154  0.59460  1.02   0.3117    
+ha_500m_log        0.02523  0.01296  3.79   0.0516 .  
+age               -0.09563  0.03869  6.11   0.0135 *  
+race              -0.32514  0.15705  4.29   0.0384 *  
+gender             0.10323  0.12769  0.65   0.4188    
+Index2             0.30814  0.56797  0.29   0.5874    
+Index3             1.13577  0.34201 11.03   0.0009 ***
+zha               -0.14963  0.07260  4.25   0.0393 *  
+i_g4salary_scaled  0.04816  0.07822  0.38   0.5381    
+i_d9educatpar     -0.01449  0.02049  0.50   0.4793    
+currentnoflorag   -0.00929  0.13931  0.00   0.9468    
+days_after_mdh    -0.00561  0.00452  1.54   0.2139    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inc_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 318 523 
+
+FALSE  TRUE 
+  640   429 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        0.72095  0.59593  1.46  0.22636    
+ha_1000m_log       0.01309  0.01603  0.67  0.41412    
+age               -0.10002  0.03858  6.72  0.00952 ** 
+race              -0.33431  0.15715  4.53  0.03339 *  
+gender             0.09042  0.12708  0.51  0.47680    
+Index2             0.29001  0.56958  0.26  0.61064    
+Index3             1.18624  0.34166 12.05  0.00052 ***
+zha               -0.15032  0.07248  4.30  0.03808 *  
+i_g4salary_scaled  0.05514  0.07800  0.50  0.47962    
+i_d9educatpar     -0.01737  0.02055  0.71  0.39791    
+currentnoflorag   -0.01636  0.13975  0.01  0.90679    
+days_after_mdh    -0.00614  0.00453  1.84  0.17548    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "isc_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+ 93 318 523 
+
+FALSE  TRUE 
+  694   240 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                      Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)          -0.317909  0.844503  0.14    0.707    
+dist_house_plant_log -0.000661  0.057544  0.00    0.991    
+age                   0.083792  0.047022  3.18    0.075 .  
+race                 -0.254226  0.187636  1.84    0.175    
+gender               -0.320783  0.157619  4.14    0.042 *  
+Index2               -0.287567  0.696046  0.17    0.680    
+Index3               -0.624519  0.436693  2.05    0.153    
+zha                  -0.240855  0.095594  6.35    0.012 *  
+i_g4salary_scaled    -0.045526  0.097024  0.22    0.639    
+i_d9educatpar        -0.000688  0.023809  0.00    0.977    
+currentnoflorag       0.068560  0.175742  0.15    0.696    
+days_after_mdh        0.004689  0.005617  0.70    0.404    
+inc                  -0.220829  0.030911 51.04  9.1e-13 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   934  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "isc_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+ 93 318 523 
+
+FALSE  TRUE 
+  694   240 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.319258  0.799022  0.16    0.689    
+ha_50m_log        -0.001460  0.043136  0.00    0.973    
+age                0.083612  0.047013  3.16    0.075 .  
+race              -0.253219  0.187996  1.81    0.178    
+gender            -0.321086  0.157856  4.14    0.042 *  
+Index2            -0.287476  0.695542  0.17    0.679    
+Index3            -0.623096  0.436396  2.04    0.153    
+zha               -0.240808  0.095550  6.35    0.012 *  
+i_g4salary_scaled -0.045544  0.096996  0.22    0.639    
+i_d9educatpar     -0.000761  0.023876  0.00    0.975    
+currentnoflorag    0.068920  0.175602  0.15    0.695    
+days_after_mdh     0.004679  0.005616  0.69    0.405    
+inc               -0.220870  0.030840 51.29    8e-13 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   934  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "isc_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+ 93 318 523 
+
+FALSE  TRUE 
+  694   240 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.32139  0.79651  0.16    0.687    
+ha_100m_log       -0.00384  0.02589  0.02    0.882    
+age                0.08317  0.04727  3.10    0.078 .  
+race              -0.24896  0.18868  1.74    0.187    
+gender            -0.32151  0.15755  4.16    0.041 *  
+Index2            -0.28135  0.69730  0.16    0.687    
+Index3            -0.61982  0.43730  2.01    0.156    
+zha               -0.24095  0.09557  6.36    0.012 *  
+i_g4salary_scaled -0.04477  0.09701  0.21    0.644    
+i_d9educatpar     -0.00101  0.02395  0.00    0.966    
+currentnoflorag    0.07066  0.17607  0.16    0.688    
+days_after_mdh     0.00470  0.00561  0.70    0.402    
+inc               -0.22107  0.03091 51.15  8.6e-13 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   934  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "isc_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+ 93 318 523 
+
+FALSE  TRUE 
+  694   240 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.320382  0.795500  0.16    0.687    
+ha_150m_log        0.006549  0.020779  0.10    0.753    
+age                0.084515  0.046981  3.24    0.072 .  
+race              -0.264827  0.188628  1.97    0.160    
+gender            -0.319347  0.157398  4.12    0.042 *  
+Index2            -0.296963  0.697490  0.18    0.670    
+Index3            -0.636449  0.437040  2.12    0.145    
+zha               -0.240907  0.095554  6.36    0.012 *  
+i_g4salary_scaled -0.046934  0.096853  0.23    0.628    
+i_d9educatpar     -0.000206  0.023832  0.00    0.993    
+currentnoflorag    0.064535  0.176174  0.13    0.714    
+days_after_mdh     0.004709  0.005617  0.70    0.402    
+inc               -0.220506  0.030860 51.06    9e-13 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   934  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "isc_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+ 93 318 523 
+
+FALSE  TRUE 
+  694   240 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.318833  0.797837  0.16    0.689    
+ha_200m_log       -0.002769  0.018678  0.02    0.882    
+age                0.083556  0.046954  3.17    0.075 .  
+race              -0.249567  0.187156  1.78    0.182    
+gender            -0.321824  0.157396  4.18    0.041 *  
+Index2            -0.285226  0.695216  0.17    0.682    
+Index3            -0.618812  0.436922  2.01    0.157    
+zha               -0.240657  0.095616  6.33    0.012 *  
+i_g4salary_scaled -0.044987  0.096861  0.22    0.642    
+i_d9educatpar     -0.000811  0.023793  0.00    0.973    
+currentnoflorag    0.070004  0.175871  0.16    0.691    
+days_after_mdh     0.004658  0.005607  0.69    0.406    
+inc               -0.221104  0.030940 51.07  8.9e-13 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   934  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "isc_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+ 93 318 523 
+
+FALSE  TRUE 
+  694   240 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.334679  0.802936  0.17    0.677    
+ha_300m_log        0.003273  0.016515  0.04    0.843    
+age                0.083940  0.046912  3.20    0.074 .  
+race              -0.257537  0.186270  1.91    0.167    
+gender            -0.319520  0.157350  4.12    0.042 *  
+Index2            -0.286449  0.696368  0.17    0.681    
+Index3            -0.631294  0.437669  2.08    0.149    
+zha               -0.241059  0.095642  6.35    0.012 *  
+i_g4salary_scaled -0.046069  0.096949  0.23    0.635    
+i_d9educatpar     -0.000596  0.023792  0.00    0.980    
+currentnoflorag    0.067066  0.175686  0.15    0.703    
+days_after_mdh     0.004760  0.005622  0.72    0.397    
+inc               -0.220431  0.030882 50.95  9.5e-13 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   934  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "isc_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+ 93 318 523 
+
+FALSE  TRUE 
+  694   240 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)       -4.41e-01  8.18e-01  0.29    0.590    
+ha_500m_log        1.47e-02  1.54e-02  0.90    0.342    
+age                8.64e-02  4.71e-02  3.36    0.067 .  
+race              -2.61e-01  1.87e-01  1.95    0.163    
+gender            -3.12e-01  1.58e-01  3.90    0.048 *  
+Index2            -2.85e-01  6.96e-01  0.17    0.682    
+Index3            -6.59e-01  4.38e-01  2.26    0.133    
+zha               -2.41e-01  9.59e-02  6.32    0.012 *  
+i_g4salary_scaled -4.91e-02  9.73e-02  0.25    0.614    
+i_d9educatpar      9.94e-05  2.38e-02  0.00    0.997    
+currentnoflorag    7.17e-02  1.76e-01  0.17    0.683    
+days_after_mdh     4.99e-03  5.62e-03  0.79    0.374    
+inc               -2.20e-01  3.07e-02 51.29    8e-13 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   934  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "isc_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+ 93 318 523 
+
+FALSE  TRUE 
+  694   240 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.316910  0.817350  0.15    0.698    
+ha_1000m_log      -0.000665  0.017853  0.00    0.970    
+age                0.083731  0.046970  3.18    0.075 .  
+race              -0.252899  0.186520  1.84    0.175    
+gender            -0.320900  0.157140  4.17    0.041 *  
+Index2            -0.287850  0.695971  0.17    0.679    
+Index3            -0.623987  0.435651  2.05    0.152    
+zha               -0.240889  0.095502  6.36    0.012 *  
+i_g4salary_scaled -0.045412  0.097059  0.22    0.640    
+i_d9educatpar     -0.000645  0.023861  0.00    0.978    
+currentnoflorag    0.068835  0.175705  0.15    0.695    
+days_after_mdh     0.004681  0.005612  0.70    0.404    
+inc               -0.220857  0.030823 51.34  7.8e-13 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   934  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "cits_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  557   255 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                     Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)           0.13866  0.73330  0.04  0.85002    
+dist_house_plant_log -0.14928  0.05940  6.32  0.01196 *  
+age                   0.06573  0.04465  2.17  0.14100    
+race                 -0.41926  0.18834  4.96  0.02601 *  
+gender                0.12311  0.15859  0.60  0.43759    
+Index3               -0.28263  0.39402  0.51  0.47319    
+zha                  -0.38302  0.08959 18.28  1.9e-05 ***
+i_g4salary_scaled     0.03488  0.09635  0.13  0.71738    
+i_d9educatpar        -0.10283  0.02729 14.20  0.00016 ***
+currentnoflorag      -0.22390  0.17433  1.65  0.19903    
+days_after_mdh        0.00162  0.00501  0.10  0.74596    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "cits_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  557   255 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.78415  0.66332  1.40  0.23714    
+ha_50m_log         0.04093  0.04167  0.96  0.32595    
+age                0.06246  0.04487  1.94  0.16389    
+race              -0.37233  0.18750  3.94  0.04706 *  
+gender             0.10927  0.15842  0.48  0.49037    
+Index3            -0.26179  0.39757  0.43  0.51024    
+zha               -0.38201  0.08904 18.40  1.8e-05 ***
+i_g4salary_scaled  0.05084  0.09645  0.28  0.59810    
+i_d9educatpar     -0.10294  0.02749 14.02  0.00018 ***
+currentnoflorag   -0.22085  0.17427  1.61  0.20505    
+days_after_mdh     0.00118  0.00505  0.05  0.81537    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "cits_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  557   255 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.729436  0.658246  1.23  0.26780    
+ha_100m_log        0.031044  0.026749  1.35  0.24583    
+age                0.062616  0.044823  1.95  0.16243    
+race              -0.386961  0.188556  4.21  0.04015 *  
+gender             0.109785  0.157993  0.48  0.48713    
+Index3            -0.264202  0.396861  0.44  0.50558    
+zha               -0.380212  0.088874 18.30  1.9e-05 ***
+i_g4salary_scaled  0.044486  0.096664  0.21  0.64537    
+i_d9educatpar     -0.102393  0.027399 13.97  0.00019 ***
+currentnoflorag   -0.227016  0.174216  1.70  0.19255    
+days_after_mdh     0.000913  0.004999  0.03  0.85508    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "cits_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  557   255 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.74037  0.65902  1.26  0.26125    
+ha_150m_log        0.02694  0.02218  1.48  0.22451    
+age                0.06268  0.04487  1.95  0.16244    
+race              -0.39367  0.18932  4.32  0.03758 *  
+gender             0.11257  0.15795  0.51  0.47604    
+Index3            -0.27713  0.39910  0.48  0.48745    
+zha               -0.37942  0.08883 18.24  1.9e-05 ***
+i_g4salary_scaled  0.04344  0.09650  0.20  0.65258    
+i_d9educatpar     -0.10275  0.02737 14.10  0.00017 ***
+currentnoflorag   -0.22451  0.17371  1.67  0.19622    
+days_after_mdh     0.00110  0.00501  0.05  0.82577    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "cits_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  557   255 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err  Wald Pr(>|W|)    
+(Intercept)        -0.7936  0.6608  1.44  0.22979    
+ha_200m_log         0.0292  0.0195  2.24  0.13421    
+age                 0.0631  0.0447  1.99  0.15833    
+race               -0.3872  0.1879  4.25  0.03935 *  
+gender              0.1158  0.1581  0.54  0.46369    
+Index3             -0.2831  0.3970  0.51  0.47579    
+zha                -0.3791  0.0891 18.12  2.1e-05 ***
+i_g4salary_scaled   0.0437  0.0966  0.20  0.65133    
+i_d9educatpar      -0.1037  0.0274 14.37  0.00015 ***
+currentnoflorag    -0.2210  0.1741  1.61  0.20436    
+days_after_mdh      0.0013  0.0050  0.07  0.79574    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "cits_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  557   255 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.88735  0.66789  1.77  0.18399    
+ha_300m_log        0.03208  0.01725  3.46  0.06294 .  
+age                0.06372  0.04464  2.04  0.15342    
+race              -0.37737  0.18757  4.05  0.04422 *  
+gender             0.11047  0.15821  0.49  0.48502    
+Index3            -0.28366  0.39557  0.51  0.47331    
+zha               -0.37944  0.08927 18.07  2.1e-05 ***
+i_g4salary_scaled  0.03763  0.09657  0.15  0.69675    
+i_d9educatpar     -0.10505  0.02745 14.64  0.00013 ***
+currentnoflorag   -0.21999  0.17382  1.60  0.20565    
+days_after_mdh     0.00185  0.00501  0.14  0.71272    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "cits_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  557   255 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -1.11302  0.67916  2.69  0.10125    
+ha_500m_log        0.04622  0.01694  7.45  0.00636 ** 
+age                0.06804  0.04484  2.30  0.12913    
+race              -0.36611  0.18864  3.77  0.05229 .  
+gender             0.12751  0.15874  0.65  0.42181    
+Index3            -0.31080  0.39507  0.62  0.43146    
+zha               -0.38120  0.08977 18.03  2.2e-05 ***
+i_g4salary_scaled  0.02047  0.09688  0.04  0.83268    
+i_d9educatpar     -0.10444  0.02741 14.52  0.00014 ***
+currentnoflorag   -0.19585  0.17524  1.25  0.26372    
+days_after_mdh     0.00246  0.00496  0.25  0.62036    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "cits_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  557   255 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -1.03751  0.68545  2.29    0.130    
+ha_1000m_log       0.04339  0.02088  4.32    0.038 *  
+age                0.05951  0.04454  1.79    0.181    
+race              -0.39338  0.18853  4.35    0.037 *  
+gender             0.11274  0.15854  0.51    0.477    
+Index3            -0.21431  0.39199  0.30    0.585    
+zha               -0.38006  0.08996 17.85  2.4e-05 ***
+i_g4salary_scaled  0.02916  0.09630  0.09    0.762    
+i_d9educatpar     -0.11016  0.02746 16.09  6.0e-05 ***
+currentnoflorag   -0.20679  0.17444  1.41    0.236    
+days_after_mdh     0.00144  0.00499  0.08    0.773    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "snc_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+229 523 
+
+FALSE  TRUE 
+  524   228 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                      Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)           0.528742  0.771579 0.47    0.493  
+dist_house_plant_log  0.044801  0.064992 0.48    0.491  
+age                  -0.077695  0.052801 2.17    0.141  
+race                 -0.195354  0.202688 0.93    0.335  
+gender               -0.178378  0.164536 1.18    0.278  
+Index3               -0.359927  0.438958 0.67    0.412  
+zha                  -0.216008  0.098072 4.85    0.028 *
+i_g4salary_scaled     0.057198  0.105919 0.29    0.589  
+i_d9educatpar        -0.061587  0.028671 4.61    0.032 *
+currentnoflorag      -0.052979  0.174778 0.09    0.762  
+days_after_mdh       -0.000503  0.004578 0.01    0.912  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   752  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "snc_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+229 523 
+
+FALSE  TRUE 
+  524   228 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)        0.845179  0.680508 1.54    0.214  
+ha_50m_log        -0.063475  0.049762 1.63    0.202  
+age               -0.080440  0.053117 2.29    0.130  
+race              -0.192739  0.201981 0.91    0.340  
+gender            -0.181517  0.164839 1.21    0.271  
+Index3            -0.324003  0.442205 0.54    0.464  
+zha               -0.214846  0.097930 4.81    0.028 *
+i_g4salary_scaled  0.053057  0.105681 0.25    0.616  
+i_d9educatpar     -0.063752  0.028714 4.93    0.026 *
+currentnoflorag   -0.048640  0.174691 0.08    0.781  
+days_after_mdh    -0.000451  0.004561 0.01    0.921  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   752  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "snc_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+229 523 
+
+FALSE  TRUE 
+  524   228 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)        0.785695  0.679235 1.34    0.247  
+ha_100m_log       -0.022138  0.029151 0.58    0.448  
+age               -0.078002  0.052985 2.17    0.141  
+race              -0.193719  0.202906 0.91    0.340  
+gender            -0.176469  0.164328 1.15    0.283  
+Index3            -0.349502  0.441269 0.63    0.428  
+zha               -0.216718  0.098164 4.87    0.027 *
+i_g4salary_scaled  0.056674  0.106090 0.29    0.593  
+i_d9educatpar     -0.062569  0.028718 4.75    0.029 *
+currentnoflorag   -0.047440  0.175297 0.07    0.787  
+days_after_mdh    -0.000253  0.004582 0.00    0.956  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   752  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "snc_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+229 523 
+
+FALSE  TRUE 
+  524   228 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)        0.788308  0.678547 1.35    0.245  
+ha_150m_log       -0.002903  0.023605 0.02    0.902  
+age               -0.075538  0.052779 2.05    0.152  
+race              -0.209693  0.203472 1.06    0.303  
+gender            -0.172628  0.164225 1.10    0.293  
+Index3            -0.375784  0.441219 0.73    0.394  
+zha               -0.215849  0.098003 4.85    0.028 *
+i_g4salary_scaled  0.053267  0.105734 0.25    0.614  
+i_d9educatpar     -0.060841  0.028706 4.49    0.034 *
+currentnoflorag   -0.053266  0.174949 0.09    0.761  
+days_after_mdh    -0.000338  0.004591 0.01    0.941  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   752  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "snc_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+229 523 
+
+FALSE  TRUE 
+  524   228 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)        0.778069  0.679844 1.31    0.252  
+ha_200m_log        0.004541  0.020712 0.05    0.826  
+age               -0.074272  0.052630 1.99    0.158  
+race              -0.218531  0.202874 1.16    0.281  
+gender            -0.169482  0.163991 1.07    0.301  
+Index3            -0.394361  0.439627 0.80    0.370  
+zha               -0.215373  0.097960 4.83    0.028 *
+i_g4salary_scaled  0.051490  0.105588 0.24    0.626  
+i_d9educatpar     -0.060233  0.028624 4.43    0.035 *
+currentnoflorag   -0.054646  0.174457 0.10    0.754  
+days_after_mdh    -0.000284  0.004596 0.00    0.951  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   752  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "snc_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+229 523 
+
+FALSE  TRUE 
+  524   228 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)        7.08e-01  6.84e-01 1.07    0.301  
+ha_300m_log        1.59e-02  1.82e-02 0.76    0.382  
+age               -7.18e-02  5.26e-02 1.86    0.172  
+race              -2.25e-01  2.03e-01 1.23    0.268  
+gender            -1.67e-01  1.64e-01 1.03    0.310  
+Index3            -4.23e-01  4.39e-01 0.93    0.335  
+zha               -2.15e-01  9.79e-02 4.81    0.028 *
+i_g4salary_scaled  4.60e-02  1.06e-01 0.19    0.663  
+i_d9educatpar     -6.00e-02  2.85e-02 4.43    0.035 *
+currentnoflorag   -5.44e-02  1.74e-01 0.10    0.755  
+days_after_mdh     8.72e-05  4.61e-03 0.00    0.985  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   752  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "snc_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+229 523 
+
+FALSE  TRUE 
+  524   228 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)        0.660930  0.696948 0.90    0.343  
+ha_500m_log        0.014529  0.017198 0.71    0.398  
+age               -0.071675  0.052728 1.85    0.174  
+race              -0.215002  0.203076 1.12    0.290  
+gender            -0.162264  0.164475 0.97    0.324  
+Index3            -0.417886  0.439030 0.91    0.341  
+zha               -0.216141  0.098109 4.85    0.028 *
+i_g4salary_scaled  0.042865  0.105290 0.17    0.684  
+i_d9educatpar     -0.059860  0.028477 4.42    0.036 *
+currentnoflorag   -0.047847  0.174160 0.08    0.784  
+days_after_mdh     0.000146  0.004570 0.00    0.975  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   752  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "snc_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+229 523 
+
+FALSE  TRUE 
+  524   228 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)        0.853512  0.695069 1.51    0.219  
+ha_1000m_log      -0.009125  0.021447 0.18    0.670  
+age               -0.075498  0.052433 2.07    0.150  
+race              -0.205566  0.202746 1.03    0.311  
+gender            -0.174972  0.164216 1.14    0.287  
+Index3            -0.382819  0.436535 0.77    0.381  
+zha               -0.216437  0.097993 4.88    0.027 *
+i_g4salary_scaled  0.057157  0.105681 0.29    0.589  
+i_d9educatpar     -0.059645  0.028726 4.31    0.038 *
+currentnoflorag   -0.057048  0.174819 0.11    0.744  
+days_after_mdh    -0.000427  0.004602 0.01    0.926  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   752  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffts_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  625   133 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                      Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)           0.915117  0.999842 0.84    0.360  
+dist_house_plant_log -0.154273  0.071955 4.60    0.032 *
+age                   0.036968  0.057401 0.41    0.520  
+race                 -0.393899  0.243381 2.62    0.106  
+gender                0.107525  0.196174 0.30    0.584  
+Index3               -0.773281  0.500824 2.38    0.123  
+zha                   0.037178  0.119052 0.10    0.755  
+i_g4salary_scaled    -0.196936  0.119387 2.72    0.099 .
+i_d9educatpar        -0.039541  0.033655 1.38    0.240  
+currentnoflorag       0.435060  0.209930 4.29    0.038 *
+days_after_mdh        0.000227  0.007415 0.00    0.976  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffts_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  625   133 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)       -3.49e-02  9.34e-01 0.00    0.970  
+ha_50m_log         5.53e-02  4.91e-02 1.27    0.260  
+age                3.50e-02  5.76e-02 0.37    0.544  
+race              -3.61e-01  2.41e-01 2.25    0.134  
+gender             1.02e-01  1.96e-01 0.27    0.605  
+Index3            -7.53e-01  5.04e-01 2.23    0.135  
+zha                3.37e-02  1.20e-01 0.08    0.779  
+i_g4salary_scaled -1.85e-01  1.20e-01 2.38    0.123  
+i_d9educatpar     -4.07e-02  3.37e-02 1.45    0.228  
+currentnoflorag    4.36e-01  2.09e-01 4.33    0.037 *
+days_after_mdh    -3.29e-05  7.41e-03 0.00    0.996  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffts_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  625   133 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)        0.008379  0.925332 0.00    0.993  
+ha_100m_log        0.054554  0.032319 2.85    0.091 .
+age                0.037052  0.057498 0.42    0.519  
+race              -0.391212  0.243717 2.58    0.108  
+gender             0.105115  0.196184 0.29    0.592  
+Index3            -0.785421  0.500505 2.46    0.117  
+zha                0.036987  0.118855 0.10    0.756  
+i_g4salary_scaled -0.192993  0.120075 2.58    0.108  
+i_d9educatpar     -0.038366  0.033976 1.28    0.259  
+currentnoflorag    0.425201  0.209739 4.11    0.043 *
+days_after_mdh    -0.000272  0.007325 0.00    0.970  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffts_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  625   133 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)        5.55e-03  9.27e-01 0.00    0.995  
+ha_150m_log        2.03e-02  2.75e-02 0.55    0.459  
+age                3.31e-02  5.77e-02 0.33    0.566  
+race              -3.67e-01  2.42e-01 2.30    0.129  
+gender             1.02e-01  1.96e-01 0.27    0.605  
+Index3            -7.45e-01  5.06e-01 2.17    0.141  
+zha                3.58e-02  1.19e-01 0.09    0.763  
+i_g4salary_scaled -1.89e-01  1.20e-01 2.47    0.116  
+i_d9educatpar     -4.17e-02  3.38e-02 1.52    0.218  
+currentnoflorag    4.36e-01  2.09e-01 4.35    0.037 *
+days_after_mdh    -2.38e-05  7.29e-03 0.00    0.997  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffts_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  625   133 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)       -0.028988  0.932212 0.00    0.975  
+ha_200m_log        0.023050  0.024469 0.89    0.346  
+age                0.033019  0.057790 0.33    0.568  
+race              -0.364479  0.241823 2.27    0.132  
+gender             0.102595  0.196014 0.27    0.601  
+Index3            -0.752061  0.508177 2.19    0.139  
+zha                0.036538  0.119073 0.09    0.759  
+i_g4salary_scaled -0.189395  0.120657 2.46    0.116  
+i_d9educatpar     -0.041942  0.033715 1.55    0.214  
+currentnoflorag    0.438792  0.208918 4.41    0.036 *
+days_after_mdh     0.000135  0.007296 0.00    0.985  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffts_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  625   133 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)       -0.104035  0.939465 0.01    0.912  
+ha_300m_log        0.025425  0.021907 1.35    0.246  
+age                0.034318  0.057627 0.35    0.551  
+race              -0.357414  0.241896 2.18    0.140  
+gender             0.097811  0.196136 0.25    0.618  
+Index3            -0.757797  0.504400 2.26    0.133  
+zha                0.037053  0.118936 0.10    0.755  
+i_g4salary_scaled -0.194843  0.121004 2.59    0.107  
+i_d9educatpar     -0.042420  0.033589 1.60    0.207  
+currentnoflorag    0.440809  0.209156 4.44    0.035 *
+days_after_mdh     0.000513  0.007343 0.00    0.944  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffts_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  625   133 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)       -0.306848  0.939009 0.11    0.744  
+ha_500m_log        0.042554  0.021001 4.11    0.043 *
+age                0.038256  0.057449 0.44    0.505  
+race              -0.347977  0.243898 2.04    0.154  
+gender             0.111582  0.195781 0.32    0.569  
+Index3            -0.791365  0.498983 2.52    0.113  
+zha                0.036870  0.119898 0.09    0.758  
+i_g4salary_scaled -0.211870  0.121809 3.03    0.082 .
+i_d9educatpar     -0.040885  0.033378 1.50    0.221  
+currentnoflorag    0.459527  0.209413 4.82    0.028 *
+days_after_mdh     0.000896  0.007231 0.02    0.901  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffts_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  625   133 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)  
+(Intercept)       -0.20429  0.95821 0.05    0.831  
+ha_1000m_log       0.03533  0.02645 1.78    0.182  
+age                0.02875  0.05772 0.25    0.618  
+race              -0.36420  0.24379 2.23    0.135  
+gender             0.10066  0.19666 0.26    0.609  
+Index3            -0.68528  0.49908 1.89    0.170  
+zha                0.03642  0.11967 0.09    0.761  
+i_g4salary_scaled -0.20323  0.12053 2.84    0.092 .
+i_d9educatpar     -0.04709  0.03358 1.97    0.161  
+currentnoflorag    0.45128  0.20870 4.68    0.031 *
+days_after_mdh     0.00004  0.00733 0.00    0.996  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffdts_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+233 523 
+
+FALSE  TRUE 
+  643   113 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                     Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)           0.25405  1.05068  0.06    0.809    
+dist_house_plant_log  0.01880  0.07816  0.06    0.810    
+age                  -0.03968  0.06649  0.36    0.551    
+race                 -0.16497  0.26223  0.40    0.529    
+gender                0.40160  0.21664  3.44    0.064 .  
+Index3                0.55357  0.55169  1.01    0.316    
+zha                   0.02234  0.11148  0.04    0.841    
+i_g4salary_scaled     0.01973  0.12322  0.03    0.873    
+i_d9educatpar        -0.01292  0.03351  0.15    0.700    
+currentnoflorag      -0.20438  0.24574  0.69    0.406    
+days_after_mdh       -0.00160  0.00727  0.05    0.826    
+mffts                -0.22239  0.03813 34.02  5.5e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   756  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffdts_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+233 523 
+
+FALSE  TRUE 
+  643   113 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err  Wald Pr(>|W|)    
+(Intercept)         0.4175  0.9071  0.21    0.645    
+ha_50m_log         -0.0445  0.0587  0.57    0.449    
+age                -0.0434  0.0673  0.42    0.519    
+race               -0.1572  0.2611  0.36    0.547    
+gender              0.3999  0.2150  3.46    0.063 .  
+Index3              0.5919  0.5606  1.11    0.291    
+zha                 0.0213  0.1114  0.04    0.848    
+i_g4salary_scaled   0.0173  0.1224  0.02    0.888    
+i_d9educatpar      -0.0147  0.0337  0.19    0.662    
+currentnoflorag    -0.1999  0.2462  0.66    0.417    
+days_after_mdh     -0.0016  0.0072  0.05    0.824    
+mffts              -0.2237  0.0383 34.09  5.3e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   756  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffdts_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+233 523 
+
+FALSE  TRUE 
+  643   113 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        0.35523  0.91287  0.15    0.697    
+ha_100m_log        0.01114  0.03417  0.11    0.744    
+age               -0.03727  0.06629  0.32    0.574    
+race              -0.18516  0.26180  0.50    0.479    
+gender             0.40885  0.21567  3.59    0.058 .  
+Index3             0.52608  0.54956  0.92    0.338    
+zha                0.02361  0.11168  0.04    0.833    
+i_g4salary_scaled  0.01757  0.12234  0.02    0.886    
+i_d9educatpar     -0.01178  0.03338  0.12    0.724    
+currentnoflorag   -0.20685  0.24490  0.71    0.398    
+days_after_mdh    -0.00158  0.00730  0.05    0.829    
+mffts             -0.22105  0.03792 33.99  5.5e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   756  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffdts_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+233 523 
+
+FALSE  TRUE 
+  643   113 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        0.35707  0.91391  0.15    0.696    
+ha_150m_log        0.00718  0.02908  0.06    0.805    
+age               -0.03789  0.06628  0.33    0.568    
+race              -0.18368  0.26148  0.49    0.482    
+gender             0.40904  0.21647  3.57    0.059 .  
+Index3             0.52892  0.55063  0.92    0.337    
+zha                0.02279  0.11136  0.04    0.838    
+i_g4salary_scaled  0.01729  0.12262  0.02    0.888    
+i_d9educatpar     -0.01195  0.03349  0.13    0.721    
+currentnoflorag   -0.20713  0.24530  0.71    0.398    
+days_after_mdh    -0.00151  0.00729  0.04    0.835    
+mffts             -0.22161  0.03784 34.30  4.7e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   756  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffdts_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+233 523 
+
+FALSE  TRUE 
+  643   113 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)        3.58e-01  9.11e-01  0.15    0.694    
+ha_200m_log       -3.54e-05  2.66e-02  0.00    0.999    
+age               -3.89e-02  6.62e-02  0.35    0.557    
+race              -1.73e-01  2.60e-01  0.44    0.505    
+gender             4.05e-01  2.17e-01  3.49    0.062 .  
+Index3             5.45e-01  5.50e-01  0.98    0.321    
+zha                2.24e-02  1.11e-01  0.04    0.841    
+i_g4salary_scaled  1.86e-02  1.23e-01  0.02    0.880    
+i_d9educatpar     -1.26e-02  3.34e-02  0.14    0.707    
+currentnoflorag   -2.04e-01  2.45e-01  0.69    0.405    
+days_after_mdh    -1.53e-03  7.27e-03  0.04    0.833    
+mffts             -2.22e-01  3.80e-02 34.07  5.3e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   756  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffdts_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+233 523 
+
+FALSE  TRUE 
+  643   113 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        0.46917  0.91210  0.26    0.607    
+ha_300m_log       -0.02074  0.02369  0.77    0.381    
+age               -0.04136  0.06660  0.39    0.535    
+race              -0.15674  0.25883  0.37    0.545    
+gender             0.39547  0.21532  3.37    0.066 .  
+Index3             0.59022  0.55604  1.13    0.288    
+zha                0.02174  0.11186  0.04    0.846    
+i_g4salary_scaled  0.02316  0.12331  0.04    0.851    
+i_d9educatpar     -0.01323  0.03348  0.16    0.693    
+currentnoflorag   -0.20543  0.24700  0.69    0.406    
+days_after_mdh    -0.00205  0.00726  0.08    0.778    
+mffts             -0.22363  0.03856 33.63  6.7e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   756  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffdts_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+233 523 
+
+FALSE  TRUE 
+  643   113 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        0.60176  0.93160  0.42     0.52    
+ha_500m_log       -0.02473  0.02198  1.27     0.26    
+age               -0.04434  0.06702  0.44     0.51    
+race              -0.17306  0.25592  0.46     0.50    
+gender             0.38033  0.21691  3.07     0.08 .  
+Index3             0.60483  0.55958  1.17     0.28    
+zha                0.02367  0.11160  0.04     0.83    
+i_g4salary_scaled  0.03036  0.12536  0.06     0.81    
+i_d9educatpar     -0.01422  0.03379  0.18     0.67    
+currentnoflorag   -0.21652  0.24689  0.77     0.38    
+days_after_mdh    -0.00223  0.00733  0.09     0.76    
+mffts             -0.22399  0.03865 33.58  6.8e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   756  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "mffdts_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+233 523 
+
+FALSE  TRUE 
+  643   113 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        0.33062  0.92914  0.13    0.722    
+ha_1000m_log       0.00379  0.02571  0.02    0.883    
+age               -0.03890  0.06619  0.35    0.557    
+race              -0.17582  0.25666  0.47    0.493    
+gender             0.40651  0.21507  3.57    0.059 .  
+Index3             0.54541  0.54944  0.99    0.321    
+zha                0.02257  0.11128  0.04    0.839    
+i_g4salary_scaled  0.01670  0.12332  0.02    0.892    
+i_d9educatpar     -0.01294  0.03323  0.15    0.697    
+currentnoflorag   -0.20313  0.24453  0.69    0.406    
+days_after_mdh    -0.00150  0.00728  0.04    0.836    
+mffts             -0.22144  0.03789 34.15  5.1e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   756  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "dcgts_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+280 523 
+
+FALSE  TRUE 
+  691   112 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                      Estimate   Std.err Wald Pr(>|W|)   
+(Intercept)           0.836049  1.288326 0.42   0.5164   
+dist_house_plant_log  0.032182  0.082649 0.15   0.6970   
+age                  -0.067830  0.063618 1.14   0.2863   
+race                  0.000121  0.251805 0.00   0.9996   
+gender                0.470291  0.210901 4.97   0.0258 * 
+Index3                0.639569  0.529262 1.46   0.2269   
+zha                  -0.136711  0.131871 1.07   0.2999   
+i_g4salary_scaled     0.006319  0.113168 0.00   0.9555   
+i_d9educatpar        -0.050982  0.032578 2.45   0.1176   
+currentnoflorag       0.234790  0.224133 1.10   0.2948   
+days_after_mdh       -0.028234  0.010203 7.66   0.0057 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   803  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "dcgts_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+280 523 
+
+FALSE  TRUE 
+  691   112 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)   
+(Intercept)        1.04514  1.12988 0.86    0.355   
+ha_50m_log        -0.01904  0.05965 0.10    0.750   
+age               -0.06822  0.06367 1.15    0.284   
+race              -0.00341  0.24847 0.00    0.989   
+gender             0.47101  0.21076 4.99    0.025 * 
+Index3             0.64334  0.53108 1.47    0.226   
+zha               -0.13583  0.13135 1.07    0.301   
+i_g4salary_scaled  0.00323  0.11221 0.00    0.977   
+i_d9educatpar     -0.05144  0.03249 2.51    0.113   
+currentnoflorag    0.23479  0.22412 1.10    0.295   
+days_after_mdh    -0.02817  0.01025 7.55    0.006 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   803  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "dcgts_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+280 523 
+
+FALSE  TRUE 
+  691   112 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err Wald Pr(>|W|)   
+(Intercept)         1.0234  1.1264 0.83   0.3636   
+ha_100m_log        -0.0503  0.0408 1.52   0.2175   
+age                -0.0728  0.0644 1.28   0.2580   
+race                0.0276  0.2510 0.01   0.9125   
+gender              0.4658  0.2105 4.90   0.0269 * 
+Index3              0.7021  0.5435 1.67   0.1964   
+zha                -0.1358  0.1326 1.05   0.3056   
+i_g4salary_scaled   0.0113  0.1135 0.01   0.9205   
+i_d9educatpar      -0.0543  0.0326 2.76   0.0964 . 
+currentnoflorag     0.2538  0.2277 1.24   0.2650   
+days_after_mdh     -0.0279  0.0101 7.63   0.0057 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   803  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "dcgts_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+280 523 
+
+FALSE  TRUE 
+  691   112 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err Wald Pr(>|W|)   
+(Intercept)         1.0287  1.1248 0.84   0.3604   
+ha_150m_log        -0.0270  0.0318 0.73   0.3944   
+age                -0.0704  0.0641 1.21   0.2716   
+race                0.0216  0.2546 0.01   0.9323   
+gender              0.4644  0.2102 4.88   0.0271 * 
+Index3              0.6877  0.5408 1.62   0.2035   
+zha                -0.1383  0.1326 1.09   0.2970   
+i_g4salary_scaled   0.0090  0.1130 0.01   0.9365   
+i_d9educatpar      -0.0528  0.0325 2.63   0.1047   
+currentnoflorag     0.2430  0.2252 1.16   0.2805   
+days_after_mdh     -0.0282  0.0101 7.73   0.0054 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   803  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "dcgts_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+280 523 
+
+FALSE  TRUE 
+  691   112 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)   
+(Intercept)        1.07934  1.12027 0.93    0.335   
+ha_200m_log       -0.02772  0.02757 1.01    0.315   
+age               -0.07072  0.06394 1.22    0.269   
+race               0.01241  0.25295 0.00    0.961   
+gender             0.46253  0.21048 4.83    0.028 * 
+Index3             0.69468  0.53755 1.67    0.196   
+zha               -0.13846  0.13235 1.09    0.295   
+i_g4salary_scaled  0.00784  0.11265 0.00    0.945   
+i_d9educatpar     -0.05185  0.03252 2.54    0.111   
+currentnoflorag    0.24085  0.22473 1.15    0.284   
+days_after_mdh    -0.02833  0.01009 7.88    0.005 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   803  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "dcgts_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+280 523 
+
+FALSE  TRUE 
+  691   112 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)   
+(Intercept)        1.06303  1.12369 0.89   0.3441   
+ha_300m_log       -0.00652  0.02295 0.08   0.7761   
+age               -0.06749  0.06362 1.13   0.2888   
+race              -0.00645  0.24990 0.00   0.9794   
+gender             0.47209  0.21045 5.03   0.0249 * 
+Index3             0.64060  0.53084 1.46   0.2275   
+zha               -0.13721  0.13174 1.08   0.2976   
+i_g4salary_scaled  0.00585  0.11250 0.00   0.9585   
+i_d9educatpar     -0.05078  0.03256 2.43   0.1189   
+currentnoflorag    0.23467  0.22392 1.10   0.2946   
+days_after_mdh    -0.02837  0.01023 7.70   0.0055 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   803  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "dcgts_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+280 523 
+
+FALSE  TRUE 
+  691   112 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err Wald Pr(>|W|)   
+(Intercept)         1.1461  1.1158 1.06   0.3043   
+ha_500m_log        -0.0154  0.0216 0.51   0.4739   
+age                -0.0694  0.0637 1.19   0.2760   
+race               -0.0101  0.2479 0.00   0.9674   
+gender              0.4660  0.2111 4.87   0.0273 * 
+Index3              0.6562  0.5295 1.54   0.2153   
+zha                -0.1384  0.1315 1.11   0.2925   
+i_g4salary_scaled   0.0147  0.1139 0.02   0.8973   
+i_d9educatpar      -0.0509  0.0326 2.43   0.1189   
+currentnoflorag     0.2264  0.2238 1.02   0.3117   
+days_after_mdh     -0.0287  0.0101 7.98   0.0047 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   803  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "dcgts_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+280 523 
+
+FALSE  TRUE 
+  691   112 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)   
+(Intercept)        1.008436  1.156637 0.76   0.3833   
+ha_1000m_log       0.006853  0.024262 0.08   0.7776   
+age               -0.066625  0.063454 1.10   0.2937   
+race              -0.010017  0.247846 0.00   0.9678   
+gender             0.474136  0.210572 5.07   0.0243 * 
+Index3             0.630525  0.526183 1.44   0.2308   
+zha               -0.136607  0.131778 1.07   0.2999   
+i_g4salary_scaled -0.000696  0.112646 0.00   0.9951   
+i_d9educatpar     -0.051768  0.032499 2.54   0.1112   
+currentnoflorag    0.236414  0.223559 1.12   0.2903   
+days_after_mdh    -0.028436  0.010381 7.50   0.0062 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   803  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "gpts_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  695   117 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                     Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)          -2.08167  1.02195  4.15  0.04166 *  
+dist_house_plant_log -0.13499  0.07842  2.96  0.08517 .  
+age                   0.20456  0.05939 11.86  0.00057 ***
+race                  0.15400  0.26719  0.33  0.56436    
+gender               -0.35196  0.20440  2.97  0.08508 .  
+Index3               -1.54389  0.52484  8.65  0.00326 ** 
+zha                  -0.07426  0.11611  0.41  0.52242    
+i_g4salary_scaled     0.01181  0.11514  0.01  0.91828    
+i_d9educatpar        -0.03009  0.03296  0.83  0.36124    
+currentnoflorag      -0.10155  0.22447  0.20  0.65099    
+days_after_mdh       -0.00401  0.00709  0.32  0.57145    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "gpts_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  695   117 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -3.02962  0.94985 10.17  0.00142 ** 
+ha_50m_log         0.10964  0.04676  5.50  0.01905 *  
+age                0.20944  0.05928 12.48  0.00041 ***
+race               0.17157  0.26814  0.41  0.52225    
+gender            -0.34771  0.20509  2.87  0.08999 .  
+Index3            -1.60520  0.52372  9.39  0.00218 ** 
+zha               -0.07761  0.11724  0.44  0.50798    
+i_g4salary_scaled  0.02612  0.11569  0.05  0.82141    
+i_d9educatpar     -0.02731  0.03297  0.69  0.40753    
+currentnoflorag   -0.10852  0.22488  0.23  0.62940    
+days_after_mdh    -0.00402  0.00723  0.31  0.57801    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "gpts_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  695   117 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -2.85911  0.92715  9.51  0.00204 ** 
+ha_100m_log        0.05995  0.03208  3.49  0.06165 .  
+age                0.20574  0.05938 12.01  0.00053 ***
+race               0.15316  0.26635  0.33  0.56527    
+gender            -0.35361  0.20478  2.98  0.08420 .  
+Index3            -1.56614  0.52228  8.99  0.00271 ** 
+zha               -0.07198  0.11580  0.39  0.53421    
+i_g4salary_scaled  0.01452  0.11552  0.02  0.89999    
+i_d9educatpar     -0.02830  0.03285  0.74  0.38885    
+currentnoflorag   -0.11798  0.22482  0.28  0.59974    
+days_after_mdh    -0.00478  0.00707  0.46  0.49891    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "gpts_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  695   117 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -2.88815  0.92961  9.65  0.00189 ** 
+ha_150m_log        0.03899  0.02762  1.99  0.15801    
+age                0.20417  0.05961 11.73  0.00061 ***
+race               0.15862  0.26614  0.36  0.55119    
+gender            -0.35337  0.20467  2.98  0.08426 .  
+Index3            -1.56675  0.53059  8.72  0.00315 ** 
+zha               -0.07268  0.11549  0.40  0.52918    
+i_g4salary_scaled  0.01604  0.11574  0.02  0.88974    
+i_d9educatpar     -0.02983  0.03301  0.82  0.36615    
+currentnoflorag   -0.10750  0.22439  0.23  0.63188    
+days_after_mdh    -0.00439  0.00704  0.39  0.53347    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "gpts_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  695   117 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -2.94220  0.93104  9.99  0.00158 ** 
+ha_200m_log        0.03257  0.02474  1.73  0.18802    
+age                0.20321  0.05955 11.64  0.00064 ***
+race               0.17742  0.26470  0.45  0.50269    
+gender            -0.35323  0.20401  3.00  0.08337 .  
+Index3            -1.55559  0.53202  8.55  0.00346 ** 
+zha               -0.07194  0.11569  0.39  0.53403    
+i_g4salary_scaled  0.01798  0.11578  0.02  0.87657    
+i_d9educatpar     -0.03089  0.03307  0.87  0.35012    
+currentnoflorag   -0.10275  0.22448  0.21  0.64714    
+days_after_mdh    -0.00421  0.00702  0.36  0.54897    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "gpts_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  695   117 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -2.93166  0.94132  9.70  0.00184 ** 
+ha_300m_log        0.01046  0.02274  0.21  0.64565    
+age                0.20005  0.05957 11.28  0.00078 ***
+race               0.19671  0.26522  0.55  0.45829    
+gender            -0.36414  0.20428  3.18  0.07466 .  
+Index3            -1.50345  0.53340  7.94  0.00482 ** 
+zha               -0.07383  0.11608  0.40  0.52475    
+i_g4salary_scaled  0.02242  0.11575  0.04  0.84641    
+i_d9educatpar     -0.03201  0.03315  0.93  0.33426    
+currentnoflorag   -0.09994  0.22561  0.20  0.65779    
+days_after_mdh    -0.00413  0.00701  0.35  0.55632    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "gpts_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  695   117 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err  Wald Pr(>|W|)    
+(Intercept)        -3.0063  0.9476 10.07  0.00151 ** 
+ha_500m_log         0.0163  0.0217  0.57  0.45079    
+age                 0.2011  0.0594 11.47  0.00071 ***
+race                0.1996  0.2653  0.57  0.45184    
+gender             -0.3576  0.2039  3.08  0.07938 .  
+Index3             -1.5096  0.5273  8.20  0.00420 ** 
+zha                -0.0743  0.1164  0.41  0.52318    
+i_g4salary_scaled   0.0150  0.1168  0.02  0.89770    
+i_d9educatpar      -0.0316  0.0331  0.91  0.34028    
+currentnoflorag    -0.0917  0.2252  0.17  0.68382    
+days_after_mdh     -0.0039  0.0070  0.31  0.57678    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "gpts_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  695   117 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -2.94464  0.94961  9.62  0.00193 ** 
+ha_1000m_log       0.01042  0.02634  0.16  0.69233    
+age                0.19830  0.05893 11.32  0.00077 ***
+race               0.19268  0.26780  0.52  0.47184    
+gender            -0.36560  0.20409  3.21  0.07324 .  
+Index3            -1.47553  0.52258  7.97  0.00475 ** 
+zha               -0.07447  0.11634  0.41  0.52212    
+i_g4salary_scaled  0.02118  0.11553  0.03  0.85452    
+i_d9educatpar     -0.03319  0.03325  1.00  0.31819    
+currentnoflorag   -0.09587  0.22496  0.18  0.67000    
+days_after_mdh    -0.00436  0.00699  0.39  0.53322    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "auditory_attention_response_set_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  962   107 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                     Estimate Std.err Wald Pr(>|W|)   
+(Intercept)            0.9894  1.4380 0.47   0.4915   
+dist_house_plant_log  -0.0715  0.0785 0.83   0.3622   
+age                    0.0962  0.0565 2.89   0.0889 . 
+race                  -0.6965  0.2222 9.82   0.0017 **
+gender                 0.3523  0.2123 2.75   0.0971 . 
+Index2                -3.3456  1.3218 6.41   0.0114 * 
+Index3                -1.3798  0.5770 5.72   0.0168 * 
+zha                   -0.1489  0.1132 1.73   0.1884   
+i_g4salary_scaled      0.0841  0.1421 0.35   0.5541   
+i_d9educatpar         -0.0699  0.0333 4.40   0.0358 * 
+currentnoflorag       -0.0960  0.2333 0.17   0.6808   
+days_after_mdh        -0.0229  0.0128 3.19   0.0742 . 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "auditory_attention_response_set_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  962   107 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err Wald Pr(>|W|)   
+(Intercept)         0.5173  1.3632 0.14    0.704   
+ha_50m_log          0.0650  0.0530 1.51    0.220   
+age                 0.0977  0.0562 3.03    0.082 . 
+race               -0.6966  0.2255 9.54    0.002 **
+gender              0.3555  0.2126 2.80    0.094 . 
+Index2             -3.3715  1.3156 6.57    0.010 * 
+Index3             -1.4004  0.5758 5.91    0.015 * 
+zha                -0.1515  0.1135 1.78    0.182   
+i_g4salary_scaled   0.0890  0.1425 0.39    0.532   
+i_d9educatpar      -0.0680  0.0335 4.11    0.043 * 
+currentnoflorag    -0.0959  0.2344 0.17    0.683   
+days_after_mdh     -0.0230  0.0128 3.22    0.073 . 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "auditory_attention_response_set_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  962   107 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err Wald Pr(>|W|)   
+(Intercept)         0.5547  1.3471 0.17   0.6805   
+ha_100m_log         0.0236  0.0354 0.44   0.5054   
+age                 0.0965  0.0566 2.91   0.0881 . 
+race               -0.6956  0.2239 9.65   0.0019 **
+gender              0.3488  0.2118 2.71   0.0996 . 
+Index2             -3.3544  1.3081 6.58   0.0103 * 
+Index3             -1.3877  0.5773 5.78   0.0162 * 
+zha                -0.1483  0.1132 1.72   0.1901   
+i_g4salary_scaled   0.0840  0.1424 0.35   0.5556   
+i_d9educatpar      -0.0690  0.0331 4.35   0.0370 * 
+currentnoflorag    -0.0991  0.2358 0.18   0.6741   
+days_after_mdh     -0.0228  0.0126 3.27   0.0704 . 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "auditory_attention_response_set_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  962   107 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)   
+(Intercept)        0.52358  1.33765 0.15   0.6955   
+ha_150m_log        0.00499  0.02924 0.03   0.8644   
+age                0.09510  0.05674 2.81   0.0937 . 
+race              -0.67982  0.22332 9.27   0.0023 **
+gender             0.34720  0.21173 2.69   0.1010   
+Index2            -3.31430  1.29809 6.52   0.0107 * 
+Index3            -1.38099  0.58112 5.65   0.0175 * 
+zha               -0.14782  0.11310 1.71   0.1912   
+i_g4salary_scaled  0.08884  0.14235 0.39   0.5326   
+i_d9educatpar     -0.07030  0.03313 4.50   0.0338 * 
+currentnoflorag   -0.09236  0.23448 0.16   0.6937   
+days_after_mdh    -0.02254  0.01251 3.25   0.0716 . 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "auditory_attention_response_set_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  962   107 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)   
+(Intercept)        0.516605  1.335208 0.15   0.6988   
+ha_200m_log       -0.000948  0.025705 0.00   0.9706   
+age                0.094806  0.056751 2.79   0.0948 . 
+race              -0.673363  0.223798 9.05   0.0026 **
+gender             0.345863  0.211610 2.67   0.1022   
+Index2            -3.300976  1.292494 6.52   0.0107 * 
+Index3            -1.375434  0.581534 5.59   0.0180 * 
+zha               -0.147729  0.113204 1.70   0.1919   
+i_g4salary_scaled  0.090357  0.142323 0.40   0.5255   
+i_d9educatpar     -0.070705  0.033207 4.53   0.0332 * 
+currentnoflorag   -0.089595  0.234196 0.15   0.7020   
+days_after_mdh    -0.022469  0.012456 3.25   0.0713 . 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "auditory_attention_response_set_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  962   107 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err Wald Pr(>|W|)   
+(Intercept)         0.4751  1.3607 0.12   0.7269   
+ha_300m_log         0.0142  0.0222 0.41   0.5211   
+age                 0.0957  0.0566 2.86   0.0908 . 
+race               -0.6789  0.2242 9.17   0.0025 **
+gender              0.3489  0.2115 2.72   0.0991 . 
+Index2             -3.3165  1.3096 6.41   0.0113 * 
+Index3             -1.3885  0.5800 5.73   0.0167 * 
+zha                -0.1485  0.1132 1.72   0.1898   
+i_g4salary_scaled   0.0858  0.1420 0.36   0.5459   
+i_d9educatpar      -0.0705  0.0333 4.49   0.0341 * 
+currentnoflorag    -0.0918  0.2331 0.16   0.6938   
+days_after_mdh     -0.0225  0.0127 3.15   0.0760 . 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "auditory_attention_response_set_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  962   107 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err Wald Pr(>|W|)   
+(Intercept)         0.3842  1.3848 0.08   0.7815   
+ha_500m_log         0.0233  0.0221 1.11   0.2918   
+age                 0.0977  0.0566 2.99   0.0840 . 
+race               -0.6694  0.2279 8.63   0.0033 **
+gender              0.3552  0.2128 2.79   0.0951 . 
+Index2             -3.3314  1.3255 6.32   0.0120 * 
+Index3             -1.3989  0.5776 5.87   0.0154 * 
+zha                -0.1449  0.1136 1.63   0.2018   
+i_g4salary_scaled   0.0785  0.1418 0.31   0.5797   
+i_d9educatpar      -0.0700  0.0332 4.44   0.0350 * 
+currentnoflorag    -0.0772  0.2342 0.11   0.7416   
+days_after_mdh     -0.0226  0.0129 3.08   0.0792 . 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "auditory_attention_response_set_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+226 320 523 
+
+FALSE  TRUE 
+  962   107 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err Wald Pr(>|W|)   
+(Intercept)         0.4121  1.3749 0.09   0.7644   
+ha_1000m_log        0.0207  0.0275 0.57   0.4519   
+age                 0.0949  0.0566 2.81   0.0936 . 
+race               -0.6820  0.2252 9.17   0.0025 **
+gender              0.3490  0.2121 2.71   0.0998 . 
+Index2             -3.3581  1.3243 6.43   0.0112 * 
+Index3             -1.3650  0.5763 5.61   0.0179 * 
+zha                -0.1475  0.1136 1.68   0.1943   
+i_g4salary_scaled   0.0840  0.1420 0.35   0.5540   
+i_d9educatpar      -0.0730  0.0335 4.74   0.0295 * 
+currentnoflorag    -0.0876  0.2332 0.14   0.7073   
+days_after_mdh     -0.0231  0.0128 3.23   0.0722 . 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1069  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inhibition_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  776   285 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                      Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)           1.010858  0.778408  1.69   0.1941    
+dist_house_plant_log -0.093430  0.055704  2.81   0.0935 .  
+age                   0.109511  0.044910  5.95   0.0148 *  
+race                 -0.264442  0.178249  2.20   0.1379    
+gender               -0.180281  0.148558  1.47   0.2249    
+Index2               -1.051648  0.661162  2.53   0.1117    
+Index3               -1.105308  0.412471  7.18   0.0074 ** 
+zha                  -0.253628  0.086993  8.50   0.0036 ** 
+i_g4salary_scaled    -0.064412  0.093218  0.48   0.4896    
+i_d9educatpar        -0.026661  0.022741  1.37   0.2410    
+currentnoflorag       0.014762  0.163665  0.01   0.9281    
+days_after_mdh        0.000614  0.005255  0.01   0.9071    
+inc                  -0.241487  0.028759 70.51   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inhibition_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  776   285 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)        0.393872  0.709003  0.31   0.5785    
+ha_50m_log         0.055543  0.038982  2.03   0.1542    
+age                0.110271  0.044758  6.07   0.0138 *  
+race              -0.241873  0.177982  1.85   0.1742    
+gender            -0.182528  0.148432  1.51   0.2188    
+Index2            -1.072010  0.659175  2.64   0.1039    
+Index3            -1.119173  0.411389  7.40   0.0065 ** 
+zha               -0.255269  0.087281  8.55   0.0034 ** 
+i_g4salary_scaled -0.056316  0.093087  0.37   0.5452    
+i_d9educatpar     -0.026090  0.022799  1.31   0.2525    
+currentnoflorag    0.018278  0.162749  0.01   0.9106    
+days_after_mdh     0.000514  0.005268  0.01   0.9223    
+inc               -0.242071  0.028753 70.88   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inhibition_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  776   285 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)        4.89e-01  7.05e-01  0.48   0.4880    
+ha_100m_log        4.25e-02  2.41e-02  3.10   0.0781 .  
+age                1.11e-01  4.47e-02  6.19   0.0128 *  
+race              -2.71e-01  1.79e-01  2.28   0.1309    
+gender            -1.83e-01  1.49e-01  1.52   0.2181    
+Index2            -1.14e+00  6.65e-01  2.93   0.0869 .  
+Index3            -1.12e+00  4.09e-01  7.50   0.0062 ** 
+zha               -2.52e-01  8.69e-02  8.37   0.0038 ** 
+i_g4salary_scaled -6.68e-02  9.32e-02  0.51   0.4735    
+i_d9educatpar     -2.49e-02  2.27e-02  1.20   0.2738    
+currentnoflorag    6.14e-03  1.64e-01  0.00   0.9701    
+days_after_mdh     3.97e-06  5.29e-03  0.00   0.9994    
+inc               -2.41e-01  2.88e-02 70.12   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inhibition_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  776   285 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)        0.486735  0.706678  0.47   0.4910    
+ha_150m_log        0.043181  0.019821  4.75   0.0294 *  
+age                0.110751  0.044747  6.13   0.0133 *  
+race              -0.288572  0.179246  2.59   0.1074    
+gender            -0.178338  0.148603  1.44   0.2301    
+Index2            -1.125751  0.669233  2.83   0.0925 .  
+Index3            -1.145713  0.411590  7.75   0.0054 ** 
+zha               -0.251554  0.086841  8.39   0.0038 ** 
+i_g4salary_scaled -0.069702  0.093444  0.56   0.4557    
+i_d9educatpar     -0.024854  0.022813  1.19   0.2759    
+currentnoflorag    0.002890  0.164059  0.00   0.9859    
+days_after_mdh     0.000303  0.005311  0.00   0.9545    
+inc               -0.242006  0.028802 70.60   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inhibition_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  776   285 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)        0.433513  0.704441  0.38   0.5383    
+ha_200m_log        0.020043  0.017908  1.25   0.2631    
+age                0.107533  0.044739  5.78   0.0162 *  
+race              -0.245889  0.177440  1.92   0.1658    
+gender            -0.183229  0.148258  1.53   0.2165    
+Index2            -1.069473  0.661309  2.62   0.1058    
+Index3            -1.103071  0.412273  7.16   0.0075 ** 
+zha               -0.253405  0.086866  8.51   0.0035 ** 
+i_g4salary_scaled -0.062336  0.093147  0.45   0.5033    
+i_d9educatpar     -0.027641  0.022766  1.47   0.2247    
+currentnoflorag    0.018967  0.163292  0.01   0.9075    
+days_after_mdh     0.000457  0.005255  0.01   0.9306    
+inc               -0.241516  0.028835 70.15   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inhibition_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  776   285 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)        0.340883  0.708845  0.23   0.6306    
+ha_300m_log        0.025705  0.015691  2.68   0.1014    
+age                0.108241  0.044792  5.84   0.0157 *  
+race              -0.241202  0.177197  1.85   0.1734    
+gender            -0.182572  0.148385  1.51   0.2185    
+Index2            -1.039376  0.660121  2.48   0.1154    
+Index3            -1.114191  0.413130  7.27   0.0070 ** 
+zha               -0.252838  0.086981  8.45   0.0037 ** 
+i_g4salary_scaled -0.064393  0.093497  0.47   0.4910    
+i_d9educatpar     -0.027595  0.022848  1.46   0.2271    
+currentnoflorag    0.017491  0.163486  0.01   0.9148    
+days_after_mdh     0.000808  0.005251  0.02   0.8777    
+inc               -0.240405  0.028782 69.77   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inhibition_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  776   285 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)        0.328909  0.714582  0.21   0.6453    
+ha_500m_log        0.015976  0.014585  1.20   0.2734    
+age                0.108466  0.044887  5.84   0.0157 *  
+race              -0.221851  0.176997  1.57   0.2101    
+gender            -0.182214  0.148275  1.51   0.2191    
+Index2            -1.046100  0.655895  2.54   0.1107    
+Index3            -1.101536  0.413264  7.10   0.0077 ** 
+zha               -0.252785  0.087041  8.43   0.0037 ** 
+i_g4salary_scaled -0.062732  0.093123  0.45   0.5005    
+i_d9educatpar     -0.027658  0.022670  1.49   0.2225    
+currentnoflorag    0.030227  0.163019  0.03   0.8529    
+days_after_mdh     0.000603  0.005219  0.01   0.9080    
+inc               -0.242378  0.028747 71.09   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "inhibition_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + inc"
+
+  1   2   3 
+220 318 523 
+
+FALSE  TRUE 
+  776   285 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        0.41487  0.71369  0.34   0.5610    
+ha_1000m_log       0.00568  0.01739  0.11   0.7437    
+age                0.10583  0.04483  5.57   0.0182 *  
+race              -0.22445  0.17607  1.63   0.2024    
+gender            -0.18926  0.14781  1.64   0.2004    
+Index2            -1.04977  0.65647  2.56   0.1098    
+Index3            -1.06898  0.41078  6.77   0.0093 ** 
+zha               -0.25293  0.08703  8.45   0.0037 ** 
+i_g4salary_scaled -0.05779  0.09271  0.39   0.5331    
+i_d9educatpar     -0.02916  0.02287  1.63   0.2021    
+currentnoflorag    0.02561  0.16305  0.02   0.8752    
+days_after_mdh     0.00033  0.00522  0.00   0.9496    
+inc               -0.24285  0.02875 71.34   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1061  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "attention_inhibitory_control_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 320 523 
+
+FALSE  TRUE 
+  974    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                     Estimate  Std.err Wald Pr(>|W|)   
+(Intercept)           0.76085  1.33147 0.33   0.5677   
+dist_house_plant_log -0.15292  0.07783 3.86   0.0494 * 
+age                   0.06247  0.05966 1.10   0.2951   
+race                 -0.70459  0.23397 9.07   0.0026 **
+gender                0.13024  0.21933 0.35   0.5526   
+Index2               -2.04593  1.20806 2.87   0.0903 . 
+Index3               -1.10204  0.57707 3.65   0.0562 . 
+zha                  -0.34590  0.12881 7.21   0.0072 **
+i_g4salary_scaled    -0.00956  0.14447 0.00   0.9473   
+i_d9educatpar        -0.08840  0.03426 6.66   0.0099 **
+currentnoflorag       0.14058  0.23936 0.34   0.5570   
+days_after_mdh       -0.01110  0.01115 0.99   0.3196   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1071  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "attention_inhibitory_control_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 320 523 
+
+FALSE  TRUE 
+  974    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)   
+(Intercept)       -0.232087  1.246751 0.03   0.8523   
+ha_50m_log         0.077467  0.053498 2.10   0.1476   
+age                0.063435  0.059321 1.14   0.2849   
+race              -0.680427  0.236992 8.24   0.0041 **
+gender             0.129142  0.219140 0.35   0.5557   
+Index2            -2.060693  1.180190 3.05   0.0808 . 
+Index3            -1.121690  0.575624 3.80   0.0513 . 
+zha               -0.349679  0.129166 7.33   0.0068 **
+i_g4salary_scaled  0.000806  0.145787 0.00   0.9956   
+i_d9educatpar     -0.086730  0.034431 6.34   0.0118 * 
+currentnoflorag    0.149220  0.241047 0.38   0.5359   
+days_after_mdh    -0.011112  0.010910 1.04   0.3084   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1071  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "attention_inhibitory_control_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 320 523 
+
+FALSE  TRUE 
+  974    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err Wald Pr(>|W|)   
+(Intercept)        -0.1269  1.2425 0.01   0.9187   
+ha_100m_log         0.0598  0.0349 2.94   0.0865 . 
+age                 0.0642  0.0598 1.15   0.2825   
+race               -0.7133  0.2376 9.01   0.0027 **
+gender              0.1262  0.2192 0.33   0.5649   
+Index2             -2.1148  1.1919 3.15   0.0760 . 
+Index3             -1.1246  0.5756 3.82   0.0507 . 
+zha                -0.3457  0.1292 7.16   0.0074 **
+i_g4salary_scaled  -0.0141  0.1450 0.01   0.9224   
+i_d9educatpar      -0.0857  0.0343 6.24   0.0125 * 
+currentnoflorag     0.1310  0.2427 0.29   0.5894   
+days_after_mdh     -0.0115  0.0109 1.11   0.2928   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1071  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "attention_inhibitory_control_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 320 523 
+
+FALSE  TRUE 
+  974    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err Wald Pr(>|W|)   
+(Intercept)        -0.1494  1.2542 0.01   0.9052   
+ha_150m_log         0.0579  0.0290 3.99   0.0458 * 
+age                 0.0628  0.0598 1.10   0.2938   
+race               -0.7245  0.2371 9.34   0.0022 **
+gender              0.1293  0.2198 0.35   0.5562   
+Index2             -2.1086  1.2044 3.07   0.0800 . 
+Index3             -1.1533  0.5808 3.94   0.0471 * 
+zha                -0.3441  0.1287 7.15   0.0075 **
+i_g4salary_scaled  -0.0123  0.1452 0.01   0.9327   
+i_d9educatpar      -0.0866  0.0345 6.30   0.0121 * 
+currentnoflorag     0.1238  0.2413 0.26   0.6079   
+days_after_mdh     -0.0112  0.0110 1.02   0.3117   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1071  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "attention_inhibitory_control_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 320 523 
+
+FALSE  TRUE 
+  974    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)   
+(Intercept)       -0.22019  1.23815 0.03   0.8588   
+ha_200m_log        0.03758  0.02570 2.14   0.1437   
+age                0.05975  0.05973 1.00   0.3172   
+race              -0.68740  0.23415 8.62   0.0033 **
+gender             0.12846  0.21913 0.34   0.5577   
+Index2            -2.03835  1.18288 2.97   0.0849 . 
+Index3            -1.11690  0.57944 3.72   0.0539 . 
+zha               -0.34536  0.12897 7.17   0.0074 **
+i_g4salary_scaled -0.00572  0.14587 0.00   0.9687   
+i_d9educatpar     -0.08920  0.03426 6.78   0.0092 **
+currentnoflorag    0.14013  0.23961 0.34   0.5587   
+days_after_mdh    -0.01082  0.01082 1.00   0.3170   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1071  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "attention_inhibitory_control_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 320 523 
+
+FALSE  TRUE 
+  974    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err Wald Pr(>|W|)   
+(Intercept)        -0.3841  1.2722 0.09   0.7627   
+ha_300m_log         0.0487  0.0230 4.50   0.0340 * 
+age                 0.0619  0.0594 1.08   0.2976   
+race               -0.6749  0.2359 8.18   0.0042 **
+gender              0.1282  0.2186 0.34   0.5576   
+Index2             -2.0068  1.1974 2.81   0.0937 . 
+Index3             -1.1371  0.5808 3.83   0.0503 . 
+zha                -0.3456  0.1296 7.12   0.0076 **
+i_g4salary_scaled  -0.0101  0.1454 0.00   0.9446   
+i_d9educatpar      -0.0903  0.0343 6.93   0.0085 **
+currentnoflorag     0.1474  0.2394 0.38   0.5379   
+days_after_mdh     -0.0103  0.0110 0.88   0.3488   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1071  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "attention_inhibitory_control_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 320 523 
+
+FALSE  TRUE 
+  974    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err Wald Pr(>|W|)   
+(Intercept)        -0.4274  1.2746 0.11   0.7374   
+ha_500m_log         0.0318  0.0231 1.90   0.1675   
+age                 0.0629  0.0596 1.12   0.2910   
+race               -0.6444  0.2394 7.24   0.0071 **
+gender              0.1270  0.2187 0.34   0.5614   
+Index2             -2.0073  1.1795 2.90   0.0888 . 
+Index3             -1.1182  0.5787 3.73   0.0533 . 
+zha                -0.3420  0.1298 6.94   0.0084 **
+i_g4salary_scaled  -0.0109  0.1438 0.01   0.9396   
+i_d9educatpar      -0.0892  0.0339 6.93   0.0085 **
+currentnoflorag     0.1707  0.2408 0.50   0.4784   
+days_after_mdh     -0.0106  0.0109 0.95   0.3296   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1071  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "attention_inhibitory_control_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   2   3 
+228 320 523 
+
+FALSE  TRUE 
+  974    97 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)   
+(Intercept)       -0.305828  1.268566 0.06   0.8095   
+ha_1000m_log       0.015348  0.026376 0.34   0.5606   
+age                0.059079  0.059901 0.97   0.3240   
+race              -0.654760  0.236458 7.67   0.0056 **
+gender             0.118258  0.217841 0.29   0.5872   
+Index2            -2.021301  1.170869 2.98   0.0843 . 
+Index3            -1.074490  0.577572 3.46   0.0628 . 
+zha               -0.343785  0.129069 7.09   0.0077 **
+i_g4salary_scaled -0.000578  0.144339 0.00   0.9968   
+i_d9educatpar     -0.091899  0.034255 7.20   0.0073 **
+currentnoflorag    0.157904  0.239663 0.43   0.5100   
+days_after_mdh    -0.011056  0.010728 1.06   0.3027   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   1071  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "language_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  634   178 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                     Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)           0.07201  0.82607  0.01   0.9305    
+dist_house_plant_log -0.11082  0.07004  2.50   0.1136    
+age                  -0.06386  0.05220  1.50   0.2212    
+race                 -0.23099  0.20528  1.27   0.2605    
+gender               -0.10811  0.17737  0.37   0.5422    
+Index3               -0.21208  0.45552  0.22   0.6415    
+zha                  -0.44230  0.10508 17.72  2.6e-05 ***
+i_g4salary_scaled     0.09937  0.11526  0.74   0.3886    
+i_d9educatpar        -0.09961  0.03102 10.31   0.0013 ** 
+currentnoflorag      -0.16494  0.19161  0.74   0.3893    
+days_after_mdh        0.00370  0.00513  0.52   0.4702    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "language_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  634   178 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.65586  0.69526  0.89   0.3455    
+ha_50m_log         0.05950  0.04619  1.66   0.1976    
+age               -0.06313  0.05241  1.45   0.2284    
+race              -0.21352  0.20459  1.09   0.2967    
+gender            -0.11174  0.17775  0.40   0.5296    
+Index3            -0.23423  0.45819  0.26   0.6092    
+zha               -0.44519  0.10499 17.98  2.2e-05 ***
+i_g4salary_scaled  0.11266  0.11516  0.96   0.3279    
+i_d9educatpar     -0.09825  0.03131  9.85   0.0017 ** 
+currentnoflorag   -0.16686  0.19278  0.75   0.3867    
+days_after_mdh     0.00358  0.00515  0.48   0.4875    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "language_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  634   178 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate Std.err  Wald Pr(>|W|)    
+(Intercept)        -0.5880  0.6952  0.72   0.3977    
+ha_100m_log         0.0185  0.0303  0.37   0.5421    
+age                -0.0661  0.0524  1.59   0.2073    
+race               -0.2081  0.2060  1.02   0.3124    
+gender             -0.1174  0.1772  0.44   0.5078    
+Index3             -0.1978  0.4578  0.19   0.6656    
+zha                -0.4417  0.1047 17.80  2.5e-05 ***
+i_g4salary_scaled   0.1094  0.1163  0.88   0.3469    
+i_d9educatpar      -0.0996  0.0312 10.20   0.0014 ** 
+currentnoflorag    -0.1661  0.1928  0.74   0.3890    
+days_after_mdh      0.0033  0.0051  0.42   0.5179    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "language_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  634   178 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.59260  0.69521  0.73   0.3940    
+ha_150m_log        0.01840  0.02514  0.54   0.4643    
+age               -0.06566  0.05243  1.57   0.2104    
+race              -0.21430  0.20630  1.08   0.2989    
+gender            -0.11493  0.17692  0.42   0.5159    
+Index3            -0.21005  0.45948  0.21   0.6476    
+zha               -0.44073  0.10471 17.72  2.6e-05 ***
+i_g4salary_scaled  0.10767  0.11603  0.86   0.3534    
+i_d9educatpar     -0.09972  0.03117 10.24   0.0014 ** 
+currentnoflorag   -0.16532  0.19224  0.74   0.3898    
+days_after_mdh     0.00340  0.00511  0.44   0.5059    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "language_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  634   178 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.63539  0.69323  0.84   0.3594    
+ha_200m_log        0.02645  0.02175  1.48   0.2238    
+age               -0.06465  0.05227  1.53   0.2162    
+race              -0.21523  0.20463  1.11   0.2929    
+gender            -0.10967  0.17705  0.38   0.5356    
+Index3            -0.22582  0.45750  0.24   0.6216    
+zha               -0.43966  0.10499 17.54  2.8e-05 ***
+i_g4salary_scaled  0.10595  0.11594  0.84   0.3608    
+i_d9educatpar     -0.09997  0.03118 10.28   0.0013 ** 
+currentnoflorag   -0.16445  0.19196  0.73   0.3916    
+days_after_mdh     0.00352  0.00510  0.48   0.4895    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "language_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  634   178 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.79473  0.69356  1.31   0.2518    
+ha_300m_log        0.04640  0.01920  5.84   0.0157 *  
+age               -0.06201  0.05208  1.42   0.2338    
+race              -0.21213  0.20485  1.07   0.3004    
+gender            -0.11159  0.17726  0.40   0.5290    
+Index3            -0.25872  0.45514  0.32   0.5697    
+zha               -0.44011  0.10572 17.33  3.1e-05 ***
+i_g4salary_scaled  0.09273  0.11573  0.64   0.4230    
+i_d9educatpar     -0.10228  0.03125 10.71   0.0011 ** 
+currentnoflorag   -0.16623  0.19148  0.75   0.3853    
+days_after_mdh     0.00442  0.00511  0.75   0.3873    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "language_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  634   178 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.79130  0.70922  1.24   0.2645    
+ha_500m_log        0.02506  0.01884  1.77   0.1835    
+age               -0.06392  0.05234  1.49   0.2219    
+race              -0.18852  0.20465  0.85   0.3570    
+gender            -0.11039  0.17701  0.39   0.5329    
+Index3            -0.21609  0.45666  0.22   0.6361    
+zha               -0.44089  0.10537 17.51  2.9e-05 ***
+i_g4salary_scaled  0.09567  0.11612  0.68   0.4100    
+i_d9educatpar     -0.10133  0.03104 10.66   0.0011 ** 
+currentnoflorag   -0.14898  0.19270  0.60   0.4394    
+days_after_mdh     0.00412  0.00506  0.66   0.4151    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "language_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+289 523 
+
+FALSE  TRUE 
+  634   178 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)       -0.61069  0.70843  0.74   0.3887    
+ha_1000m_log       0.00193  0.02278  0.01   0.9324    
+age               -0.06808  0.05245  1.68   0.1944    
+race              -0.19253  0.20322  0.90   0.3434    
+gender            -0.12115  0.17664  0.47   0.4928    
+Index3            -0.17355  0.45792  0.14   0.7047    
+zha               -0.44160  0.10457 17.83  2.4e-05 ***
+i_g4salary_scaled  0.11293  0.11656  0.94   0.3326    
+i_d9educatpar     -0.10144  0.03161 10.30   0.0013 ** 
+currentnoflorag   -0.16039  0.19329  0.69   0.4067    
+days_after_mdh     0.00340  0.00509  0.45   0.5044    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   812  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "memory_and_learning_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  688    70 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                      Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)           6.88e+00  1.76e+00 15.36  8.9e-05 ***
+dist_house_plant_log -2.33e-01  1.26e-01  3.41    0.065 .  
+age                  -1.29e-01  1.29e-01  1.01    0.315    
+race                  1.52e-01  4.50e-01  0.11    0.735    
+gender                6.42e-01  3.55e-01  3.27    0.071 .  
+Index3                1.34e+00  1.03e+00  1.69    0.194    
+zha                  -8.83e-05  2.17e-01  0.00    1.000    
+i_g4salary_scaled    -2.00e-01  2.11e-01  0.90    0.342    
+i_d9educatpar        -1.64e-02  5.26e-02  0.10    0.755    
+currentnoflorag      -3.44e-01  3.96e-01  0.75    0.385    
+days_after_mdh       -6.72e-03  9.14e-03  0.54    0.462    
+mffts                -1.11e+00  1.33e-01 69.57  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "memory_and_learning_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  688    70 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        5.33984  1.58830 11.30  0.00077 ***
+ha_50m_log         0.14581  0.07920  3.39  0.06560 .  
+age               -0.12363  0.12893  0.92  0.33764    
+race               0.20209  0.44487  0.21  0.64963    
+gender             0.60285  0.35495  2.88  0.08944 .  
+Index3             1.26104  1.02291  1.52  0.21765    
+zha                0.01209  0.22147  0.00  0.95646    
+i_g4salary_scaled -0.18444  0.21601  0.73  0.39320    
+i_d9educatpar     -0.00789  0.05456  0.02  0.88495    
+currentnoflorag   -0.39782  0.40510  0.96  0.32608    
+days_after_mdh    -0.00617  0.00902  0.47  0.49381    
+mffts             -1.11580  0.13362 69.73  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "memory_and_learning_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  688    70 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        5.56565  1.56817 12.60  0.00039 ***
+ha_100m_log        0.05476  0.05107  1.15  0.28353    
+age               -0.13256  0.12764  1.08  0.29904    
+race               0.19487  0.44622  0.19  0.66232    
+gender             0.60671  0.35239  2.96  0.08512 .  
+Index3             1.35029  1.01105  1.78  0.18170    
+zha                0.01192  0.21749  0.00  0.95629    
+i_g4salary_scaled -0.19224  0.21743  0.78  0.37662    
+i_d9educatpar     -0.02022  0.05230  0.15  0.69909    
+currentnoflorag   -0.38533  0.39768  0.94  0.33257    
+days_after_mdh    -0.00669  0.00893  0.56  0.45335    
+mffts             -1.11401  0.13530 67.79  2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "memory_and_learning_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  688    70 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        5.57982  1.57618 12.53   0.0004 ***
+ha_150m_log        0.04977  0.04577  1.18   0.2769    
+age               -0.13109  0.12742  1.06   0.3036    
+race               0.17437  0.44924  0.15   0.6979    
+gender             0.61807  0.35368  3.05   0.0805 .  
+Index3             1.33116  1.01116  1.73   0.1880    
+zha                0.00312  0.21481  0.00   0.9884    
+i_g4salary_scaled -0.20364  0.21769  0.88   0.3495    
+i_d9educatpar     -0.01993  0.05295  0.14   0.7067    
+currentnoflorag   -0.40324  0.40042  1.01   0.3139    
+days_after_mdh    -0.00658  0.00906  0.53   0.4675    
+mffts             -1.11148  0.13412 68.67   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "memory_and_learning_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  688    70 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        5.60137  1.58333 12.52   0.0004 ***
+ha_200m_log        0.05862  0.04223  1.93   0.1651    
+age               -0.14455  0.12859  1.26   0.2610    
+race               0.16567  0.44265  0.14   0.7082    
+gender             0.63770  0.35526  3.22   0.0727 .  
+Index3             1.40509  1.02268  1.89   0.1695    
+zha                0.00204  0.21518  0.00   0.9924    
+i_g4salary_scaled -0.21156  0.21774  0.94   0.3312    
+i_d9educatpar     -0.02069  0.05225  0.16   0.6921    
+currentnoflorag   -0.37916  0.39471  0.92   0.3368    
+days_after_mdh    -0.00618  0.00914  0.46   0.4986    
+mffts             -1.10848  0.13341 69.04   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "memory_and_learning_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  688    70 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err  Wald Pr(>|W|)    
+(Intercept)        5.48e+00  1.59e+00 11.90  0.00056 ***
+ha_300m_log        1.47e-02  4.02e-02  0.13  0.71541    
+age               -1.36e-01  1.28e-01  1.12  0.28906    
+race               2.43e-01  4.51e-01  0.29  0.58935    
+gender             5.97e-01  3.51e-01  2.89  0.08889 .  
+Index3             1.41e+00  1.03e+00  1.86  0.17282    
+zha                9.42e-06  2.15e-01  0.00  0.99997    
+i_g4salary_scaled -2.05e-01  2.18e-01  0.89  0.34640    
+i_d9educatpar     -2.31e-02  5.21e-02  0.20  0.65712    
+currentnoflorag   -3.72e-01  3.94e-01  0.89  0.34551    
+days_after_mdh    -5.91e-03  8.87e-03  0.44  0.50524    
+mffts             -1.11e+00  1.36e-01 66.43  3.3e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "memory_and_learning_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  688    70 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        5.06131  1.60353  9.96   0.0016 ** 
+ha_500m_log        0.04607  0.04216  1.19   0.2745    
+age               -0.12227  0.12900  0.90   0.3432    
+race               0.24639  0.43784  0.32   0.5736    
+gender             0.66588  0.35421  3.53   0.0601 .  
+Index3             1.30058  1.03943  1.57   0.2108    
+zha               -0.01421  0.21776  0.00   0.9480    
+i_g4salary_scaled -0.22098  0.21367  1.07   0.3010    
+i_d9educatpar     -0.01920  0.05191  0.14   0.7114    
+currentnoflorag   -0.33787  0.39070  0.75   0.3872    
+days_after_mdh    -0.00579  0.00876  0.44   0.5085    
+mffts             -1.10662  0.13352 68.69   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "memory_and_learning_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh + mffts"
+
+  1   3 
+235 523 
+
+FALSE  TRUE 
+  688    70 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err  Wald Pr(>|W|)    
+(Intercept)        4.97414  1.66355  8.94   0.0028 ** 
+ha_1000m_log       0.12262  0.05959  4.23   0.0396 *  
+age               -0.11866  0.12700  0.87   0.3502    
+race               0.16055  0.43771  0.13   0.7138    
+gender             0.58975  0.35358  2.78   0.0953 .  
+Index3             1.34715  1.02944  1.71   0.1907    
+zha                0.00935  0.21743  0.00   0.9657    
+i_g4salary_scaled -0.29300  0.21197  1.91   0.1669    
+i_d9educatpar     -0.02885  0.05039  0.33   0.5670    
+currentnoflorag   -0.23922  0.39827  0.36   0.5481    
+days_after_mdh    -0.00963  0.00918  1.10   0.2941    
+mffts             -1.11398  0.13104 72.26   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   758  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "visuospatial_processing_binary ~ dist_house_plant_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+290 523 
+
+FALSE  TRUE 
+  754    59 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                     Estimate  Std.err Wald Pr(>|W|)
+(Intercept)          -1.19453  1.78156 0.45     0.50
+dist_house_plant_log  0.08979  0.11196 0.64     0.42
+age                   0.00399  0.08062 0.00     0.96
+race                  0.14730  0.34671 0.18     0.67
+gender                0.24405  0.27402 0.79     0.37
+Index3                0.19581  0.69059 0.08     0.78
+zha                  -0.24326  0.14850 2.68     0.10
+i_g4salary_scaled    -0.12091  0.11590 1.09     0.30
+i_d9educatpar        -0.07365  0.04604 2.56     0.11
+currentnoflorag       0.13342  0.29835 0.20     0.65
+days_after_mdh       -0.01958  0.01337 2.14     0.14
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   813  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "visuospatial_processing_binary ~ ha_50m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+290 523 
+
+FALSE  TRUE 
+  754    59 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)  
+(Intercept)       -0.60848  1.68000 0.13     0.72  
+ha_50m_log         0.01838  0.07204 0.07     0.80  
+age                0.00857  0.07979 0.01     0.91  
+race               0.11843  0.34455 0.12     0.73  
+gender             0.25357  0.27374 0.86     0.35  
+Index3             0.15510  0.68191 0.05     0.82  
+zha               -0.24431  0.14838 2.71     0.10 .
+i_g4salary_scaled -0.13043  0.11571 1.27     0.26  
+i_d9educatpar     -0.07247  0.04594 2.49     0.11  
+currentnoflorag    0.12422  0.29617 0.18     0.67  
+days_after_mdh    -0.02001  0.01402 2.04     0.15  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   813  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "visuospatial_processing_binary ~ ha_100m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+290 523 
+
+FALSE  TRUE 
+  754    59 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)  
+(Intercept)       -0.62773  1.65435 0.14     0.70  
+ha_100m_log       -0.03288  0.05109 0.41     0.52  
+age                0.00311  0.08105 0.00     0.97  
+race               0.14600  0.34563 0.18     0.67  
+gender             0.24506  0.27422 0.80     0.37  
+Index3             0.21344  0.70129 0.09     0.76  
+zha               -0.24235  0.14879 2.65     0.10  
+i_g4salary_scaled -0.12348  0.11587 1.14     0.29  
+i_d9educatpar     -0.07544  0.04586 2.71     0.10 .
+currentnoflorag    0.13997  0.29922 0.22     0.64  
+days_after_mdh    -0.01952  0.01363 2.05     0.15  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   813  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "visuospatial_processing_binary ~ ha_150m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+290 523 
+
+FALSE  TRUE 
+  754    59 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)  
+(Intercept)       -0.64798  1.62598 0.16    0.690  
+ha_150m_log       -0.06494  0.04565 2.02    0.155  
+age               -0.00213  0.08167 0.00    0.979  
+race               0.18602  0.35049 0.28    0.596  
+gender             0.23691  0.27464 0.74    0.388  
+Index3             0.29895  0.71188 0.18    0.675  
+zha               -0.24591  0.14950 2.71    0.100 .
+i_g4salary_scaled -0.11526  0.11543 1.00    0.318  
+i_d9educatpar     -0.07699  0.04555 2.86    0.091 .
+currentnoflorag    0.15340  0.29999 0.26    0.609  
+days_after_mdh    -0.01938  0.01319 2.16    0.142  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   813  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "visuospatial_processing_binary ~ ha_200m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+290 523 
+
+FALSE  TRUE 
+  754    59 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)  
+(Intercept)       -0.56982  1.62970 0.12    0.727  
+ha_200m_log       -0.05856  0.03791 2.39    0.122  
+age               -0.00161  0.08120 0.00    0.984  
+race               0.16646  0.34713 0.23    0.632  
+gender             0.23538  0.27457 0.73    0.391  
+Index3             0.29251  0.70249 0.17    0.677  
+zha               -0.24737  0.14948 2.74    0.098 .
+i_g4salary_scaled -0.11859  0.11433 1.08    0.300  
+i_d9educatpar     -0.07502  0.04545 2.72    0.099 .
+currentnoflorag    0.14959  0.30017 0.25    0.618  
+days_after_mdh    -0.01961  0.01322 2.20    0.138  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   813  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "visuospatial_processing_binary ~ ha_300m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+290 523 
+
+FALSE  TRUE 
+  754    59 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)  
+(Intercept)       -0.49375  1.61491 0.09    0.760  
+ha_300m_log       -0.04207  0.03157 1.78    0.183  
+age                0.00134  0.08116 0.00    0.987  
+race               0.14180  0.34910 0.16    0.685  
+gender             0.24741  0.27416 0.81    0.367  
+Index3             0.24689  0.69537 0.13    0.723  
+zha               -0.24578  0.14846 2.74    0.098 .
+i_g4salary_scaled -0.11387  0.11477 0.98    0.321  
+i_d9educatpar     -0.07336  0.04589 2.56    0.110  
+currentnoflorag    0.13972  0.29983 0.22    0.641  
+days_after_mdh    -0.02018  0.01322 2.33    0.127  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   813  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "visuospatial_processing_binary ~ ha_500m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+290 523 
+
+FALSE  TRUE 
+  754    59 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                   Estimate   Std.err Wald Pr(>|W|)  
+(Intercept)       -0.372648  1.608382 0.05    0.817  
+ha_500m_log       -0.039092  0.027446 2.03    0.154  
+age                0.000857  0.081116 0.00    0.992  
+race               0.118055  0.346214 0.12    0.733  
+gender             0.237578  0.274177 0.75    0.386  
+Index3             0.234171  0.693242 0.11    0.736  
+zha               -0.246880  0.147093 2.82    0.093 .
+i_g4salary_scaled -0.102217  0.115248 0.79    0.375  
+i_d9educatpar     -0.073408  0.046184 2.53    0.112  
+currentnoflorag    0.114959  0.294549 0.15    0.696  
+days_after_mdh    -0.020530  0.013253 2.40    0.121  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   813  Maximum cluster size: 1 
+[1] "-------------------------------"
+[1] "visuospatial_processing_binary ~ ha_1000m_log + age + race + gender + Index + zha + i_g4salary_scaled + i_d9educatpar + currentnoflorag + days_after_mdh"
+
+  1   3 
+290 523 
+
+FALSE  TRUE 
+  754    59 
+
+Call:
+geeglm(formula = formula(eq), family = binomial(link = "logit"), 
+    data = df4_long, id = nid, corstr = "exchangeable")
+
+ Coefficients:
+                  Estimate  Std.err Wald Pr(>|W|)  
+(Intercept)       -0.51630  1.64556 0.10    0.754  
+ha_1000m_log      -0.02297  0.02833 0.66    0.417  
+age                0.00825  0.08067 0.01    0.919  
+race               0.12702  0.34529 0.14    0.713  
+gender             0.24853  0.27434 0.82    0.365  
+Index3             0.15338  0.69025 0.05    0.824  
+zha               -0.24456  0.14805 2.73    0.099 .
+i_g4salary_scaled -0.11834  0.11638 1.03    0.309  
+i_d9educatpar     -0.06927  0.04618 2.25    0.134  
+currentnoflorag    0.11945  0.29510 0.16    0.686  
+days_after_mdh    -0.01935  0.01336 2.10    0.148  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+  Link = identity 
+
+Estimated Correlation Parameters:
+Number of clusters:   813  Maximum cluster size: 1 
+[1] "-------------------------------"
